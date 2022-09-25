@@ -1,10 +1,20 @@
 # Databricks notebook source
-# MAGIC %md
-# MAGIC ## Ingestão Nota Fiscal Eletronica - NFe - XML
-# MAGIC <br>
-# MAGIC ### Referências:<br>
+# MAGIC %md-sandbox
 # MAGIC 
+# MAGIC <div style="text-align: left; line-height: 0; padding-top: 9px;">
+# MAGIC   <img src="https://raw.githubusercontent.com/Databricks-BR/Databricks-BR/main/images/databricks_br_header.png" alt="GitHub Databricks Brasil" style="width: 800px">
+# MAGIC </div>
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Ingestão Nota Fiscal Eletrônica - NFe - XML
+# MAGIC </br>
+# MAGIC 
+# MAGIC ##### Referências:
 # MAGIC * https://docs.databricks.com/data/data-sources/xml.html
+# MAGIC * https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml
+# MAGIC * https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml#xsd-support
 
 # COMMAND ----------
 
@@ -15,22 +25,24 @@
 # MAGIC import org.apache.commons.io.FileUtils
 # MAGIC 
 # MAGIC var tmpFile = new File("/tmp/nfe.xml")
-# MAGIC FileUtils.copyURLToFile(new URL("https://raw.githubusercontent.com/lcpassuncao/databricks_br_tax/main/test_nfe_xml/NFe35170171322150001301550000000477521876550573_procNFe.xml"), tmpFile)
+# MAGIC 
+# MAGIC FileUtils.copyURLToFile(new URL("https://raw.githubusercontent.com/Databricks-BR/tax_lakehouse/main/datasets/NFe_XML/NFe_001.xml"), tmpFile)
 
 # COMMAND ----------
 
-import re
-
-filename = "nfe.xml"
-username = spark.sql("SELECT current_user()").first()[0]
-clean_username = re.sub("[^a-zA-Z0-9]", "_", username)
-working_dir = f"dbfs:/user/{clean_username}/db_tax"
-db_name = f"db_br_tax"
-dbutils.fs.cp('file:/tmp/nfe.xml', working_dir + '/{filename}')
-nfe_path = f"dbfs:/user/{clean_username}/db_tax/{filename}"
-
-print("NFe XML Path: " + nfe_path)
-
+# MAGIC 
+# MAGIC %python
+# MAGIC import re
+# MAGIC 
+# MAGIC filename = "nfe.xml"
+# MAGIC username = spark.sql("SELECT current_user()").first()[0]
+# MAGIC clean_username = re.sub("[^a-zA-Z0-9]", "_", username)
+# MAGIC working_dir = f"dbfs:/user/{clean_username}/db_tax"
+# MAGIC db_name = f"db_br_tax"
+# MAGIC dbutils.fs.cp('file:/tmp/nfe.xml', working_dir + '/{filename}')
+# MAGIC nfe_path = f"dbfs:/user/{clean_username}/db_tax/{filename}"
+# MAGIC 
+# MAGIC print("NFe XML Path: " + nfe_path)
 
 # COMMAND ----------
 
