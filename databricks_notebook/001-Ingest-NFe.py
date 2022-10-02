@@ -25,7 +25,7 @@
 # MAGIC import java.io.File
 # MAGIC import org.apache.commons.io.FileUtils
 # MAGIC 
-# MAGIC var tmpFile = new File("/tmp/nfe.xml")
+# MAGIC var tmpFile = new File("/tmp/tax_lakehouse/nfe.xml")
 # MAGIC 
 # MAGIC FileUtils.copyURLToFile(new URL("https://raw.githubusercontent.com/Databricks-BR/tax_lakehouse/main/datasets/NFe_XML/NFe_001.xml"), tmpFile)
 
