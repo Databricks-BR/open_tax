@@ -1,3 +1,10 @@
+
+<img src='https://raw.githubusercontent.com/Databricks-BR/tax_lakehouse/main/images/opentax_logo_red.png' width='100px'></img>
+
+# Open TAX innovation
+
+Sobre a iniciativa
+
 # TAX Lakehouse
 
 Lakehouse Tributário, para apoio gerencial aos processos fiscais, visando a melhoria contínua, identificação de falhas (_Tax Compliance_), modelos inteligentes de identificação de oportunidades (_Tax Intelligence_) e democratização das informações fiscais.
