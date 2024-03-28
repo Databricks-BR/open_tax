@@ -1,0 +1,72 @@
+tipo_tributo,nom_esfera,sigla,ind_direto_indireto,nom_imposto,cod_legislacao
+imposto,federal,II,indireto,Imposto sobre a importação de produtos estrangeiros,
+imposto,federal,IE,indireto,Imposto sobre a exportação de produtos nacionais ou nacionalizados,
+imposto,federal,IR,direto,Imposto sobre a renda e proventos de qualquer natureza,
+imposto,federal,IPI,indireto,Imposto sobre Produtos Industrializados,
+imposto,federal,IOF,indireto,"Imposto sobre Operações de Crédito, Câmbio e Seguro ou relativas a Títulos ou Valores Mobiliários",
+imposto,federal,ITR,direto,Imposto Territorial Rural,
+imposto,estadual,ICMS,indireto,"Imposto sobre operações relativas à Circulação de Mercadorias e prestação de Serviços de transporte interestadual, intermunicipal e de comunicação",
+imposto,estadual,IPVA,direto,Imposto sobre Propriedade de Veículos Automotores,
+imposto,estadual,ITCMd,direto,Imposto sobre Transmissões Causa Mortis e Doações de Qualquer Bem ou Direito,
+imposto,municipal,IPTU,direto,Imposto sobre a Propriedade predial e Territorial Urbana,
+imposto,municipal,ITBI,direto,Imposto sobre Transmissão inter vivos de Bens e Imóveis e de direitos reais a eles relativos ,
+imposto,municipal,ISS,indireto,Impostos sobre Serviços de Qualquer Natureza,
+taxa,federal,,,Taxa de Autorização do Trabalho Estrangeiro,
+taxa,federal,,,Taxa de Avaliação in loco das Instituições de Educação e Cursos de Graduação,lei 10.870/2004
+taxa,federal,,,"Taxa de Classificação, Inspeção e Fiscalização de produtos animais e vegetais ou de consumo nas atividades agropecuárias",decreto-lei 1.899/1981 
+taxa,municipal,,,Taxa de Coleta de Lixo,
+taxa,municipal,,,Taxa de Combate a Incêndios,
+taxa,municipal,,,Taxa de Conservação e Limpeza Pública,
+taxa,municipal,TCFA,,Taxa de Controle e Fiscalização Ambiental,lei 10.165/2000
+taxa,,,,Taxa de Controle e Fiscalização de Produtos Químicos ,"lei 10.357/2001, art. 16"
+taxa,,,,"Taxa de Emissão de Documentos (níveis municipais, estaduais e federais)",
+taxa,federal,,,Taxa de Fiscalização do Mercado de Valores Mobiliários da Comissão de Valores Mobiliários (CVM),lei 7.940/1989
+taxa,federal,TFF,,Taxa de Fiscalização de Funcionamento,
+taxa,federal,TFI,,Taxa de Fiscalização de Instalações (TFI) da Agência Nacional de Telecomunicações (Fistel),"leis 5.070/1966 e 9.742/1997, Resolução n° 255/2001 da Anatel"
+taxa,,,,Taxa de Fiscalização de Vigilância Sanitária,"lei 9.782/1999, art. 23"
+taxa,,TFPC,,Taxa de Fiscalização dos Produtos Controlados pelo Exército Brasileiro,lei 10.834/2003
+taxa,,TAFIC,,Taxa de Fiscalização e Controle da Previdência Complementar,
+taxa,,,,Taxa de Licenciamento Anual de Veículo,
+taxa,,,,Taxa de Licenciamento para Funcionamento e Alvará Municipal,
+taxa,,,,Taxa de Marinha - Laudêmio,
+taxa,,,,Taxa de Pesquisa Mineral ou Taxa Anual por Hectare,"Medida Provisória n° 790, que alterou o art. 20, inciso II, Decreto-lei n° 227/67 (Código de Mineração); Portaria Ministerial 503/1999"
+taxa,,TFAM,,Taxa de Fiscalização de Atividades Minerais,"Medida Provisória n° 791, art. 24"
+taxa,,TSA,,Taxa de Serviços Administrativos – Zona Franca de Manaus,lei 9960/2000
+taxa,,,,Taxa de Serviços Metrológicos,"lei 9933/1999, art. 11"
+taxa,,CNP,,Taxas ao Conselho Nacional de Petróleo,
+taxa,,,,"Taxas de Outorgas (Radiodifusão, Telecomunicações, Transporte Rodoviário e Ferroviário, etc.)",
+taxa,,,,Taxas de Saúde Suplementar (ANS),"lei 9.961/2000, art. 18"
+taxa,,,,Taxa de Utilização do SISCOMEX,
+taxa,,,,Taxa de Utilização do MERCANTE,decreto 6.756/2009
+taxa,,AFRMM,,Taxa Adicional ao Frete para a Renovação da Marinha Mercante,
+taxa,,,,Taxas do Registro do Comércio (Juntas Comerciais),
+taxa,,CADE,,Taxa Processual Conselho Administrativo de Defesa Econômica (CADE),lei 9.718/1998
+contribuicao,Contribuições sobre o faturamento ou sobre o lucro,COFINS,,Contribuição Social para o Financiamento da Seguridade Social,
+contribuicao,Contribuições sobre o faturamento ou sobre o lucro,CSLL,,Contribuição Social sobre o Lucro Líquido,
+contribuicao,Contribuições sobre o faturamento ou sobre o lucro,PIS/PASEP,,PIS/PASEP,
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Brasileiro de Apoio às Micro e Pequenas Empresas (SEBRAE) ,lei 8.029/1990
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Nacional de Aprendizagem Comercial (SENAC) ,lei 8.621/1946
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Nacional de Aprendizagem do Transporte (SENAT),lei 8.706/1993
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Nacional de Aprendizagem Industrial (SENAI),lei 4.048/1942
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Nacional de Aprendizagem Rural (SENAR),lei 8.315/1991
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Nacional de Aprendizagem do Cooperativismo (SESCOOP),
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Social da Indústria (SESI),lei 9.403/1946
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Social do Comércio (SESC),lei 9.853/1946
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Social do Cooperativismo (SESCOOP)[2],
+contribuicao,Contribuições para o Sistema S,,,Contribuição ao Serviço Social do Transporte (SEST),lei 8.706/1993
+contribuicao,,,,"Contribuições aos Órgãos de Fiscalização Profissional (OAB, CFC, CREA, CORE, CRQ, etc)",
+contribuicao,,,,Contribuição à Direção de Portos e Costas (DPC),lei 5.461/1968
+contribuicao,,,,Contribuição ao Fundo Nacional de Desenvolvimento Científico e Tecnológico (FNDCT),lei 10.168/2000
+contribuicao,,,,"Contribuição ao Fundo Nacional de Desenvolvimento da Educação (FNDE), também chamado ""Salário Educação""",
+contribuicao,,,,Contribuição ao Funrural,
+contribuicao,,,,Contribuição ao Instituto Nacional de Colonização e Reforma Agrária (INCRA),lei 2.613/1955
+contribuicao,,SAT,,Contribuição ao Seguro Acidente de Trabalho,
+contribuicao,,,,Contribuição Confederativa Laboral (dos empregados),
+contribuicao,,,,Contribuição Confederativa Patronal (das empresas),
+contribuicao,,CPP,,Contribuição Previdenciária Patronal,
+contribuicao,,CIDE,,Contribuição de Intervenção do Domínio Econômico ,lei 10.336/2001
+contribuicao,,,,Contribuição para Custeio do Serviço de Iluminação Pública,Emenda Constitucional 39/2002
+contribuicao,,CONDECINE,,Contribuição para o Desenvolvimento da Indústria Cinematográfica Nacional ,"MP 2228-1/2001, art. 32 e lei 10.454/2002"
+contribuicao,,,,Contribuição Sindical Laboral ,
+contribuicao,,,,Contribuição Sindical Patronal ,
+contribuicao,,,,Contribuição Social Adicional para Reposição das Perdas Inflacionárias do FGTS,lei complementar 110/2001
