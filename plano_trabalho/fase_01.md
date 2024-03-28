@@ -62,6 +62,7 @@
 | ? |  PySPED	|https://pypi.org/project/python-sped/ | avaliar |
 | ? |  PySPED	| https://github.com/aricaldeira/PySPED/tree/python3 | avaliar |
 
+
 </br></br>
 ## Documentações de Apoio
 
@@ -73,6 +74,8 @@
 | SPED |	Doc Governo | 	https://portal.fazenda.sp.gov.br/servicos/sped/Paginas/Sobre.aspx |
 | SPED |	Exemplo SPED	 | http://sped.rfb.gov.br/pasta/show/1606 |
 | SPED | Artigo Medium Fugimura	| https://fugimura.medium.com/quebra-de-speds-com-python-79d9648b3772 |
+| NFe	| guia | https://www.smartdocx.com.br/blog/guia-nota-fiscal-eletronica |
+| NFe	| blog | https://nfe.io/blog/nota-fiscal/como-conseguir-arquivo-xml-nota-fiscal |
 
 </br></br>
 ## LINKS técnicos 
@@ -83,6 +86,7 @@
 | XML | python | https://awari.com.br/xml-aprenda-a-ler-e-manipular-arquivos-xml-com-python |
 | XSD | databricks | https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml#xsd-support |
 | XML | databricks | https://learn.microsoft.com/en-us/azure/databricks/query/formats/xml |
+| XML | xlm schema	| https://pypi.org/project/xmlschema |
 
 
 </br></br></br></br>
