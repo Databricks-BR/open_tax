@@ -86,6 +86,7 @@
 | SPED |	Doc Governo | 	https://portal.fazenda.sp.gov.br/servicos/sped/Paginas/Sobre.aspx |
 | SPED |	Exemplo SPED	 | http://sped.rfb.gov.br/pasta/show/1606 |
 | SPED | Artigo Medium Fugimura	| https://fugimura.medium.com/quebra-de-speds-com-python-79d9648b3772 |
+| EFD Contribuições | Layout Blocos | https://documentacao.senior.com.br/goup/5.10.2/menu_controladoria/sped/contribuicoes-pis-cofins/lucro-real/detalhamento-registros.htm |
 | NFe	| guia | https://www.smartdocx.com.br/blog/guia-nota-fiscal-eletronica |
 | NFe	| blog | https://nfe.io/blog/nota-fiscal/como-conseguir-arquivo-xml-nota-fiscal |
 
