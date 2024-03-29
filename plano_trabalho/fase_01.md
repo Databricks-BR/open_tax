@@ -13,7 +13,7 @@
 
 | Atividade | Data Alvo | Progresso |
 | -- | -- | --: |
-| 1) Levantamento de materiais públicos - GitHub | 30/03/2024 | 50% |
+| 1) Levantamento de materiais públicos - GitHub | 30/03/2024 | 60% |
 | 2) Levantamento de códigos-fonte dos colaboradores | 20/04/2024 | 0% |
 | 3) Levantamento de base de dados para teste | 20/04/2024 | 0% |
 | 4) Organização do material levantado | 30/04/2024 | 0% |
@@ -70,9 +70,9 @@
 | ruim | NFe | https://github.com/marinho/PyNFe | codigo pra criação da NFe |
 | ruim |  NFe | https://github.com/TadaSoftware/PyNFe  | codigo pra criação da NFe |
 | OK |  NFe | https://github.com/akretion/nfelib | parece util |
-| OK |  NFe | https://github.com/3bears-data/ler-xml-nfe-python/blob/main/main.py | parece util - tem layout |
-| ? |  PySPED	|https://pypi.org/project/python-sped/ | avaliar |
-| ? |  PySPED	| https://github.com/aricaldeira/PySPED/tree/python3 | avaliar |
+| OK |  **NFe** | https://github.com/3bears-data/ler-xml-nfe-python/blob/main/main.py | parece util - tem layout |
+| ruim |  PySPED	|https://pypi.org/project/python-sped/ | codigo para cricao SPED |
+| ruim |  PySPED	| https://github.com/aricaldeira/PySPED/tree/python3 | cod para criacao SPED |
 
 
 </br></br>
@@ -85,8 +85,8 @@
 | SPED |	Doc Governo | 	http://sped.rfb.gov.br/pasta/show/1492 |
 | SPED |	Doc Governo | 	https://portal.fazenda.sp.gov.br/servicos/sped/Paginas/Sobre.aspx |
 | SPED |	Exemplo SPED	 | http://sped.rfb.gov.br/pasta/show/1606 |
-| SPED | Artigo Medium Fugimura	| https://fugimura.medium.com/quebra-de-speds-com-python-79d9648b3772 |
-| SPED | Video com excel | https://www.youtube.com/watch?v=eNSXitKONhc |
+| SPED | **Artigo Medium Fugimura**	| https://fugimura.medium.com/quebra-de-speds-com-python-79d9648b3772 |
+| SPED | **Video com excel** | https://www.youtube.com/watch?v=eNSXitKONhc |
 | EFD Contribuições | Layout Blocos | https://documentacao.senior.com.br/goup/5.10.2/menu_controladoria/sped/contribuicoes-pis-cofins/lucro-real/detalhamento-registros.htm |
 | NFe	| guia | https://www.smartdocx.com.br/blog/guia-nota-fiscal-eletronica |
 | NFe	| blog | https://nfe.io/blog/nota-fiscal/como-conseguir-arquivo-xml-nota-fiscal |
@@ -96,10 +96,11 @@
 
 | Item | Descrição | URL |
 | -- | -- | -- |
+| XML | **Databricks** | https://docs.databricks.com/en/query/formats/xml.html |
 | XML | spark read | https://medium.com/@uzzaman.ahmed/working-with-xml-files-in-pyspark-reading-and-writing-data-d5e570c913de |
 | XML | python | https://awari.com.br/xml-aprenda-a-ler-e-manipular-arquivos-xml-com-python |
-| XSD | databricks | https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml#xsd-support |
-| XML | databricks | https://learn.microsoft.com/en-us/azure/databricks/query/formats/xml |
+| XSD | Databricks | https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml#xsd-support |
+| XML | Databricks | https://learn.microsoft.com/en-us/azure/databricks/query/formats/xml |
 | XML | xlm schema	| https://pypi.org/project/xmlschema |
 
 
