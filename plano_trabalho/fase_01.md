@@ -26,17 +26,29 @@
 
 | Pri. | Fonte | Descrição |
 | -- | -- | -- |
-| 1 | NF-e	| Nota Fiscal Eletrônica |	
-| 2 | NFS-e	| Nota Fiscal de Serviços Eletrônica| 
-| 2 | CT-e	| Conhecimento de Transporte Eletrônico para Outros Serviços |
-| 2 | ECD	| Escrituração Contábil Digital |
+| 1 | NF-e	| Nota Fiscal Eletrônica (XML) |	
+| 2 | ECD	| SPED CONTÁBIL -Escrituração Contábil Digital |
 | 2 | ECF	| Escrituração Contábil Fiscal |
-| 2 | EFD | Contribuições	Escrituração Fiscal Digital - PIS/COFINS |
+| 2 | EFD	| SPED Fiscal (incluindo registros da NFCOM) |
+| 2 | EFD-Contribuições | Contribuições	Escrituração Fiscal Digital - PIS/COFINS |
 | 2 | EFD-Reinf	| Escrituração Fiscal Digital de Retenções e Outras Informações Fiscais |
 | 3 | CT-e	| Conhecimento de Transporte Eletrônico	 |
-| 8 | NFC-e	| Nota Fiscal de Consumidor Eletrônica |
 | 9 | MDF-e	| Manifesto Eletrônico de Documentos Fiscais |
-| 9 | CC-e	| Carta de Correção Eletrônica |
+| 9 | DCTF | Declaração de Débitos e Créditos Tributários Federais |
+| 9 | DIRF | Declaração do Imposto de Renda Retido na Fonte |
+| 9 | PERDCOMP | Pedido de Restituição e Declaração de Compensação |
+| 9 | Convênio ICMS 115   |  Telecom e Energia |
+| 9 | Obrigações Estaduais de ICMS  | ??? |
+| 9 | Convênio 201  | x |
+| 9 | Relatório de DARF  | extraído do site do eCAC  |
+| 9 | ADRC-ST  | Arquivo Digital da Recuperação, do Ressarcimento e da Complementação do ICMS-ST |
+| 9 | CAT 42  | Ressarcimento de Substituição Tributária do ICMS |
+| 9 | Convênio 126  | concessão de regime especial ICMS para Telecom |
+| 9 | Obrigações municipais  |  ??? |
+| 9 | Selic  | Sistema Especial de Liquidação e de Custódia |
+| 9 | GIA | Guia de Informação e Apuração do ICMS |
+| 9 | E-social  | encargos sociais |
+
 
 ### Tabelas Auxiliares de Tipificação (Códigos)
 
