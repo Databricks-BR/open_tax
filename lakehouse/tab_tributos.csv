@@ -1,4 +1,4 @@
-tipo_tributo,nom_esfera,sigla,ind_direto_indireto,nom_imposto,cod_legislacao
+tipo_tributo,nom_esfera,sigla_tributo,ind_direto_indireto,nom_tributo,cod_legislacao
 imposto,federal,II,indireto,Imposto sobre a importação de produtos estrangeiros,
 imposto,federal,IE,indireto,Imposto sobre a exportação de produtos nacionais ou nacionalizados,
 imposto,federal,IR,direto,Imposto sobre a renda e proventos de qualquer natureza,
