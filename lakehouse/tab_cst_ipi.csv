@@ -1,0 +1,15 @@
+cod_cst_ipi,desc_cst_ipi
+0,Entrada com recuperação de crédito
+1,Entrada tributada com alíquota zero
+2,Entrada isenta
+3,Entrada não-tributada
+4,Entrada imune
+5,Entrada com suspensão
+49,Outras entradas
+50,Saída tributada
+51,Saída tributada com alíquota zero
+52,Saída isenta
+53,Saída não-tributada
+54,Saída imune
+55,Saída com suspensão
+99,Outras saídas
