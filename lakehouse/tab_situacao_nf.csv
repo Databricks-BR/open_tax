@@ -1,0 +1,10 @@
+cod_situacao_nf,desc_situacao_nf
+0,Documento regular
+1,Documento regular extemporâneo
+2,Documento cancelado
+3,Documento cancelado extemporâneo
+4,NFe ou CT-e denegada
+5,NFe ou CT-e Numeração inutilizada
+6,Documento Fiscal Complementar
+7,Documento Fiscal Complementar extemporâneo
+8,Documento Fiscal emitido com base em Regime Especial ou Norma Específica
