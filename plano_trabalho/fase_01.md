@@ -92,6 +92,7 @@
 | NFe	| blog | https://nfe.io/blog/nota-fiscal/como-conseguir-arquivo-xml-nota-fiscal |
 | EFD Contrib | FAQ | https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/ecf/perguntas-e-respostas-pessoa-juridica-2021-arquivos/capitulo-xxvii-efd-contribuicoes-2021.pdf |
 | EFD Contrib | FAQ | https://suporte.dominioatendimento.com/central/faces/solucao.html?codigo=5452 |
+| EFD Contrib | FAQ | https://home.radinfo.com.br/efd-contribuicoes-perguntas-e-respostas-sesconsp |
 | EFD Contrib | Erros Freq | https://www.crcsc.org.br/noticia/view/5963 |
 | EFD Contrib | Sobre | https://www.rotinafiscal.com.br/tributos-e-declaracoes/federal/efd-contribui%C3%A7%C3%B5es |
 | EFD Contrib | Cruzamentos | https://blog.taxceladdins.com.br/efd-contribuicoes-praticas-e-cruzamentos |
@@ -109,6 +110,7 @@
 | XSD | Databricks | https://learn.microsoft.com/pt-br/azure/databricks/data/data-sources/xml#xsd-support |
 | XML | Databricks | https://learn.microsoft.com/en-us/azure/databricks/query/formats/xml |
 | XML | xlm schema	| https://pypi.org/project/xmlschema |
+| SELIC | github | https://github.com/andreluizjaques/Taxas_Selic_CDI_Ibov/blob/main/Gr%C3%A1ficos%20(Selic%2C%20CDI%20e%20Ibov).ipynb |
 
 
 </br></br></br></br>
