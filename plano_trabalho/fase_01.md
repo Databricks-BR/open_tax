@@ -90,6 +90,13 @@
 | EFD Contribuições | Layout Blocos | https://documentacao.senior.com.br/goup/5.10.2/menu_controladoria/sped/contribuicoes-pis-cofins/lucro-real/detalhamento-registros.htm |
 | NFe	| guia | https://www.smartdocx.com.br/blog/guia-nota-fiscal-eletronica |
 | NFe	| blog | https://nfe.io/blog/nota-fiscal/como-conseguir-arquivo-xml-nota-fiscal |
+| EFD Contrib | FAQ | https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/declaracoes-e-demonstrativos/ecf/perguntas-e-respostas-pessoa-juridica-2021-arquivos/capitulo-xxvii-efd-contribuicoes-2021.pdf |
+| EFD Contrib | FAQ | https://suporte.dominioatendimento.com/central/faces/solucao.html?codigo=5452 |
+| EFD Contrib | Erros Freq | https://www.crcsc.org.br/noticia/view/5963 |
+| EFD Contrib | Sobre | https://www.rotinafiscal.com.br/tributos-e-declaracoes/federal/efd-contribui%C3%A7%C3%B5es |
+| EFD Contrib | Cruzamentos | https://blog.taxceladdins.com.br/efd-contribuicoes-praticas-e-cruzamentos |
+| EFD Contrib | blog | https://makrosystem.com.br/blog/o-efd-contribuicoes |
+| EFD Contrib | Governo | http://sped.rfb.gov.br/pagina/show/284 |
 
 </br></br>
 ## LINKS técnicos 
