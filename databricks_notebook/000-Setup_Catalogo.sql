@@ -11,7 +11,7 @@
 -- MAGIC
 -- MAGIC | versão | data | autor | e-mail | alterações |
 -- MAGIC | --- | --- | --- | --- | --- |
--- MAGIC | 1.0 | 03-ABR-2024 | Luis Assunção | luis.assuncao@databricks.com | Primeira versão  |
+-- MAGIC | 1.0 | 11-ABR-2024 | Luis Assunção | luis.assuncao@databricks.com | Primeira versão  |
 
 -- COMMAND ----------
 
