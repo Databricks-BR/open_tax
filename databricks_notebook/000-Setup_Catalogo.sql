@@ -46,16 +46,16 @@ COMMENT ON CATALOG tax IS 'Lakehouse Tributário, para apoio gerencial aos proce
 USE CATALOG tax;
 
 CREATE SCHEMA landing;
-COMMENT ON SCHEMA landing IS 'Camada LANDING armazena os arquivos ORIGINAIS no seu formato nativo (CSV, XML, JSON)';
+COMMENT ON SCHEMA landing IS 'Camada LANDING (staging) armazena os arquivos ORIGINAIS no seu formato nativo (CSV, XML, JSON)';
 
 CREATE SCHEMA bronze;
-COMMENT ON SCHEMA bronze IS 'Camada BRONZE armazena todos os dados BRUTOS de sistemas de origem, procurando manter o layout original também, permite pesquisa no dado original, linhagem de dados, auditoria e reprocessamento conforme necessário, sem recarregar os dados do sistema de origem.(Ex. Notas Fiscais XML sem tratamento)';
+COMMENT ON SCHEMA bronze IS 'Camada BRONZE (raw) armazena todos os dados BRUTOS de sistemas de origem, procurando manter o layout original também, permite pesquisa no dado original, linhagem de dados, auditoria e reprocessamento conforme necessário, sem recarregar os dados do sistema de origem.(Ex. Notas Fiscais XML sem tratamento)';
 
 CREATE SCHEMA silver;
-COMMENT ON SCHEMA silver IS 'Camada SILVER armazena os dados já trabalhados, tratados e enriquecidos, originados na camada Bronze.  As entidades (tabelas) armazenadas nessa camada apoiam as equipe de dados na construção de visões, cruzamentos de dados, análise exploratória em uma granularidade de dados detalhada. Dados nessa camada podem ser utilizados nos Modelos de Inteligência Artificial.';
+COMMENT ON SCHEMA silver IS 'Camada SILVER (curated) armazena os dados já trabalhados, tratados e enriquecidos, originados na camada Bronze.  As entidades (tabelas) armazenadas nessa camada apoiam as equipe de dados na construção de visões, cruzamentos de dados, análise exploratória em uma granularidade de dados detalhada. Dados nessa camada podem ser utilizados nos Modelos de Inteligência Artificial.';
 
 CREATE SCHEMA gold;
-COMMENT ON SCHEMA gold IS 'Camada GOLD armazena dados resultantes de cruzamentos e Modelos de IA. Normamelte são dados preparados para consumo das áreas de negócio, através de soluções de Visualização de Dados e Painéis. Geralmente são agregados, e por contexto do negócio. (Ex. Resultado da análise de outliers, potenciais erros de tributação, Indicadores Tributários, Cruzamentos e Análises Fiscais).';
+COMMENT ON SCHEMA gold IS 'Camada GOLD (business) armazena dados resultantes de cruzamentos e Modelos de IA. Normamelte são dados preparados para consumo das áreas de negócio, através de soluções de Visualização de Dados e Painéis. Geralmente são agregados, e por contexto do negócio. (Ex. Resultado da análise de outliers, potenciais erros de tributação, Indicadores Tributários, Cruzamentos e Análises Fiscais).';
 
 CREATE SCHEMA metadado;
 COMMENT ON SCHEMA metadado IS 'Camada de armazenamento do LAYOUT de Arquivos de Entrada (Notas Fiscais XML, Blocos do SPED, mapeamento de Documentos Fiscais, Glossários de Termos).';
