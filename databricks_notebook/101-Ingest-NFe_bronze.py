@@ -30,6 +30,12 @@
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC <img src="https://raw.githubusercontent.com/Databricks-BR/open_tax/main/images/etl_nfe.png" width="900px">
+# MAGIC
+
+# COMMAND ----------
+
+# MAGIC %md
 # MAGIC ### Parâmetros
 # MAGIC | Parâmetro | descrição | 
 # MAGIC | --- | --- | 
