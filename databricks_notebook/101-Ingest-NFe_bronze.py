@@ -101,5 +101,8 @@ query.awaitTermination()
 # DBTITLE 1,Dicionariza a Tabela (executar apenas 1 vez)
 # MAGIC %sql
 # MAGIC
-# MAGIC A tabela 'nfe_xml' contém informações sobre arquivos XML da NFe (Nota Fiscal Eletrônica). Inclui detalhes como versão, estrutura de vários componentes e metadados sobre o arquivo. Esses dados podem ser úteis para rastrear o processamento da NF-e, monitorar a qualidade dos arquivos e garantir a conformidade com as regulamentações. Ele também pode ajudar na identificação e resolução de problemas com arquivos XML da NFe, melhorando a eficiência geral e reduzindo erros no pipeline de processamento da NFe.
+# MAGIC USE catalog tax;
+# MAGIC USE bronze;
+# MAGIC COMMENT ON TABLE nfe_xml IS 'NFe (Nota Fiscal Eletrônica) no seu formato semi-estruturado (hierárquico). Inclui detalhes como versão, estrutura de vários componentes e metadados sobre o arquivo. Esses dados podem ser úteis para rastrear o processamento da NF-e, monitorar a qualidade dos arquivos e garantir a conformidade com as regulamentações. Ele também pode ajudar na identificação e resolução de problemas com arquivos XML da NFe, melhorando a eficiência geral e reduzindo erros no pipeline de processamento da NFe.';
+# MAGIC
 # MAGIC

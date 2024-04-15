@@ -15,8 +15,7 @@
 # MAGIC | **Camada** | Landing to Bronze |
 # MAGIC | **Databricks Run Time** | DBR 14.3 LTS |
 # MAGIC | **Linguagem** | Python, Pyspark |
-# MAGIC | **Referência** | [Leitura de formatos XML](https://docs.databricks.com/en/query/formats/xml.html) |
-# MAGIC | **Framework de Carga** | [AUTOLOADER - spark.stream pra XML](https://docs.databricks.com/en/query/formats/xml.html#read-and-write-xml) |
+# MAGIC | **Framework de Carga** | [AUTOLOADER - spark.stream](https://docs.databricks.com/en/ingestion/auto-loader/patterns.html#load-csv-files-without-headers) |
 
 # COMMAND ----------
 
@@ -39,8 +38,8 @@
 # MAGIC | Parâmetro | descrição | 
 # MAGIC | --- | --- | 
 # MAGIC | rootpath | diretório raiz onde serão armazenados os arquivos de schema e checkpoint |
-# MAGIC | inputPath | path do LANDING onde estão os arquivos XML (dbfs:/Volumes...) |
-# MAGIC | schemaPath | path+arquivo pra controle de atualização do layout do XML |
+# MAGIC | inputPath | path do LANDING onde estão os arquivos (dbfs:/Volumes...) |
+# MAGIC | schemaPath | path+arquivo pra controle de atualização do layout |
 # MAGIC | checkPointPath | diretório de controle pra marcação dos arquivos já processados |
 # MAGIC | delta_table | tabela DELTA de destino na camada BRONZE | 
 
