@@ -13,10 +13,10 @@
 
 | Atividade | Data Alvo | Progresso |
 | -- | -- | --: |
-| 1) Levantamento de materiais públicos - GitHub | 30/03/2024 | 60% |
-| 2) Levantamento de códigos-fonte dos colaboradores | 20/04/2024 | 0% |
-| 3) Levantamento de base de dados para teste | 20/04/2024 | 0% |
-| 4) Organização do material levantado | 30/04/2024 | 0% |
+| 1) Levantamento de materiais públicos - GitHub | 30/03/2024 | 100% |
+| 2) Levantamento de códigos-fonte dos colaboradores | 20/04/2024 | 10% |
+| 3) Levantamento de base de dados para teste | 20/04/2024 | 10% |
+| 4) Organização do material levantado | 30/04/2024 | 50% |
 
 </br></br>
 
@@ -24,42 +24,42 @@
 
 ### Documentos Digitais
 
-| Pri. | Fonte | Descrição |
-| -- | -- | -- |
-| 1 | NF-e	| Nota Fiscal Eletrônica (XML) |	
-| 2 | ECD	| SPED CONTÁBIL -Escrituração Contábil Digital |
-| 2 | ECF	| Escrituração Contábil Fiscal |
-| 2 | EFD	| SPED Fiscal (incluindo registros da NFCOM) |
-| 2 | EFD-Contribuições | Contribuições	Escrituração Fiscal Digital - PIS/COFINS |
-| 2 | EFD-Reinf	| Escrituração Fiscal Digital de Retenções e Outras Informações Fiscais |
-| 3 | CT-e	| Conhecimento de Transporte Eletrônico	 |
-| 9 | MDF-e	| Manifesto Eletrônico de Documentos Fiscais |
-| 9 | DCTF | Declaração de Débitos e Créditos Tributários Federais |
-| 9 | DIRF | Declaração do Imposto de Renda Retido na Fonte |
-| 9 | PERDCOMP | Pedido de Restituição e Declaração de Compensação |
-| 9 | Convênio ICMS 115   |  Telecom e Energia |
-| 9 | Obrigações Estaduais de ICMS  | ??? |
-| 9 | Convênio 201  | x |
-| 9 | Relatório de DARF  | extraído do site do eCAC  |
-| 9 | ADRC-ST  | Arquivo Digital da Recuperação, do Ressarcimento e da Complementação do ICMS-ST |
-| 9 | CAT 42  | Ressarcimento de Substituição Tributária do ICMS |
-| 9 | Convênio 126  | concessão de regime especial ICMS para Telecom |
-| 9 | Obrigações municipais  |  ??? |
-| 9 | Selic  | Sistema Especial de Liquidação e de Custódia |
-| 9 | GIA | Guia de Informação e Apuração do ICMS |
-| 9 | E-social  | encargos sociais |
+| Pri. | Fonte | Descrição | Progresso |
+| -- | -- | -- | --: |
+| 1 | NF-e	| Nota Fiscal Eletrônica (XML) |	 80% |
+| 2 | EFD-Contribuições | Contribuições	Escrituração Fiscal Digital - PIS/COFINS |  30% |
+| 2 | ECD	| SPED CONTÁBIL -Escrituração Contábil Digital | 0% |
+| 2 | ECF	| Escrituração Contábil Fiscal |  0% |
+| 2 | EFD	| SPED Fiscal (incluindo registros da NFCOM) |  0% |
+| 2 | EFD-Reinf	| Escrituração Fiscal Digital de Retenções e Outras Informações Fiscais |  0% |
+| 3 | CT-e	| Conhecimento de Transporte Eletrônico	 (???) |  0% |
+| 9 | MDF-e	| Manifesto Eletrônico de Documentos Fiscais  (???) |  0% |
+| 9 | DCTF | Declaração de Débitos e Créditos Tributários Federais |  0% |
+| 9 | DIRF | Declaração do Imposto de Renda Retido na Fonte |  0% |
+| 9 | PERDCOMP | Pedido de Restituição e Declaração de Compensação |  0% |
+| 9 | Convênio ICMS 115   |  Telecom e Energia (???) |  0% |
+| 9 | Obrigações Estaduais de ICMS  | ??? |  0% |
+| 9 | Convênio 201  | ??? |  0% |
+| 9 | Relatório de DARF  | extraído do site do eCAC  |  0% |
+| 9 | ADRC-ST  | Arquivo Digital da Recuperação, do Ressarcimento e da Complementação do ICMS-ST |  0% |
+| 9 | CAT 42  | Ressarcimento de Substituição Tributária do ICMS |  0% |
+| 9 | Convênio 126  | concessão de regime especial ICMS para Telecom (???) |  0% |
+| 9 | Obrigações municipais  |  ??? |  0% |
+| 9 | Selic  | Sistema Especial de Liquidação e de Custódia  |  0% |
+| 9 | GIA | Guia de Informação e Apuração do ICMS (???) |  0% |
+| 9 | E-social  | encargos sociais (???) |  0% |
 
 
 ### Tabelas Auxiliares de Tipificação (Códigos)
 
-| Pri. | Fonte | Descrição |
-| -- | -- | -- |
-| 1 | CFOP	| Código Fiscal de Operações e Prestações  |
-| 1 | NCM	| Nomenclatura Comum do Mercosul  |
-| 2 | CNAE	| Classificação Nacional de Atividades Econômicas |
-| 3 | CSOSN | Código de Situação da Operação no Simples Nacional |
-| 3 | CST | Código de Situação Tributária |
-| 3 | CEST	| Código Especificador da Substituição Tributária |
+| Pri. | Fonte | Descrição | Progresso |
+| -- | -- | -- | --: |
+| 1 | CFOP	| Código Fiscal de Operações e Prestações  |  100% |
+| 1 | NCM	| Nomenclatura Comum do Mercosul  | 100% |
+| 2 | CNAE	| Classificação Nacional de Atividades Econômicas | 100% |
+| 3 | CSOSN | Código de Situação da Operação no Simples Nacional (???) |  0% |
+| 3 | CST | Código de Situação Tributária | 100% |
+| 3 | CEST	| Código Especificador da Substituição Tributária | 0% |
  
 </br></br>
 
