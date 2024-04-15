@@ -1,0 +1,995 @@
+linha,nivel1,nivel2,nivel3,id,campo_original,campo_composto,campo_destino,descricao,elemento,pai_hierarquia,tipificacao,ocorrencia,tamanho,Observação
+0.00,infNFe,,,0,NFe,,,TAG raiz da NF-e,G,xx,xx,1-1,xxx,TAG raiz da NF-e
+1.00,infNFe,,,A01,infNFe,,,Informações da NF-e,G,Raiz,,1-1,,Grupo que contém as informações da NF-e
+2.00,infNFe,,,A02,versao,versao,versao_layout,Versão do leiaute,A,A01,C,1-1,1 - 4,Versão do leiaute (4.00)
+3.00,infNFe,,,A03,Id,Id,id_nfe,Identificador da TAG a ser assinada,ID,A01,C,1-1,47,"Informar a Chave de Acesso precedida do literal ‘NFe’,"
+4.00,infNFe,,,A04,pk_nItem,pk_nItem,pk_nItem,"Regra para que a numeração do item de detalhe da NF-e
+seja única.",RC,,,1-1,,"Regra de validação do item de detalhe da NF-e, campo de
+controle do Schema XML, o contribuinte não deve se preocupar com o preenchimento deste campo."
+5.00,infNFe,ide,,B01,ide,,,Informações de identificação da NF-e,G,A01,,1-1,,
+6.00,infNFe,ide,,B02,cUF,ide.cUF,num_uf,Código da UF do emitente do Documento Fiscal,E,B01,N,1-1,2,"Código da UF do emitente do Documento Fiscal.  Utilizar a Tabela do IBGE de código de unidades da federação (Seção
+8.1 do MOC – Visão Geral, Tabela de UF, Município e País)."
+7.00,infNFe,ide,,B03,cNF,ide.cNF,cod_chave_acesso,Código Numérico que compõe a Chave de Acesso,E,B01,N,1-1,8,"Código numérico que compõe a Chave de Acesso. Número aleatório gerado pelo emitente para cada NF-e para evitar
+acessos indevidos da NF-e. (v2.0)"
+8.00,infNFe,ide,,B04,natOp,ide.natOp,cod_nat_operacao,Descrição da Natureza da Operação,E,B01,C,1-1,1 - 60,"Informar a natureza da operação de que decorrer a saída ou a entrada, tais como: venda, compra, transferência, devolução, importação, consignação, remessa (para fins de demonstração, de industrialização ou outra), conforme previsto na alínea 'i',  inciso I, art. 19 do CONVÊNIO S/Nº, de
+15 de dezembro de 1970."
+9.00,infNFe,ide,,B05,indPag,ide.indPag,ind_forma_pag,Indicador da forma de pagamento,E,B01,N,1-1,1,"0=Pagamento à vista; 1=Pagamento a prazo; 2=Outros.
+(Excluído no leiaute 4.0 - NT2016.002)"
+10.00,infNFe,ide,,B06,mod,ide.mod,cod_modelo_fiscal,Código do Modelo do Documento Fiscal,E,B01,N,1-1,2,"55=NF-e emitida em substituição ao modelo 1 ou 1A; 65=NFC-e, utilizada nas operações de venda no varejo (a
+critério da UF aceitar este modelo de documento)."
+11.00,infNFe,ide,,B07,serie,ide.serie,num_serie,Série do Documento Fiscal,E,B01,N,1-1,1 - 3,"Série do Documento Fiscal, preencher com zeros na hipótese de a NF-e não possuir série. Série na faixa:
+- [000-889]:  Aplicativo do Contribuinte; Emitente=CNPJ; Assinatura pelo e-CNPJ do contribuinte (procEmi<>1,2);
+- [890-899]:  Emissão no site do Fisco (NFA-e - Avulsa); Emitente= CNPJ / CPF; Assinatura pelo e-CNPJ da SEFAZ (procEmi=1);
+- [900-909]:  Emissão no site do Fisco (NFA-e); Emitente= CNPJ; Assinatura pelo e-CNPJ da SEFAZ (procEmi=1), ou Assinatura pelo e-CNPJ do contribuinte (procEmi=2);
+- [910-919]:  Emissão no site do Fisco (NFA-e); Emitente= CPF; Assinatura pelo e-CNPJ da SEFAZ (procEmi=1), ou Assinatura pelo e-CPF do contribuinte (procEmi=2);
+- [920-969]:  Aplicativo do Contribuinte; Emitente=CPF;
+Assinatura pelo e-CPF do contribuinte (procEmi<>1,2); (Atualizado NT 2018/001)"
+12.00,infNFe,ide,,B08,nNF,ide.nNF,num_doc_fiscal,Número do Documento Fiscal,E,B01,N,1-1,1 - 9,Número do Documento Fiscal.
+13.00,infNFe,ide,,B09,dhEmi,ide.dhEmi,dt_emissao,Data e hora de emissão do Documento Fiscal,E,B01,D,1-1,,"Data e hora no formato UTC (Universal Coordinated Time):
+AAAA-MM-DDThh:mm:ssTZD"
+14.00,infNFe,ide,,B10,dhSaiEnt,ide.dhSaiEnt,dt_saida_entrada,Data e hora de Saída ou da Entrada da Mercadoria/Produto,E,B01,D,0-1,,"Data e hora no formato UTC (Universal Coordinated Time): AAAA-MM-DDThh:mm:ssTZD.
+Observação: Não informar este campo para a NFC-e."
+15.00,infNFe,ide,,B11,tpNF,ide.tpNF,cod_tipo_operacao,Tipo de Operação,E,B01,N,1-1,1,"0=Entrada;
+1=Saída"
+16.00,infNFe,ide,,B12,cMunFG,ide.cMunFG,cod_mun_fato_gerador,Código do Município de Ocorrência do Fato Gerador,E,B01,N,1-1,7,"Informar o município de ocorrência do fato gerador do ICMS. Utilizar a Tabela do IBGE (Seção 8.2  do MOC – Visão
+Geral, Tabela de UF, Município e País)"
+25.00,infNFe,ide,,B21,tpImp,ide.tpImp,cod_tipo_impressao_danfe,Formato de Impressão do DANFE,E,B01,N,1-1,1,"0=Sem geração de DANFE;
+1=DANFE normal, Retrato; 2=DANFE normal, Paisagem;
+3=DANFE Simplificado; 4=DANFE NFC-e;
+5=DANFE NFC-e em mensagem eletrônica (o envio de mensagem eletrônica pode ser feita de forma simultânea com a impressão do DANFE; usar o tpImp=5 quando esta
+for a única forma de disponibilização do DANFE)."
+26.00,infNFe,ide,,B22,tpEmis,ide.tpEmis,cod_tipo_emissao_nf,Tipo de Emissão da NF-e,E,B01,N,1-1,1,"1=Emissão normal (não em contingência); 2=Contingência FS-IA, com impressão do DANFE em Formulário de Segurança - Impressor Autônomo; 3=Contingência SCAN (Sistema de Contingência do Ambiente Nacional); *Desativado  * NT 2015/002 4=Contingência EPEC (Evento Prévio da Emissão em Contingência);
+5=Contingência FS-DA, com impressão do DANFE em Formulário de Segurança - Documento Auxiliar; 6=Contingência SVC-AN (SEFAZ Virtual de Contingência do AN);
+7=Contingência SVC-RS (SEFAZ Virtual de Contingência do RS);
+9=Contingência off-line da NFC-e;
+Observação: Para a NFC-e somente é válida a opção de contingência: 9-Contingência Off-Line e, a critério da UF,
+opção 4-Contingência EPEC. (NT 2015/002)"
+27.00,infNFe,ide,,B23,cDV,ide.cDV,num_dv_chave_acesso,Dígito Verificador da Chave de Acesso da NF-e,E,B01,N,1-1,1,"Informar o DV da Chave de Acesso da NF-e, o DV será
+calculado com a aplicação do algoritmo módulo 11 (base 2,9) da Chave de Acesso. (vide item 5.4 do MOC – Visão Geral)"
+28.00,infNFe,ide,,B24,tpAmb,ide.tpAmb,tip_ambiente,Identificação do Ambiente,E,B01,N,1-1,1,1=Produção; 2=Homologação
+29.00,infNFe,ide,,B25,finNFe,ide.finNFe,cod_finalidade_nfe,Finalidade de emissão da NF-e,E,B01,N,1-1,1,"1=NF-e normal;
+2=NF-e complementar; 3=NF-e de ajuste;
+4=Devolução de mercadoria."
+29.10,infNFe,ide,,B25a,indFinal,ide.indFinal,ind_oper_consumidor_final,Indica operação com Consumidor final,E,B01,N,1-1,1,"0=Normal;
+1=Consumidor final;"
+29.20,infNFe,ide,,B25b,indPres,ide.indPres,ind_presencao_comprador,Indicador de presença do comprador no estabelecimento comercial no momento da operação,E,B01,N,1-1,1,"0=Não se aplica (por exemplo, Nota Fiscal complementar ou de ajuste);
+1=Operação presencial;
+2=Operação não presencial, pela Internet; 3=Operação não presencial, Teleatendimento; 4=NFC-e em operação com entrega a domicílio;
+5=Operação presencial, fora do estabelecimento;  (incluído NT2016.002)
+9=Operação não presencial, outros."
+30.00,infNFe,emit,,C01,emit,,,Identificação do emitente da NF-e,G,A01,,1-1,,
+31.00,infNFe,emit,,C02,CNPJ,emit.CNPJ,emit_cnpj,CNPJ do emitente,CE,C01,N,1-1,14,"Informar o CNPJ do emitente.
+Na emissão de NF-e avulsa pelo Fisco, as informações do
+remetente serão informadas neste grupo. O CNPJ ou CPF deverão ser informados com os zeros não significativos."
+32.00,infNFe,emit,,C03,xNome,emit.xNome,emit_nome_emitente,Razão Social ou Nome do emitente,E,C01,C,1-1,2 - 60,
+33.00,infNFe,emit,,C04,xFant,emit.xFant,emit_nome_fantasia,Nome fantasia,E,C01,C,0-1,1 - 60,
+34.00,infNFe,emit,,C05,enderEmit,,,Endereço do emitente,G,C01,,1-1,,
+35.00,infNFe,emit,,C06,xLgr,emit.enderEmit.xLgr,emit_end_logradouro,Logradouro do emitente,E,C05,C,1-1,2 - 60,
+36.00,infNFe,emit,,C07,nro,emit.enderEmit.nro,emit_end_nro,Número,E,C05,C,1-1,1 - 60,
+37.00,infNFe,emit,,C08,xCpl,emit.enderEmit.xCpl,emit_end_complemento,Complemento,E,C05,C,0-1,1 - 60,
+38.00,infNFe,emit,,C09,xBairro,emit.enderEmit.xBairro,emit_end_bairro,Bairro,E,C05,C,1-1,2 - 60,
+39.00,infNFe,emit,,C10,cMun,emit.enderEmit.cMun,emit_end_cod_municipio,Código do município,E,C05,N,1-1,7,"Utilizar a Tabela do IBGE (Seção 8.2  do MOC – Visão Geral,
+Tabela de UF, Município e País)."
+40.00,infNFe,emit,,C11,xMun,emit.enderEmit.xMun,emit_end_municipio,Nome do município,E,C05,C,1-1,2 - 60,
+41.00,infNFe,emit,,C12,UF,emit.enderEmit.UF,emit_end_uf,Sigla da UF,E,C05,C,1-1,2,
+42.00,infNFe,emit,,C13,CEP,emit.enderEmit.CEP,emit_end_cep,Código do CEP,E,C05,N,1-1,8,Informar os zeros não significativos.  (NT 2011/004)
+43.00,infNFe,emit,,C14,cPais,emit.enderEmit.cPais,emit_end_cod_pais,Código do País,E,C05,N,0-1,4,1058=Brasil
+44.00,infNFe,emit,,C15,xPais,emit.enderEmit.xPais,emit_end_pais,Nome do País,E,C05,C,0-1,1 - 60,Brasil ou BRASIL
+45.00,infNFe,emit,,C16,fone,emit.fone,emit_end_fone,Telefone,E,C05,N,0-1,6 - 14,"Preencher com o Código DDD + número do telefone. Nas operações com exterior é permitido informar o código do
+país + código da localidade  + número do telefone (v2.0)"
+46.00,infNFe,emit,,C17,IE,emit.IE,emit_insc_estadual,Inscrição Estadual do Emitente,E,C01,C,1-1,2 - 14,"Informar somente os algarismos,  sem os caracteres de
+formatação (ponto, barra, hífen, etc.)."
+47.00,infNFe,emit,,C18,IEST,emit.IEST,emit_insc_estadual_st,IE do Substituto Tributário,E,C01,N,0-1,2 - 14,"IE do Substituto Tributário da UF de destino da mercadoria, quando houver a retenção do ICMS ST para a UF de
+destino."
+47.10,infNFe,emit,,C18.1,-x-,emit.-x-,,Sequência XML,G,C01,,0-1,,Grupo opcional.
+48.00,infNFe,emit,,C19,IM,emit.IM,emit_insc_municipal,Inscrição Municipal do Prestador de Serviço,E,C18.1,C,1-1,1 - 15,"Informado na emissão de NF-e conjugada, com itens de produtos sujeitos ao ICMS e itens de serviços sujeitos ao
+ISSQN."
+49.00,infNFe,emit,,C20,CNAE,emit.CNAE,cod_cnae,CNAE fiscal,E,C18.1,N,0-1,7,"Campo Opcional. Pode ser informado quando a Inscrição
+Municipal (id:C19) for informada."
+50.00,infNFe,avulsa,,D01,avulsa,,,,G,A01,,0-1,,Informações do fisco emitente (uso exclusivo do fisco)
+51.00,infNFe,avulsa,,D02,CNPJ,avulsa.CNPJ,avulsa_cnpj,CNPJ do órgão emitente,E,D01,C,1-1,14,Informar os zeros não significativos.
+52.00,infNFe,avulsa,,D03,xOrgao,avulsa.xOrgao,avulsa_orgao,Órgão emitente,E,D01,C,1-1,1 - 60,
+53.00,infNFe,avulsa,,D04,matr,avulsa.matr,avulsa_mat_agente_fisco,Matrícula do agente do Fisco,E,D01,C,1-1,1 - 60,
+54.00,infNFe,avulsa,,D05,xAgente,avulsa.xAgente,avulsa_nome_agente_fisco,Nome do agente do Fisco,E,D01,C,1-1,1 - 60,
+55.00,infNFe,avulsa,,D06,fone,avulsa.fone,avulsa_fone,Telefone,E,D01,N,0-1,6 - 14,"Preencher com Código DDD + número do telefone (v2.0)
+(NT 2011/004)"
+56.00,infNFe,avulsa,,D07,UF,avulsa.UF,avulsa_uf,Sigla da UF,E,D01,C,1-1,2,
+57.00,infNFe,avulsa,,D08,nDAR,avulsa.nDAR,avulva_doc_receita,Número do Documento de Arrecadação de Receita,E,D01,C,0-1,1- 60,(NT 2011/004)
+58.00,infNFe,avulsa,,D09,dEmi,avulsa.dEmi,avulsa_dt_emissao,Data de emissão do Documento de Arrecadação,E,D01,D,0-1,,Formato: “AAAA-MM-DD” (NT 2011/004)
+59.00,infNFe,avulsa,,D10,vDAR,avulsa.vDAR,avulsa_valor_arrecadacao,"Valor Total constante no Documento de arrecadação de
+Receita",E,D01,N,0-1,1 - 13v2,(NT 2011/004)
+60.00,infNFe,avulsa,,D11,repEmi,avulsa.repEmi,avulsa_reparticao,Repartição Fiscal emitente,E,D01,C,1-1,1 - 60,
+61.00,infNFe,avulsa,,D12,dPag,avulsa.dPag,avulsa_dt_pagamento,Data de pagamento do Documento de Arrecadação,E,D01,D,0-1,,Formato: “AAAA-MM-DD”
+62.00,infNFe,dest,,E01,dest,,,Identificação do Destinatário da NF-e,G,A01,,0-1,,Grupo Obrig.atório para a NF-e (modelo 55).
+63.00,infNFe,dest,,E02,CNPJ,dest.CNPJ,dest_cnpj,CNPJ do destinatário,CE,E01,N,1-1,14,"Informar o CNPJ ou o CPF do destinatário, preenchendo os zeros não significativos.  No caso de operação com o exterior, ou para comprador estrangeiro informar a tag
+""idEstrangeiro”."
+64.00,infNFe,dest,,E03,CPF,dest.CPF,dest_cpf,CPF do destinatário,CE,E01,N,1-1,11,
+65.00,infNFe,dest,,E04,xNome,dest.xNome,dest_nome_destinatario,Razão Social ou nome do destinatário,E,E01,C,0-1,2 - 60,"Tag Obrigatória para a NF-e (modelo 55) e opcional para a
+NFC-e."
+66.00,infNFe,dest,,E05,enderDest,,,Endereço do Destinatário da NF-e,G,E01,,0 -1,,Grupo Obrig.atório para a NF-e (modelo 55).
+67.00,infNFe,dest,,E06,xLgr,dest.xLgr,dest_end_logradouro,Logradouro,E,E05,C,1-1,2 - 60,
+68.00,infNFe,dest,,E07,nro,dest.nro,dest_end_num,Número,E,E05,C,1-1,1 - 60,
+69.00,infNFe,dest,,E08,xCpl,dest.xCpl,dest_end_complemento,Complemento,E,E05,C,0-1,1 - 60,
+70.00,infNFe,dest,,E09,xBairro,dest.xBairro,dest_end_bairro,Bairro,E,E05,C,1-1,2 - 60,
+71.00,infNFe,dest,,E10,cMun,dest.cMun,dest_end_cod_municipio,Código do município,E,E05,N,1-1,7,"Utilizar a Tabela do IBGE (Seção 8.2 do MOC – Visão Geral,
+- Tabela de UF, Município e País)."
+72.00,infNFe,dest,,E11,xMun,dest.xMun,dest_end_municipio,Nome do município,E,E05,C,1-1,2 - 60,Informar ‘EXTERIOR ‘para operações com o exterior.
+73.00,infNFe,dest,,E12,UF,dest.UF,dest_end_uf,Sigla da UF,E,E05,C,1-1,2,Informar ‘EX’ para operações com o exterior.
+74.00,infNFe,dest,,E13,CEP,dest.CEP,dest_end_cep,Código do CEP,E,E05,N,0-1,8,Informar os zeros não significativos.
+75.00,infNFe,dest,,E14,cPais,dest.cPais,dest_end_cod_pais,Código do País,E,E05,N,0-1,2 - 4,"Utilizar a Tabela do BACEN (Seção 8.3 do MOC – Visão
+Geral, Tabela de UF, Município e País)."
+76.00,infNFe,dest,,E15,xPais,dest.xPais,dest_end_pais,Nome do País,E,E05,C,0-1,2 - 60,
+77.00,infNFe,dest,,E16,fone,dest.fone,dest_end_fone,Telefone,E,E05,N,0-1,6 - 14,"Preencher com o Código DDD + número do telefone. Nas
+operações com exterior é permitido informar o código do país + código da localidade  + número do telefone (v2.0)"
+78.00,infNFe,dest,,E17,IE,dest.IE,dest_insc_estadual,Inscrição Estadual do Destinatário,E,E01,N,0-1,2 - 14,"Campo opcional. Informar somente os algarismos, sem os
+caracteres de formatação (ponto, barra, hífen, etc.)."
+79.00,infNFe,dest,,E18,ISUF,dest.ISUF,dest_insc_suframa,Inscrição na SUFRAMA,E,E01,N,0-1,8 - 9,"Obrig.atório, nas operações que se beneficiam de incentivos fiscais existentes nas áreas sob controle da SUFRAMA. A omissão desta informação impede o processamento da operação pelo Sistema de Mercadoria Nacional da SUFRAMA e a liberação da Declaração de Ingresso, prejudicando a comprovação do ingresso /
+internamento da mercadoria nestas áreas. (v2.0)"
+79.10,infNFe,dest,,E18a,IM,dest.IM,dest_insc_municipal,Inscrição Municipal do Tomador do Serviço,E,E01,C,0-1,1 - 15,"Campo opcional, pode ser informado na NF-e conjugada, com itens de produtos sujeitos ao ICMS e itens de serviços
+sujeitos ao ISSQN."
+80.00,infNFe,retirada,,F01,retirada,,,Identificação do Local de retirada,G,A01,,0-1,,"Informar somente se diferente do endereço do
+remetente."
+81.00,infNFe,retirada,,F02,CNPJ,retirada.CNPJ,retirada_cnpj,CNPJ,CE,F01,N,1-1,0 ou 14,"Informar CNPJ ou CPF. Preencher os zeros não
+significativos."
+82.00,infNFe,retirada,,F03,xLgr,retirada.xLgr,retirada_end_logradouro,Logradouro,E,F01,C,1-1,2 - 60,
+83.00,infNFe,retirada,,F04,nro,retirada.nro,retirada_end_num,Número,E,F01,C,1-1,1 - 60,
+84.00,infNFe,retirada,,F05,xCpl,retirada.xCpl,retirada_end_complemento,Complemento,E,F01,C,0-1,1 - 60,
+85.00,infNFe,retirada,,F06,xBairro,retirada.xBairro,retirada_end_bairro,Bairro,E,F01,C,1-1,2 - 60,
+86.00,infNFe,retirada,,F07,cMun,retirada.cMun,retirada_end_cod_municipio,Código do município,E,F01,N,1-1,7,"Utilizar a Tabela do IBGE (Seção 8.2 do MOC – Visão Geral, Tabela de UF, Município e País).
+Informar ‘9999999  ‘para operações com o exterior."
+87.00,infNFe,retirada,,F08,xMun,retirada.xMun,retirada_end_municipio,Nome do município,E,F01,C,1-1,2 - 60,Informar ‘EXTERIOR ‘para operações com o exterior.
+88.00,infNFe,retirada,,F09,UF,retirada.UF,retirada_end_uf,Sigla da UF,E,F01,C,1-1,2,Informar ‘EX’ para operações com o exterior.
+89.00,infNFe,entrega,,G01,entrega,,,Identificação do Local de entrega,G,A01,,0-1,,Informar somente se diferente do endereço destinatário.
+90.00,infNFe,entrega,,G02,CNPJ,entrega.CNPJ,entrega_cnpj,CNPJ,CE,G01,N,1-1,0 ou 14,"Informar CNPJ ou CPF. Preencher os zeros não
+significativos. (v2.0)"
+91.00,infNFe,entrega,,G03,xLgr,entrega.xLgr,entrega_end_logradouro,Logradouro,E,G01,C,1-1,2 - 60,
+92.00,infNFe,entrega,,G04,nro,entrega.nro,entrega_end_num,Número,E,G01,C,1-1,1 - 60,
+93.00,infNFe,entrega,,G05,xCpl,entrega.xCpl,entrega_end_complemento,Complemento,E,G01,C,0-1,1 - 60,
+94.00,infNFe,entrega,,G06,xBairro,entrega.xBairro,entrega_end_bairro,Bairro,E,G01,C,1-1,2 - 60,
+95.00,infNFe,entrega,,G07,cMun,entrega.cMun,entrega_end_cod_municipio,Código do município,E,G01,N,1-1,7,"Utilizar a Tabela do IBGE (Seção 8.2 do MOC – Visão Geral,Tabela de UF, Município e País).
+Informar ‘9999999  ‘para operações com o exterior."
+96.00,infNFe,entrega,,G08,xMun,entrega.xMun,entrega_end_municipio,Nome do município,E,G01,C,1-1,2 - 60,Informar ‘EXTERIOR ‘para operações com o exterior.
+97.00,infNFe,entrega,,G09,UF,entrega.UF,entrega_end_uf,Sigla da UF,E,G01,C,1-1,2,Informar ‘EX’ para operações com o exterior.
+98.00,infNFe,det,,H01,det,,,Detalhamento de Produtos e Serviços,G,A01,,1-990,,Múltiplas ocorrências (máximo = 990)
+99.00,infNFe,det,,H02,nItem,,,Número do item,A,H01,N,1-1,1 - 3,Número do item (1-990)
+100.00,infNFe,det,prod,I01,prod,,,Detalhamento de Produtos e Serviços,G,H01,,1-1,,
+101.00,infNFe,det,prod,I02,cProd,cProd,cod_produto,Código do produto ou serviço,E,I01,C,1-1,1 - 60,"Preencher com CFOP, caso se trate de itens não relacionados com mercadorias/produtos e que o contribuinte não possua codificação própria.
+Formato: ”CFOP9999”"
+102.00,infNFe,det,prod,I03,cEAN,cEAN,cod_ean,"GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras",E,I01,C,1-1,"0,8,12,
+13, 14","Preencher com o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 (antigos códigos EAN, UPC e DUN-14)
+Para produtos que não possuem código de barras com
+GTIN, deve ser informado o literal “SEM GTIN”;
+(atualizado NT 2017/001)"
+103.00,infNFe,det,prod,I04,xProd,xProd,desc_produto,Descrição do produto ou serviço,E,I01,C,1-1,1 - 120,
+104.00,infNFe,det,prod,I05,NCM,NCM,cod_ncm,Código NCM com 8 dígitos,E,I01,N,1-1,"2, 8","Obrigatória informação do NCM completo (8 dígitos).
+Nota: Em caso de item de serviço ou item que não tenham produto (ex. transferência de crédito, crédito do ativo imobilizado, etc.), informar o valor 00 (dois
+zeros). (NT 2014/004)"
+105.00,infNFe,det,prod,I06,EXTIPI,EXTIPI,cod_ex_tipi,EX_TIPI,E,I01,N,0-1,2 - 3,"Preencher de acordo com o código EX da TIPI. Em caso de
+serviço, não incluir a TAG."
+107.00,infNFe,det,prod,I08,CFOP,CFOP,cod_cfop,Código Fiscal de Operações e Prestações,E,I01,N,1-1,4,Utilizar Tabela de CFOP.
+108.00,infNFe,det,prod,I09,uCom,uCom,unid_comercial,Unidade Comercial,E,I01,C,1-1,1 - 6,Informar a unidade de comercialização  do produto.
+109.00,infNFe,det,prod,I10,qCom,qCom,qde_comercial,Quantidade Comercial,E,I01,N,1-1,11v0-4,"Informar a quantidade de comercialização do produto
+(v2.0)."
+110.00,infNFe,det,prod,I11,vProd,vProd,val_bruto_produto_servico,Valor Total Bruto dos Produtos ou Serviços.,E,I01,N,1-1,13v2,O valor do ICMS faz parte do Valor Total Bruto
+111.00,infNFe,det,prod,I12,cEANTrib,cEANTrib,cod_ean_trib,"GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras",E,I01,C,1-1,"0,8,12,
+13, 14","Preencher com o código GTIN-8, GTIN-12, GTIN-13 ou GTIN-14 (antigos códigos EAN, UPC e DUN-14) da unidade tributável do produto.
+O GTIN da unidade tributável deve corresponder àquele da menor unidade comercializável identificada por código GTIN.
+Para produtos que não possuem código de barras com
+GTIN, deve ser informado o literal ""SEM GTIN”;
+(Atualizado NT 2017.001)"
+112.00,infNFe,det,prod,I13,uTrib,uTrib,unid_tributavel,Unidade Tributável,E,I01,C,1-1,1 - 6,
+113.00,infNFe,det,prod,I14,qTrib,qTrib,qde_tributavel,Quantidade Tributável,E,I01,N,1-1,11v0-4,"O GTIN da unidade tributável deve corresponder àquele da menor unidade comercializável identificada por
+código GTIN."
+114.00,infNFe,det,prod,I15,vFrete,vFrete,val_total_frete,Valor Total do Frete,E,I01,N,0-1,13v2,"Para produtos que não possuem código de barras com
+GTIN, deve ser informado o literal ""SEM GTIN”;"
+115.00,infNFe,det,prod,I16,vSeg,vSeg,val_seguro,Valor Total do Seguro,E,I01,N,0-1,13v2,
+116.00,infNFe,det,prod,I17,vDesc,vDesc,val_desconto,Valor do Desconto,E,I01,N,0-1,13v2,
+117.00,infNFe,det,prod,I18,DI,DI,desc_importacao,Declaração de Importação,G,I01,,0-100,,Informar dados da importação
+118.00,infNFe,det,prod,I19,nDI,nDI,num_doc_importacao,"Número do Documento de Importação (DI, DSI, DIRE, ...)",E,I18,C,1-1,1 - 12,(NT 2011/004)
+119.00,infNFe,det,prod,I20,dDI,dDI,dt_registro,Data de Registro do documento,E,I18,D,1-1,,Formato: “AAAA-MM-DD”
+120.00,infNFe,det,prod,I21,xLocDesemb,xLocDesemb,nom_local_desembaraco,Local de desembaraço,E,I18,C,1-1,1 - 60,
+121.00,infNFe,det,prod,I22,UFDesemb,UFDesemb,uf_desembaraco,Sigla da UF onde ocorreu o Desembaraço Aduaneiro,E,I18,C,1-1,2,
+122.00,infNFe,det,prod,I23,dDesemb,dDesemb,dt_desembaraco,Data do Desembaraço Aduaneiro,E,I18,D,1-1,,Formato: “AAAA-MM-DD”
+123.00,infNFe,det,prod,I24,cExportador,cExportador,cod_exportador,Código do Exportador,E,I18,C,1-1,1 - 60,"Código do Exportador, usado nos sistemas internos de
+informação do emitente da NF-e"
+124.00,infNFe,det,adi,I25,adi,adi,,Adições,G,I18,,1-100,,(NT 2011/004)
+125.00,infNFe,det,adi,I26,nAdicao,nAdicao,nAdicao,Numero da Adição,E,I25,N,1-1,1 - 3,
+126.00,infNFe,det,adi,I27,nSeqAdic,nSeqAdic,nSeqAdic,Numero sequencial do item dentro da Adição,E,I25,N,1-1,1 - 3,
+127.00,infNFe,det,adi,I28,cFabricante,cFabricante,cFabricante,Código do fabricante estrangeiro,E,I25,C,1-1,1 - 60,"Código do fabricante estrangeiro, usado nos sistemas
+internos de informação do emitente da NF-e"
+128.00,infNFe,det,adi,I29,vDescDI,vDescDI,vDescDI,Valor do desconto do item da DI – Adição,E,I25,N,0-1,13v2,
+128.01,infNFe,det,adi,I29a,nDraw,nDraw,nDraw,Número do ato concessório de Drawback,E,I25,N,0-1,"0, 9 ou
+11","O número do Ato Concessório de Suspensão deve ser preenchido com 11 dígitos (AAAANNNNNND) e o número do Ato Concessório de Drawback Isenção deve ser
+preenchido com 9 dígitos (AANNNNNND). (Observação incluída na NT 2013/005  v. 1.10)"
+128.20,infNFe,det,adi,I50,detExport,detExport,detExport,Grupo de informações de exportação para o item,G,I01,,0-500,,Informar apenas no Drawback e nas exportações
+128.21,infNFe,det,adi,I51,nDraw,nDraw,nDraw,Número do ato concessório de Drawback,E,I50,N,0-1,"0, 9 ou
+11","O número do Ato Concessório de Suspensão deve ser preenchido com 11 dígitos (AAAANNNNNND) e o número do Ato Concessório de Drawback Isenção deve ser preenchido com 9 dígitos (AANNNNNND). (Observação
+incluída na NT 2013/005  v. 1.10)"
+128.22,infNFe,det,adi,I52,exportInd,exportInd,exportInd,Grupo sobre exportação indireta,G,I50,,0-1,,
+128.23,infNFe,det,adi,I53,nRE,nRE,nRE,Número do Registro de Exportação,E,I52,N,1-1,12,
+128.24,infNFe,det,adi,I54,chNFe,chNFe,chNFe,Chave de Acesso da NF-e recebida para exportação,E,I52,N,1-1,44,"NF-e recebida com fim específico de exportação Observação: No caso de operação com CFOP 3.503, informar a chave de acesso da NF-e que efetivou a
+exportação"
+128.25,infNFe,det,adi,I55,qExport,qExport,qExport,Quantidade do item realmente exportado,E,I52,N,1-1,11v4,"A unidade de medida desta quantidade é a unidade de comercialização  deste item. No caso de operação com CFOP 3.503,  informar a quantidade de mercadoria
+devolvida"
+128.40,infNFe,det,adi,I60,xPed,xPed,xPed,Número do Pedido de Compra,E,I01,C,0-1,1 - 15,"Informação de interesse do emissor para controle do B2B.
+(v2.0)"
+128.41,infNFe,det,adi,I61,nItemPed,nItemPed,nItemPed,Item do Pedido de Compra,E,I01,N,0-1,6,"Informação de interesse do emissor para controle do B2B.
+(v2.0)"
+128.60,infNFe,det,adi,I70,nFCI,nFCI,nFCI,Número de controle da FCI - Ficha de Conteúdo de Importação,E,I01,C,0-1,36,"Informação relacionada com a Resolução 13/2012  do Senado Federal. Formato: Algarismos, letras maiúsculas  de ""A"" a ""F"" e o caractere hífen. Exemplo: B01F70AF-10BF-
+4B1F-848C-65FF57F616FE"
+128.70,infNFe,det,adi,I80,rastro,rastro,rastro,Detalhamento de produto sujeito a rastreabilidade,G,I01,,0-500,,"Informar apenas quando se tratar  de produto a ser rastreado posteriormente
+(Grupo criado na NT/2016/002)"
+128.71,infNFe,det,adi,I81,nLote,det.nLote,nLote,Número do Lote do produto,E,I80,C,1-1,1- 20,
+128.72,infNFe,det,adi,I82,qLote,det.qLote,qLote,Quantidade de produto no Lote,E,I80,N,1-1,8v3,
+128.73,infNFe,det,adi,I83,dFab,det.dFab,dFab,Data de fabricação/ Produção,E,I80,D,1-1,,Formato: “AAAA-MM-DD”
+128.74,infNFe,det,adi,I84,dVal,det.dVal,dVal,Data de validade,E,I80,D,1-1,,"Formato: “AAAA-MM-DD” Informar o último dia do mês
+caso a validade não especifique o dia."
+128.75,infNFe,det,,I85,cAgreg,det.cAgreg,cAgreg,Código de Agregação,E,I80,N,0-1,1-20,
+129.00,,veicProd,,J01,veicProd,veicProd.veicProd,veicProd,Detalhamento de Veículos novos,CG,I90,,1-1,,Informar apenas quando se tratar  de veículos novos
+130.00,,veicProd,,J02,tpOp,veicProd.tpOp,tpOp,Tipo da operação,E,J01,N,1-1,1,"1=Venda concessionária,
+2=Faturamento direto para consumidor final 3=Venda direta para grandes consumidores (frotista,
+governo, ...)
+0=Outros"
+131.00,,veicProd,,J03,chassi,veicProd.chassi,chassi,Chassi do veículo,E,J01,C,1-1,17,VIN (código-identificação-veículo)
+132.00,,veicProd,,J04,cCor,veicProd.cCor,cCor,Cor,E,J01,C,1-1,1 - 4,Código de cada montadora
+133.00,,veicProd,,J05,xCor,veicProd.xCor,xCor,Descrição da Cor,E,J01,C,1-1,1 - 40,
+134.00,,veicProd,,J06,pot,veicProd.pot,pot,Potência Motor (CV),E,J01,C,1-1,1 - 4,
+135.00,,veicProd,,J07,cilin,veicProd.cilin,cilin,Cilindradas,E,J01,C,1-1,1 - 4,"Potência máxima do motor do veículo em cavalo vapor
+(CV). (potência-veículo)"
+136.00,,veicProd,,J08,pesoL,veicProd.pesoL,pesoL,Peso Líquido,E,J01,C,1-1,9v4,Em toneladas - 4 casas decimais
+137.00,,veicProd,,J09,pesoB,veicProd.pesoB,pesoB,Peso Bruto,E,J01,C,1-1,9v4,Peso Bruto Total - em tonelada - 4 casas decimais
+138.00,,veicProd,,J10,nSerie,veicProd.nSerie,nSerie,Serial (série),E,J01,C,1-1,1 - 9,
+139.00,,veicProd,,J11,tpComb,veicProd.tpComb,tpComb,Tipo de combustível,E,J01,C,1-1,1 - 2,"Utilizar Tabela RENAVAM (v2.0) 01=Álcool, 02=Gasolina, 03=Diesel, (...);16=Álcool/Gasolina;
+17=Gasolina/Álcool/GNV; 18=Gasolina/Elétrico"
+140.00,,veicProd,,J12,nMotor,veicProd.nMotor,nMotor,Número de Motor,E,J01,C,1-1,1 - 21,
+141.00,,veicProd,,J13,CMT,veicProd.CMT,CMT,Capacidade Máxima de Tração,E,J01,C,1-1,9v4,"CMT-Capacidade Máxima de Tração - em Toneladas 4 casas
+decimais (v2.0)"
+142.00,,veicProd,,J14,dist,veicProd.dist,dist,Distância entre eixos,E,J01,C,1-1,1 - 4,
+144.00,,veicProd,,J16,anoMod,veicProd.anoMod,anoMod,Ano Modelo de Fabricação,E,J01,N,1-1,4,
+145.00,,veicProd,,J17,anoFab,veicProd.anoFab,anoFab,Ano de Fabricação,E,J01,N,1-1,4,
+146.00,,veicProd,,J18,tpPint,veicProd.tpPint,tpPint,Tipo de Pintura,E,J01,C,1-1,1,
+147.00,,veicProd,,J19,tpVeic,veicProd.tpVeic,tpVeic,Tipo de Veículo,E,J01,N,1-1,1 - 2,"Utilizar Tabela RENAVAM, conforme exemplos abaixo: 02=CICLOMOTO; 03=MOTONETA;
+04=MOTOCICLO; 05=TRICICLO;
+06=AUTOMÓVEL; 07=MICROÔNIBUS;
+08=ÔNIBUS;10=REBOQUE;
+11=SEMIRREBOQUE;13=CAMINHONETA;
+14=CAMINHÃO;17=C. TRATOR; 22=ESP / ÔNIBUS;
+23=MISTO / CAM;24=CARGA/CAM; ..."
+148.00,,veicProd,,J20,espVeic,veicProd.espVeic,espVeic,Espécie de Veículo,E,J01,N,1-1,1,"Utilizar Tabela RENAVAM 1=PASSAGEIRO; 2=CARGA;
+3=MISTO;4=CORRIDA; 5=TRAÇÃO; 6=ESPECIAL;"
+149.00,,veicProd,,J21,VIN,veicProd.VIN,VIN,Condição do VIN,E,J01,C,1-1,1,"Informa-se o veículo tem VIN (chassi) remarcado.
+R=Remarcado; N=Normal"
+150.00,,veicProd,,J22,condVeic,veicProd.condVeic,condVeic,Condição do Veículo,E,J01,N,1-1,1,1=Acabado; 2=Inacabado; 3=Semiacabado
+151.00,,veicProd,,J23,cMod,veicProd.cMod,cMod,Código Marca Modelo,E,J01,N,1-1,1 - 6,Utilizar Tabela RENAVAM
+152.00,,med,,K01,med,med.med,med,"Detalhamento de Medicamentos e de matérias-primas
+farmacêuticas",CG,I90,,1-1,,"Informar apenas quando se tratar  de medicamentos ou de
+matérias-primas farmacêuticas,  permite ocorrências."
+153.00,,med,,K02,nLote,med.nLote,nLote,"Número do Lote de medicamentos ou de matérias-primas
+farmacêuticas",E,K01,C,1-1,1-20,(Excluído no leiaute 4.0 - NT2016.002)
+154.00,,med,,K03,qLote,med.qLote,qLote,"Quantidade de produto no Lote de medicamentos ou de
+matérias-primas farmacêuticas",E,K01,N,1-1,8v3,(Excluído no leiaute 4.0 - NT2016.002)
+155.00,,med,,K04,dFab,med.dFab,dFab,Data de fabricação,E,K01,D,1-1,,"Formato: “AAAA-MM-DD”
+(Excluído no leiaute 4.0 - NT2016.002)"
+156.00,,med,,K05,dVal,med.dVal,dVal,Data de validade,E,K01,D,1-1,,"Formato: “AAAA-MM-DD”
+(Excluído no leiaute 4.0 - NT2016.002)"
+157.00,,med,,K06,vPMC,med.vPMC,vPMC,Preço máximo consumidor,E,K01,N,1-1,13v2,
+158.00,,arma,,L01,arma,arma.arma,arma,Detalhamento de Armamento,CG,I90,,1-500,,"Informar apenas quando se tratar  de armamento, permite
+ocorrências."
+159.00,,arma,,L02,tpArma,arma.tpArma,tpArma,Indicador do tipo de arma de fogo,E,L01,N,1-1,1,0=Uso permitido; 1=Uso restrito;
+160.00,,arma,,L03,nSerie,arma.nSerie,nSerie,Número de série da arma,E,L01,C,1-1,1 - 15,
+161.00,,arma,,L04,nCano,arma.nCano,nCano,Número de série do cano,E,L01,C,1-1,1 - 15,
+162.00,,arma,,L05,descr,arma.descr,descr,"Descrição completa da arma, compreendendo: calibre,
+marca, capacidade, tipo de funcionamento, comprimento e demais elementos que permitam a sua perfeita
+identificação.",E,L01,C,1-1,1 - 256,
+164.00,,ICMS,,N01,ICMS,ICMS.ICMS,ICMS,Informações do ICMS da Operação própria e ST,CG,M01,,1-1,,"Informar apenas um dos grupos de tributação do ICMS
+(ICMS00, ICMS10,  ...) (v2.0)"
+165.00,,ICMS00,,N02,ICMS00,ICMS00.ICMS00,ICMS00,Grupo Tributação  do ICMS= 00,CG,N01,,1-1,,Tributada integralmente
+166.00,,ICMS00,,N11,orig,ICMS00.orig,orig,Origem da mercadoria,E,N02,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+167.00,,ICMS00,,N12,CST,ICMS00.CST,CST,Tributação do ICMS = 00,E,N02,N,1-1,2,00=Tributada integralmente.
+168.00,,ICMS00,,N13,modBC,ICMS00.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N02,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);2=Preço
+Tabelado Máx. (valor); 3=Valor da operação."
+169.00,,ICMS00,,N15,vBC,ICMS00.vBC,vBC,Valor da BC do ICMS,E,N02,N,1-1,13v2,
+170.00,,ICMS00,,N16,pICMS,ICMS00.pICMS,pICMS,Alíquota do imposto,E,N02,N,1-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP"
+171.00,,ICMS00,,N17,vICMS,ICMS00.vICMS,vICMS,Valor do ICMS,E,N02,N,1-1,13v2,
+171.01,,ICMS00,,N17.1,,,,Sequência XML,G,N02,,0-1,,(Criada na NT2016.002)
+171.02,,ICMS00,,N17b,pFCP,ICMS00.pFCP,pFCP,"Percentual do ICMS relativo ao Fundo de Combate à
+Pobreza (FCP)",E,N17.1,N,1-1,3v2-4,Percentual relativo ao Fundo de Combate à Pobreza (FCP).
+171.03,,ICMS00,,N17c,vFCP,ICMS00.vFCP,vFCP,Valor do Fundo de Combate à Pobreza (FCP),E,N17.1,N,1-1,13v2,"Valor do ICMS relativo ao Fundo de Combate à Pobreza
+(FCP)."
+172.00,,ICMS10,,N03,ICMS10,ICMS10.ICMS10,ICMS10,Grupo Tributação  do ICMS = 10,CG,N01,,1-1,,"Tributada e com cobrança do ICMS por substituição
+tributária"
+173.00,,ICMS10,,N11,orig,ICMS10.orig,orig,Origem da mercadoria,E,N03,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+174.00,,ICMS10,,N12,CST,ICMS10.CST,CST,Tributação do ICMS = 10,E,N03,N,1-1,2,"10=Tributada e com cobrança do ICMS por substituição
+tributária"
+175.00,,ICMS10,,N13,modBC,ICMS10.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N03,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);
+2=Preço Tabelado Máx. (valor); 3=Valor da operação."
+176.00,,ICMS10,,N15,vBC,ICMS10.vBC,vBC,Valor da BC do ICMS,E,N03,N,1-1,13v2,
+177.00,,ICMS10,,N16,pICMS,ICMS10.pICMS,pICMS,Alíquota do imposto,E,N03,N,1-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP."
+178.00,,ICMS10,,N17,vICMS,ICMS10.vICMS,vICMS,Valor do ICMS,E,N03,N,1-1,13v2,
+178.01,,ICMS10,,N17.0,,,,Sequência XML,G,N03,,0-1,,
+178.02,,ICMS10,,N17.a,vBCFCP,ICMS10.vBCFCP,vBCFCP,Valor da Base de Cálculo do FCP,E,N17.0,N,1-1,13v2,Informar o valor da Base de Cálculo do FCP
+178.03,,ICMS10,,N17.b,pFCP,ICMS10.pFCP,pFCP,Percentual do Fundo de Combate à Pobreza (FCP),E,N17.0,N,1-1,3v2-4,Percentual relativo ao Fundo de Combate à Pobreza (FCP).
+178.04,,ICMS10,,N17.c,vFCP,ICMS10.vFCP,vFCP,Valor do Fundo de Combate à Pobreza (FCP),E,N17.0,N,1-1,13v2,"Valor do ICMS relativo ao Fundo de Combate à Pobreza
+(FCP)."
+179.00,,ICMS10,,N18,modBCST,ICMS10.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N03,N,1-1,1,"0=Preço tabelado ou máximo sugerido 1=Lista Negativa (valor)
+2=Lista Positiva (valor); 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%) 5=Pauta (valor)
+6 = Valor da Operação (NT 2019.001)"
+180.00,,ICMS10,,N19,pMVAST,ICMS10.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N03,N,0-1,3v2-4,
+181.00,,ICMS10,,N20,pRedBCST,ICMS10.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N03,N,0-1,3v2-4,
+182.00,,ICMS10,,N21,vBCST,ICMS10.vBCST,vBCST,Valor da BC do ICMS ST,E,N03,N,1-1,13v2,
+183.00,,ICMS10,,N22,pICMSST,ICMS10.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N03,N,1-1,3v2-4,"Alíquota do ICMS ST sem o FCP. Quando for o caso,
+informar a alíquota do FCP no campo pFCP"
+184.00,,ICMS10,,N23,vICMSST,ICMS10.vICMSST,vICMSST,Valor do ICMS ST,E,N03,N,1-1,13v2,Valor do ICMS ST retido
+184.00,,ICMS10,,N23.1,,,,Sequência XML,G,N03,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+184.10,,ICMS10,,N23a,vBCFCPST,ICMS10.vBCFCPST,vBCFCPST,"Valor da Base de Cálculo do FCP retido por Substituição
+Tributária",E,N23.1,N,1-1,13v2,"Informar o valor da Base de Cálculo do FCP retido por
+Substituição Tributária"
+184.20,,ICMS10,,N23b,pFCPST,ICMS10.pFCPST,pFCPST,Percentual do FCP retido por Substituição Tributária,E,N23.1,N,1-1,3v2-4,"Percentual relativo ao Fundo de Combate à Pobreza (FCP)
+retido por substituição tributária."
+184.40,,ICMS10,,N23d,vFCPST,ICMS10.vFCPST,vFCPST,Valor do FCP retido por Substituição Tributária,E,N23.1,N,1-1,13v2,"Valor do ICMS relativo ao Fundo de Combate à Pobreza
+(FCP) retido por substituição tributária."
+185.00,,ICMS20,,N04,ICMS20,ICMS20.ICMS20,ICMS20,Grupo Tributação  do ICMS = 20,CG,N01,,1-1,,Tributação com redução de base de cálculo
+186.00,,ICMS20,,N11,orig,ICMS20.orig,orig,Origem da mercadoria,E,N04,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+187.00,,ICMS20,,N12,CST,ICMS20.CST,CST,Tributação do ICMS = 20,E,N04,N,1-1,2,20=Com redução de base de cálculo
+188.00,,ICMS20,,N13,modBC,ICMS20.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N04,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);
+2=Preço Tabelado Máx. (valor);
+3=Valor da operação."
+189.00,,ICMS20,,N14,pRedBC,ICMS20.pRedBC,pRedBC,Percentual da Redução de BC,E,N04,N,1-1,3v2-4,
+190.00,,ICMS20,,N15,vBC,ICMS20.vBC,vBC,Valor da BC do ICMS,E,N04,N,1-1,13v2,
+191.00,,ICMS20,,N16,pICMS,ICMS20.pICMS,pICMS,Alíquota do imposto,E,N04,N,1-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP"
+192.00,,ICMS20,,N17,vICMS,ICMS20.vICMS,vICMS,Valor do ICMS,E,N04,N,1-1,13v2,
+192.00,,ICMS20,,N17.1,,,,Sequência XML,G,N04,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+192.10,,ICMS20,,N27.1,,,,Sequência XML,G,N04,,0-1,,Grupo opcional.
+192.20,,ICMS20,,N28a,vICMSDeson,ICMS20.vICMSDeson,vICMSDeson,Valor do ICMS desonerado,E,N27.1,N,1-1,13v2,"Informar apenas nos motivos de desoneração
+documentados abaixo."
+192.30,,ICMS20,,N28,motDesICMS,ICMS20.motDesICMS,motDesICMS,Motivo da desoneração do ICMS,E,N27.1,N,1-1,2,"Campo será preenchido quando o campo anterior estiver preenchido. Informar o motivo da desoneração:
+3=Uso na agropecuária; 9=Outros;
+12=Órgão de fomento e desenvolvimento agropecuário."
+193.00,,ICMS30,,N05,ICMS30,ICMS30.ICMS30,ICMS30,Grupo Tributação  do ICMS = 30,CG,N01,,1-1,,"Tributação Isenta ou não tributada e com cobrança do
+ICMS por substituição tributária"
+194.00,,ICMS30,,N11,orig,ICMS30.orig,orig,Origem da mercadoria,E,N05,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70%;"
+195.00,,ICMS30,,N12,CST,ICMS30.CST,CST,Tributação do ICMS = 30,E,N05,N,1-1,2,"30=Isenta ou não tributada e com cobrança do ICMS por
+substituição tributária"
+196.00,,ICMS30,,N18,modBCST,ICMS30.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N05,N,1-1,1,"0=Preço tabelado ou máximo sugerido; 1=Lista Negativa (valor)
+2=Lista Positiva (valor) 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%) 5=Pauta (valor)
+6 = Valor da Operação (NT 2019.001)"
+197.00,,ICMS30,,N19,pMVAST,ICMS30.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N05,N,0-1,3v2-4,
+198.00,,ICMS30,,N20,pRedBCST,ICMS30.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N05,N,0-1,3v2-4,
+199.00,,ICMS30,,N21,vBCST,ICMS30.vBCST,vBCST,Valor da BC do ICMS ST,E,N05,N,1-1,13v2,
+200.00,,ICMS30,,N22,pICMSST,ICMS30.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N05,N,1-1,3v2-4,"Alíquota do ICMS ST sem o FCP. Quando for o caso, informar a alíquota do FCP no campo pFCP
+(Atualizado NT2016.002)"
+201.00,,ICMS30,,N23,vICMSST,ICMS30.vICMSST,vICMSST,Valor do ICMS ST,E,N05,N,1-1,13v2,Valor do ICMS ST retido
+201.00,,ICMS30,,N23.1,,,,Sequência XML,G,N05,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+201.10,,ICMS30,,N27.1,,,,Sequência XML,G,N05,,0-1,,Grupo opcional.
+201.20,,ICMS30,,N28a,vICMSDeson,ICMS30.vICMSDeson,vICMSDeson,Valor do ICMS desonerado,E,N27.1,N,1-1,13v2,"Informar apenas nos motivos de desoneração
+documentados abaixo."
+201.30,,ICMS30,,N28,motDesICMS,ICMS30.motDesICMS,motDesICMS,Motivo da desoneração do ICMS,E,N27.1,N,1-1,2,"Campo será preenchido quando o campo anterior estiver preenchido. Informar o motivo da desoneração: 6=Utilitários  e Motocicletas da Amazônia Ocidental e Áreas de Livre Comércio (Resolução 714/88  e 790/94  – CONTRAN e suas alterações);
+7=SUFRAMA;
+9=Outros;"
+202.00,,ICMS40,,N06,ICMS40,ICMS40.ICMS40,ICMS40,"Grupo Tributação  ICMS = 40,  41, 50",CG,N01,,1-1,,"Tributação Isenta, Não tributada ou Suspensão."
+203.00,,ICMS40,,N11,orig,ICMS40.orig,orig,Origem da mercadoria,E,N06,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+204.00,,ICMS40,,N12,CST,ICMS40.CST,CST,"Tributação do ICMS = 40, 41 ou 50",E,N06,N,1-1,2,40=Isenta; 41=Não tributada; 50=Suspensão.
+204.00,,ICMS40,,N27.1,,,,Sequência XML,G,N06,,0-1,,Grupo opcional.
+204.01,,ICMS40,,N28a,vICMSDeson,ICMS40.vICMSDeson,vICMSDeson,Valor do ICMS,E,N27.1,N,1-1,13v2,"Informar nas operações:
+a) com produtos beneficiados com a desoneração condicional do ICMS.
+b) destinadas à SUFRAMA, informando-se o valor que seria devido se não houvesse isenção.
+c) de venda a órgão da administração pública direta e suas fundações e autarquias com isenção do ICMS. (NT 2011/004
+d) demais casos solicitados pelo Fisco. (NT2016.002)"
+204.02,,ICMS40,,N28,motDesICMS,ICMS40.motDesICMS,motDesICMS,Motivo da desoneração do ICMS,E,N27.1,N,1-1,2,"Campo será preenchido quando o campo anterior estiver preenchido. Informar o motivo da desoneração:
+1=Táxi;
+3=Produtor Agropecuário; 4=Frotista/Locadora; 5=Diplomático/Consular;
+6=Utilitários  e Motocicletas da Amazônia Ocidental e Áreas de Livre Comércio (Resolução 714/88  e 790/94  – CONTRAN e suas alterações);
+7=SUFRAMA;
+8=Venda a Órgão Público; 9=Outros. (NT 2011/004);
+10=Deficiente Condutor (Convênio ICMS 38/12); 11=Deficiente Não Condutor (Convênio ICMS 38/12).
+16=Olimpíadas  Rio 2016  (NT 2015.002);        90=Solicitado pelo Fisco (NT2016.002)
+Revogada a partir da versão 3.10 a possibilidade de usar o
+motivo 2=Deficiente Físico"
+205.00,,ICMS51,,N07,ICMS51,ICMS51.ICMS51,ICMS51,Grupo Tributação  do ICMS = 51,CG,N01,,1-1,,"Tributação com Diferimento (a exigência do
+preenchimento das informações do ICMS diferido fica a critério de cada UF)."
+206.00,,ICMS51,,N11,orig,ICMS51.orig,orig,Origem da mercadoria,E,N07,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8;
+1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+207.00,,ICMS51,,N12,CST,ICMS51.CST,CST,Tributação do ICMS = 51,E,N07,N,1-1,2,51=Diferimento
+208.00,,ICMS51,,N13,modBC,ICMS51.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N07,N,0-1,1,"0=Margem Valor Agregado (%);
+1=Pauta (Valor);
+2=Preço Tabelado Máx. (valor);
+3=Valor da operação."
+209.00,,ICMS51,,N14,pRedBC,ICMS51.pRedBC,pRedBC,Percentual da Redução de BC,E,N07,N,0-1,3v2-4,
+210.00,,ICMS51,,N15,vBC,ICMS51.vBC,vBC,Valor da BC do ICMS,E,N07,N,0-1,13v2,
+211.00,,ICMS51,,N16,pICMS,ICMS51.pICMS,pICMS,Alíquota do imposto,E,N07,N,0-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP (Atualizado NT2016.002)"
+211.01,,ICMS51,,N16a,vICMSOp,ICMS51.vICMSOp,vICMSOp,Valor do ICMS da Operação,E,N07,N,0-1,13v2,Valor como se não tivesse o diferimento
+211.02,,ICMS51,,N16b,pDif,ICMS51.pDif,pDif,Percentual do diferimento,E,N07,N,0-1,3v2-4,"No caso de diferimento total, informar o percentual de
+diferimento ""100""."
+211.03,,ICMS51,,N16c,vICMSDif,ICMS51.vICMSDif,vICMSDif,Valor do ICMS diferido,E,N07,N,0-1,13v2,
+212.00,,ICMS51,,N17,vICMS,ICMS51.vICMS,vICMS,Valor do ICMS,E,N07,N,0-1,13v2,Informar o valor realmente devido.
+212.00,,ICMS51,,N17.1,,,,Sequência XML,G,N07,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+213.00,,ICMS60,,N08,ICMS60,ICMS60.ICMS60,ICMS60,Grupo Tributação  do ICMS = 60,CG,N01,,1-1,,"Tributação ICMS cobrado anteriormente por substituição
+tributária"
+214.00,,ICMS60,,N11,orig,ICMS60.orig,orig,Origem da mercadoria,E,N08,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+215.00,,ICMS60,,N12,CST,ICMS60.CST,CST,Tributação do ICMS = 60,E,N08,N,1-1,2,60=ICMS cobrado anteriormente por substituição tributária
+215.10,,ICMS60,,N25.1,,,,Sequência XML,G,N08,,0-1,,Grupo opcional.
+216.00,,ICMS60,,N26,vBCSTRet,ICMS60.vBCSTRet,vBCSTRet,Valor da BC do ICMS ST retido,E,N25.1,N,1-1,13v2,"Valor da BC do ICMS ST cobrado anteriormente por ST (v2.0). O valor pode ser omitido quando a legislação não
+exigir a sua informação. (NT 2011/004)"
+216.10,,ICMS60,,N26a,pST,ICMS60.pST,pST,Alíquota suportada pelo Consumidor Final,E,N25.1,N,1-1,3v2-4,"Deve ser informada a alíquota do cálculo do ICMS-ST, já incluso o FCP caso incida sobre a mercadoria. Exemplo: alíquota da mercadoria na venda ao consumidor final =
+18% e 2% de FCP. A alíquota a ser informada no campo pST deve ser 20%. (Atualizado NT2016.002)"
+216.20,,ICMS60,,N26b,vICMSSubstituto,ICMS60.vICMSSubstituto,vICMSSubstituto,Valor do ICMS próprio do Substituto,E,N25.1,N,0-1,13v2,"Valor do ICMS Próprio do Substituto cobrado em operação anterior (Criado na NT 2018.005.  Atualizado na 2018.005
+v1.20)"
+217.00,,ICMS60,,N27,vICMSSTRet,ICMS60.vICMSSTRet,vICMSSTRet,Valor do ICMS ST retido,E,N25.1,N,1-1,13v2,"Valor do ICMS ST cobrado anteriormente por ST (v2.0). O valor pode ser omitido quando a legislação não exigir a sua
+informação. (NT 2011/004)"
+217.00,,ICMS60,,N27.1 -,,,,Sequência XML,G,N08,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+217.10,,ICMS60,,N33,,,,Sequência XML,G,N08,,0-1,,"Grupo opcional para informações do ICMS Efetivo
+(Incluído na NT2016.002)"
+217.20,,ICMS60,,N34,pRedBCEfet,ICMS60.pRedBCEfet,pRedBCEfet,Percentual de redução da base de cálculo efetiva,E,N33,N,1-1,3v2-4,"Percentual de redução, caso estivesse submetida ao regime comum de tributação, para obtenção da base de cálculo efetiva (vBCEfet).
+Obs.: opcional a critério da UF."
+217.30,,ICMS60,,N35,vBCEfet,ICMS60.vBCEfet,vBCEfet,Valor da base de cálculo efetiva,E,N33,N,1-1,13v2,"Valor da base de cálculo que seria atribuída à operação própria do contribuinte substituído, caso estivesse submetida ao regime comum de tributação, obtida pelo produto do Vprod por (1- pRedBCEfet).
+Obs.: opcional a critério da UF."
+217.40,,ICMS60,,N36,pICMSEfet,ICMS60.pICMSEfet,pICMSEfet,Alíquota do ICMS efetiva,E,N33,N,1-1,3v2-4,"Alíquota do ICMS na operação a consumidor final, caso estivesse submetida ao regime comum de tributação.
+Obs.: opcional a critério da UF."
+217.50,,ICMS60,,N37,vICMSEfet,ICMS60.vICMSEfet,vICMSEfet,Valor do ICMS efetivo,E,N33,N,1-1,13v2,"Obtido pelo produto do valor do campo pICMSEfet pelo
+valor do campo vBCEfet, caso estivesse submetida ao regime comum de tributação.
+Obs.: opcional a critério da UF."
+218.00,,ICMS70,,N09,ICMS70,ICMS70.ICMS70,ICMS70,Grupo Tributação  do ICMS = 70,CG,N01,,1-1,,"Tributação ICMS com redução de base de cálculo e
+cobrança do ICMS por substituição tributária"
+219.00,,ICMS70,,N11,orig,ICMS70.orig,orig,Origem da mercadoria,E,N09,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 70%;"
+220.00,,ICMS70,,N12,CST,ICMS70.CST,CST,Tributação do ICMS = 70,E,N09,N,1-1,2,"70=Com redução de base de cálculo e cobrança do ICMS
+por substituição tributária"
+221.00,,ICMS70,,N13,modBC,ICMS70.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N09,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);2=Preço
+Tabelado Máx. (valor); 3=Valor da operação."
+222.00,,ICMS70,,N14,pRedBC,ICMS70.pRedBC,pRedBC,Percentual da Redução de BC,E,N09,N,1-1,3v2-4,
+223.00,,ICMS70,,N15,vBC,ICMS70.vBC,vBC,Valor da BC do ICMS,E,N09,N,1-1,13v2,
+224.00,,ICMS70,,N16,pICMS,ICMS70.pICMS,pICMS,Alíquota do imposto,E,N09,N,1-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP."
+225.00,,ICMS70,,N17,vICMS,ICMS70.vICMS,vICMS,Valor do ICMS,E,N09,N,1-1,13v2,
+225.00,,ICMS70,,N17.0,,,,Sequência XML,G,N09,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+225.10,,ICMS70,,N17a,vBCFCP,ICMS70.vBCFCP,vBCFCP,Valor da Base de Cálculo do FCP,E,N17.0,N,1-1,13v2,"Informar o valor da Base de Cálculo do FCP retido
+anteriormente por ST"
+225.20,,ICMS70,,N17b,pFCP,ICMS70.pFCP,pFCP,Percentual do ICMS relativo ao Fundo de Combate à Pobreza (FCP),E,N17.0,N,1-1,3v2-4,"Percentual relativo ao Fundo de Combate à Pobreza (FCP) retido por substituição tributária.  Nota: Percentual máximo
+de 2%, conforme a legislação."
+225.30,,ICMS70,,N17c,vFCP,ICMS70.vFCP,vFCP,"Valor do ICMS relativo ao Fundo de Combate à Pobreza
+(FCP)",E,N17.0,N,1-1,13v2,"Valor do ICMS relativo ao Fundo de Combate à Pobreza
+(FCP) retido por substituição tributária."
+226.00,,ICMS70,,N18,modBCST,ICMS70.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N09,N,1-1,1,"0=Preço tabelado ou máximo sugerido
+1=Lista Negativa (valor) 2=Lista Positiva (valor) 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%) 5=Pauta (valor)"
+227.00,,ICMS70,,N19,pMVAST,ICMS70.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N09,N,0-1,3v2-4,
+228.00,,ICMS70,,N20,pRedBCST,ICMS70.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N09,N,0-1,3v2-4,
+229.00,,ICMS70,,N21,vBCST,ICMS70.vBCST,vBCST,Valor da BC do ICMS ST,E,N09,N,1-1,13v2,
+230.00,,ICMS70,,N22,pICMSST,ICMS70.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N09,N,1-1,3v2-4,"Alíquota do ICMS ST sem o FCP. Quando for o caso, informar a alíquota do FCP no campo pFCP (Atualizado
+NT2016.002)"
+231.00,,ICMS70,,N23,vICMSST,ICMS70.vICMSST,vICMSST,Valor do ICMS ST,E,N09,N,1-1,13v2,Valor do ICMS ST retido
+231.00,,ICMS70,,N23.1,,,,Sequência XML,G,N09,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+231.10,,ICMS70,,N27.1,,,,Sequência  XML,G,N09,,0-1,,Grupo opcional.
+231.20,,ICMS70,,N28a,vICMSDeson,ICMS70.vICMSDeson,vICMSDeson,Valor do ICMS desonerado,E,N27.1,N,1-1,13v2,"Informar apenas nos motivos de desoneração
+documentados abaixo."
+231.30,,ICMS70,,N28,motDesICMS,ICMS70.motDesICMS,motDesICMS,Motivo da desoneração do ICMS,E,N27.1,N,1-1,2,"Campo será preenchido quando o campo anterior estiver preenchido. Informar o motivo da desoneração:
+3=Uso na agropecuária 9=Outros
+12=Órgão de fomento e desenvolvimento agropecuário"
+232.00,,ICMS90,,N10,ICMS90,ICMS90.ICMS90,ICMS90,Grupo Tributação  do ICMS = 90,CG,N01,,1-1,,Tributação ICMS: Outros
+233.00,,ICMS90,,N11,orig,ICMS90.orig,orig,Origem da mercadoria,E,N10,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+234.00,,ICMS90,,N12,CST,ICMS90.CST,CST,Tributação do ICMS = 90,E,N10,N,1-1,2,90=Outros
+234.10,,ICMS90,,N12.1,-x-,ICMS90.-x-,-x-,Sequência XML,G,N10,,0-1,,Grupo opcional.
+235.00,,ICMS90,,N13,modBC,ICMS90.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N12.1,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);
+2=Preço Tabelado Máx. (valor); 3=Valor da operação."
+236.00,,ICMS90,,N15,vBC,ICMS90.vBC,vBC,Valor da BC do ICMS,E,N12.1,N,1-1,13v2,
+237.00,,ICMS90,,N14,pRedBC,ICMS90.pRedBC,pRedBC,Percentual da Redução de BC,E,N12.1,N,0-1,3v2-4,
+238.00,,ICMS90,,N16,pICMS,ICMS90.pICMS,pICMS,Alíquota do imposto,E,N12.1,N,1-1,3v2-4,"Alíquota do ICMS sem o FCP. Quando for o caso, informar a
+alíquota do FCP no campo pFCP (Atualizado NT2016.002)"
+239.00,,ICMS90,,N17,vICMS,ICMS90.vICMS,vICMS,Valor do ICMS,E,N12.1,N,1-1,13v2,
+239.00,,ICMS90,,N17.0,,,,Sequência XML,G,N12.1,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+239.10,,ICMS90,,N17.1,,,,Sequência XML,G,N10,,0-1,,Grupo opcional.
+240.00,,ICMS90,,N18,modBCST,ICMS90.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N17.1,N,1-1,1,"0=Preço tabelado ou máximo sugerido 1=Lista Negativa (valor)
+2=Lista Positiva (valor) 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%)
+5=Pauta (valor)"
+241.00,,ICMS90,,N19,pMVAST,ICMS90.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N17.1,N,0-1,3v2-4,
+242.00,,ICMS90,,N20,pRedBCST,ICMS90.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N17.1,N,0-1,3v2-4,
+243.00,,ICMS90,,N21,vBCST,ICMS90.vBCST,vBCST,Valor da BC do ICMS ST,E,N17.1,N,1-1,13v2,
+244.00,,ICMS90,,N22,pICMSST,ICMS90.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N17.1,N,1-1,3v2-4,"Alíquota do ICMS ST sem o FCP. Quando for o caso,
+informar a alíquota do FCP no campo pFCP (Atualizado NT2016.002)"
+245.00,,ICMS90,,N23,vICMSST,ICMS90.vICMSST,vICMSST,Valor do ICMS ST,E,N17.1,N,1-1,13v2,Valor do ICMS ST retido
+245.00,,ICMS90,,N23.1,,,,Sequência XML,G,N17.1,,0-1,,Grupo opcional. (Incluído na NT2016.002)
+245.10,,ICMS90,,N27.1,,,,Sequência XML,G,N10,,0-1,,Grupo opcional.
+245.20,,ICMS90,,N28a,vICMSDeson,ICMS90.vICMSDeson,vICMSDeson,Valor do ICMS desonerado,E,N27.1,N,1-1,13v2,"Informar apenas nos motivos de desoneração
+documentados abaixo."
+245.30,,ICMS90,,N28,motDesICMS,ICMS90.motDesICMS,motDesICMS,Motivo da desoneração do ICMS,E,N27.1,N,1-1,2,"Campo será preenchido quando o campo anterior estiver
+preenchido. Informar o motivo da desoneração: 3=Uso na agropecuária;
+9=Outros;
+12=Órgão de fomento e desenvolvimento agropecuário."
+245.01,,ICMSPart,,N10a,ICMSPart,ICMSPart.ICMSPart,ICMSPart,Grupo de Partilha do ICMS entre a UF de origem e UF de destino ou a UF definida na legislação.,CG,N01,,1-1,,"Operação interestadual para consumidor final com partilha do ICMS devido na operação entre a UF de origem e a do destinatário, ou a UF definida na legislação.
+(Ex. UF da concessionária de entrega do veículo) (v2.0)"
+245.02,,ICMSPart,,N11,orig,ICMSPart.orig,orig,Origem da mercadoria,E,N10a,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+245.03,,ICMSPart,,N12,CST,ICMSPart.CST,CST,Tributação do ICMS,E,N10a,N,1-1,2,"10=Tributada e com cobrança do ICMS por substituição tributária;
+90=Outros."
+245.04,,ICMSPart,,N13,modBC,ICMSPart.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N10a,N,1-1,1,"0=Margem Valor Agregado (%)
+1=Pauta (Valor)
+2=Preço Tabelado Máx. (valor)
+3=Valor da operação"
+245.05,,ICMSPart,,N15,vBC,ICMSPart.vBC,vBC,Valor da BC do ICMS,E,N10a,N,1-1,13v2,(v2.0)
+245.06,,ICMSPart,,N14,pRedBC,ICMSPart.pRedBC,pRedBC,Percentual da Redução de BC,E,N10a,N,0-1,3v2-4,(v2.0)
+245.07,,ICMSPart,,N16,pICMS,ICMSPart.pICMS,pICMS,Alíquota do imposto,E,N10a,N,1-1,3v2-4,(v2.0)
+245.08,,ICMSPart,,N17,vICMS,ICMSPart.vICMS,vICMS,Valor do ICMS,E,N10a,N,1-1,13v2,
+245.09,,ICMSPart,,N18,modBCST,ICMSPart.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N10a,N,1-1,1,"0=Preço tabelado ou máximo sugerido 1=Lista Negativa (valor)
+2=Lista Positiva (valor); 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%);
+5=Pauta (valor)"
+245.10,,ICMSPart,,N19,pMVAST,ICMSPart.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N10a,N,0-1,3v2-4,(v2.0)
+245.11,,ICMSPart,,N20,pRedBCST,ICMSPart.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N10a,N,0-1,3v2-4,(v2.0)
+245.12,,ICMSPart,,N21,vBCST,ICMSPart.vBCST,vBCST,Valor da BC do ICMS ST,E,N10a,N,1-1,13v2,(v2.0)
+245.13,,ICMSPart,,N22,pICMSST,ICMSPart.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N10a,N,1-1,3v2-4,(v2.0)
+245.14,,ICMSPart,,N23,vICMSST,ICMSPart.vICMSST,vICMSST,Valor do ICMS ST,E,N10a,N,1-1,13v2,Valor do ICMS ST(v2.0)
+245.15,,ICMSPart,,N25,pBCOp,ICMSPart.pBCOp,pBCOp,Percentual da BC operação própria,E,N10a,N,1-1,3v2-4,"Percentual para determinação do valor da Base de Cálculo
+da operação própria. (v2.0)"
+245.16,,ICMSPart,,N24,UFST,ICMSPart.UFST,UFST,UF para qual é devido o ICMS ST,E,N10a,C,1-1,2,"Sigla da UF para qual é devido o ICMS ST da operação.
+Informar ""EX"" para Exterior. (v2.0)"
+245.17,,ICMSST,,N10b,ICMSST,ICMSST.ICMSST,ICMSST,Grupo de Repasse de ICMS ST retido anteriormente em operações interestaduais com repasses através do Substituto Tributário,CG,N01,,1-1,,"Grupo de informação do ICMS ST devido para a UF de destino, nas operações interestaduais de produtos que tiveram retenção antecipada de ICMS por ST na UF do
+remetente. Repasse via Substituto Tributário. (v2.0)"
+245.18,,ICMSST,,N11,orig,ICMSST.orig,orig,Origem da mercadoria,E,N10b,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+245.19,,ICMSST,,N12,CST,ICMSST.CST,CST,Tributação do ICMS,E,N10b,N,1-1,2,"41=Não Tributado (v2.0).
+60= cobrado anteriormente por substituição tributária
+(Incluído NT2016.002)"
+245.20,,ICMSST,,N26,vBCSTRet,ICMSST.vBCSTRet,vBCSTRet,Valor do BC do ICMS ST retido na UF remetente,E,N10b,N,1-1,13v2,"Informar o valor da BC do ICMS ST retido na UF remetente
+(v2.0)"
+245.21,,ICMSST,,N27,vICMSSTRet,ICMSST.vICMSSTRet,vICMSSTRet,Valor do ICMS ST retido na UF remetente,E,N10b,N,1-1,13v2,Informar o valor do ICMS ST retido na UF remetente (v2.0)
+245.22,,ICMSST,,N31,vBCSTDest,ICMSST.vBCSTDest,vBCSTDest,Valor da BC do ICMS ST da UF destino,E,N10b,N,1-1,13v2,Informar o valor da BC do ICMS ST da UF destino (v2.0)
+245.23,,ICMSST,,N32,vICMSSTDest,ICMSST.vICMSSTDest,vICMSSTDest,Valor do ICMS ST da UF destino,E,N10b,N,1-1,13v2,Informar o valor do ICMS ST da UF destino (v2.0)
+245.24,,ICMSSN101,,N10c,ICMSSN101,ICMSSN101.ICMSSN101,ICMSSN101,Grupo CRT=1 – Simples Nacional e CSOSN=101,CG,N01,,1-1,,"Tributação ICMS pelo Simples Nacional, CSOSN=101 (v2.0)"
+245.25,,ICMSSN101,,N11,orig,ICMSSN101.orig,orig,Origem da mercadoria,E,N10c,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+245.26,,ICMSSN101,,N12a,CSOSN,ICMSSN101.CSOSN,CSOSN,Código de Situação da Operação – Simples Nacional,E,N10c,N,1-1,3,"101=Tributada  pelo Simples Nacional com permissão de
+crédito. (v2.0)"
+245.27,,ICMSSN101,,N29,pCredSN,ICMSSN101.pCredSN,pCredSN,Alíquota aplicável de cálculo do crédito (Simples Nacional).,E,N10c,N,1-1,3v2-4,(v2.0)
+245.28,,ICMSSN101,,N30,vCredICMSSN,ICMSSN101.vCredICMSSN,vCredICMSSN,"Valor crédito do ICMS que pode ser aproveitado nos
+termos do art. 23 da LC 123  (Simples Nacional)",E,N10c,N,1-1,13v2,(v2.0)
+245.24,,ICMSSN102,,N10d,ICMSSN102,ICMSSN102.ICMSSN102,ICMSSN102,"Grupo CRT=1 – Simples Nacional e CSOSN=102,  103,  300
+ou 400",CG,N01,,1-1,,"Tributação ICMS pelo Simples Nacional, CSOSN=102, 103,
+300 ou 400 (v2.0)"
+245.25,,ICMSSN102,,N11,orig,ICMSSN102.orig,orig,Origem da mercadoria,E,N10d,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+245.26,,ICMSSN102,,N12a,CSOSN,ICMSSN102.CSOSN,CSOSN,Código de Situação da Operação – Simples Nacional,E,N10d,N,1-1,3,"102=Tributada  pelo  Simples  Nacional  sem  permissão  de crédito.
+103=Isenção  do  ICMS  no  Simples  Nacional  para  faixa  de receita bruta.
+300=Imune.
+400=Não tributada pelo Simples Nacional (v2.0) (v2.0)"
+245.27,,ICMSSN201,,N10e,ICMSSN201,ICMSSN201.ICMSSN201,ICMSSN201,Grupo CRT=1 – Simples Nacional e CSOSN=201,CG,N01,,1-1,,"Tributação ICMS pelo Simples Nacional, CSOSN=201 (v2.0)"
+245.28,,ICMSSN201,,N11,orig,ICMSSN201.orig,orig,Origem da mercadoria,E,N10e,N,1-1,,
+245.29,,ICMSSN201,,N12a,CSOSN,ICMSSN201.CSOSN,CSOSN,Código de Situação da Operação – Simples Nacional,E,N10e,N,1-1,,
+245.30,,ICMSSN201,,N18,modBCST,ICMSSN201.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N10e,N,1-1,,
+245.31,,ICMSSN201,,N19,pMVAST,ICMSSN201.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N10e,N,0-1,,
+245.32,,ICMSSN201,,N20,pRedBCST,ICMSSN201.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N10e,N,0-1,,
+245.33,,ICMSSN201,,N21,vBCST,ICMSSN201.vBCST,vBCST,Valor da BC do ICMS ST,E,N10e,N,1-1,,
+245.34,,ICMSSN201,,N22,pICMSST,ICMSSN201.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N10e,N,1-1,,
+245.35,,ICMSSN201,,N23,vICMSST,ICMSSN201.vICMSST,vICMSST,Valor do ICMS ST,E,N10e,N,1-1,,
+245.36,,ICMSSN201,,N29,pCredSN,ICMSSN201.pCredSN,pCredSN,"Alíquota aplicável de cálculo do crédito (SIMPLES
+NACIONAL).",E,N10e,N,1-1,,
+245.37,,ICMSSN201,,N30,vCredICMSSN,ICMSSN201.vCredICMSSN,vCredICMSSN,"Valor crédito do ICMS que pode ser aproveitado nos
+termos do art. 23 da LC 123  (SIMPLES NACIONAL)",E,N10e,N,1-1,,
+245.38,,ICMSSN202,,N10f,ICMSSN202,ICMSSN202.ICMSSN202,ICMSSN202,Grupo CRT=1 – Simples Nacional e CSOSN=202 ou 203,CG,N01,,1-1,,
+245.39,,ICMSSN202,,N11,orig,ICMSSN202.orig,orig,Origem da mercadoria,E,N10f,N,1-1,1,
+245.40,,ICMSSN202,,N12a,CSOSN,ICMSSN202.CSOSN,CSOSN,Código de Situação da Operação – Simples Nacional,E,N10f,N,1-1,3,
+245.41,,ICMSSN202,,N18,modBCST,ICMSSN202.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N10f,N,1-1,1,
+245.42,,ICMSSN202,,N19,pMVAST,ICMSSN202.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N10f,N,0-1,3v2-4,
+224.43,,ICMSSN202,,N20,pRedBCST,ICMSSN202.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N10f,N,0-1,3v2-4,
+245.44,,ICMSSN202,,N21,vBCST,ICMSSN202.vBCST,vBCST,Valor da BC do ICMS ST,E,N10f,N,1-1,13v2,
+245.45,,ICMSSN202,,N22,pICMSST,ICMSSN202.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N10f,N,1-1,3v2-4,
+245.46,,ICMSSN202,,N23,vICMSST,ICMSSN202.vICMSST,vICMSST,Valor do ICMS ST,E,N10f,N,1-1,13v2,
+245.52,,ICMSSN900,,N10h,ICMSSN900,ICMSSN900.ICMSSN900,ICMSSN900,Grupo CRT=1 – Simples Nacional e CSOSN=900,CG,N01,,1-1,,"Tributação ICMS pelo Simples Nacional, CSOSN=900 (v2.0)"
+245.53,,ICMSSN900,,N11,orig,ICMSSN900.orig,orig,Origem da mercadoria,E,N10h,N,1-1,1,"0 - Nacional, exceto as indicadas nos códigos 3, 4, 5 e 8; 1 - Estrangeira - Importação direta, exceto a indicada no código 6;
+2 - Estrangeira - Adquirida no mercado interno, exceto a indicada no código 7;
+3 - Nacional, mercadoria ou bem com Conteúdo de Importação superior a 40% e inferior ou igual a 70%; 4 - Nacional, cuja produção tenha sido feita em
+conformidade com os processos produtivos básicos de que tratam as legislações citadas  nos Ajustes;
+5 - Nacional, mercadoria ou bem com Conteúdo de Importação inferior ou igual a 40%;
+6 - Estrangeira - Importação direta, sem similar nacional, constante em lista da CAMEX e gás natural;
+7 - Estrangeira - Adquirida no mercado interno, sem similar nacional, constante lista CAMEX e gás natural.
+8 - Nacional, mercadoria ou bem com Conteúdo de
+Importação superior a 70%;"
+245.54,,ICMSSN900,,N12a,CSOSN,ICMSSN900.CSOSN,CSOSN,Código de Situação da Operação – SIMPLES NACIONAL,E,N10h,N,1-1,3,900=Outros (v2.0)
+245.55,,ICMSSN900,,N12.1,,,,Sequência XML,G,N10h,,0-1,,Grupo opcional.
+245.55,,ICMSSN900,,N13,modBC,ICMSSN900.modBC,modBC,Modalidade de determinação da BC do ICMS,E,N12.1,N,1-1,1,"0=Margem Valor Agregado (%); 1=Pauta (Valor);2=Preço
+Tabelado Máx. (valor); 3=Valor da operação."
+245.56,,ICMSSN900,,N15,vBC,ICMSSN900.vBC,vBC,Valor da BC do ICMS,E,N12.1,N,1-1,13v2,(v2.0)
+245.57,,ICMSSN900,,N14,pRedBC,ICMSSN900.pRedBC,pRedBC,Percentual da Redução de BC,E,N12.1,N,0-1,3v2-4,(v2.0)
+245.58,,ICMSSN900,,N16,pICMS,ICMSSN900.pICMS,pICMS,Alíquota do imposto,E,N12.1,N,1-1,3v2-4,(v2.0)
+245.59,,ICMSSN900,,N17,vICMS,ICMSSN900.vICMS,vICMS,Valor do ICMS,E,N12.1,N,1-1,13v2,(v2.0)
+245.60,,ICMSSN900,,N18,modBCST,ICMSSN900.modBCST,modBCST,Modalidade de determinação da BC do ICMS ST,E,N17.1,N,1-1,1,"0=Preço tabelado ou máximo sugerido 1=Lista Negativa (valor)
+2=Lista Positiva (valor) 3=Lista Neutra (valor)
+4=Margem Valor Agregado (%)
+5=Pauta (valor)"
+245.61,,ICMSSN900,,N19,pMVAST,ICMSSN900.pMVAST,pMVAST,Percentual da margem de valor Adicionado do ICMS ST,E,N17.1,N,0-1,3v2-4,(v2.0)
+245.62,,ICMSSN900,,N20,pRedBCST,ICMSSN900.pRedBCST,pRedBCST,Percentual da Redução de BC do ICMS ST,E,N17.1,N,0-1,3v2-4,(v2.0)
+245.63,,ICMSSN900,,N21,vBCST,ICMSSN900.vBCST,vBCST,Valor da BC do ICMS ST,E,N17.1,N,1-1,13v2,(v2.0)
+245.64,,ICMSSN900,,N22,pICMSST,ICMSSN900.pICMSST,pICMSST,Alíquota do imposto do ICMS ST,E,N17.1,N,1-1,3v2-4,"Alíquota do ICMS ST sem o FCP. Quando for o caso,
+informar a alíquota do FCP no campo pFCP"
+245.65,,ICMSSN900,,N23,vICMSST,ICMSSN900.vICMSST,vICMSST,Valor do ICMS ST,E,N17.1,N,1-1,13v2,Valor do ICMS ST retido(v2.0)
+246.00,,IPI,,O01,IPI,IPI.IPI,IPI,Grupo IPI,CG,M01,,0-1,,Informar apenas quando o item for sujeito ao IPI
+247.00,,IPI,,O02,clEnq,IPI.clEnq,clEnq,Classe de enquadramento do IPI para Cigarros e Bebidas,E,O01,C,0-1,1 - 5,"Preenchimento conforme Atos Normativos editados pela Receita Federal (Observação 2)
+(Excluído no leiaute 4.0 - NT2016.002)"
+248.00,,IPI,,O03,CNPJProd,IPI.CNPJProd,CNPJProd,"CNPJ do produtor da mercadoria, quando diferente do emitente. Somente para os casos de exportação direta ou
+indireta.",E,O01,N,0-1,14,Informar os zeros não significativos
+249.00,,IPI,,O04,cSelo,IPI.cSelo,cSelo,Código do selo de controle IPI,E,O01,C,0-1,1 - 60,"Preenchimento conforme Anexo II-A da Instrução
+Normativa RFB Nº 770/2007"
+250.00,,IPI,,O05,qSelo,IPI.qSelo,qSelo,Quantidade de selo de controle,E,O01,N,0-1,1 - 12,
+251.00,,IPI,,O06,cEnq,IPI.cEnq,cEnq,Código de Enquadramento Legal do IPI,E,O01,N,1-1,1 - 3,"Preenchimento conforme seção 8.9 do MOC – Visão Geral
+(Tabela do Código de Enquadramento do IPI)"
+252.00,,IPI,,O07,IPITrib,IPI.IPITrib,IPITrib,"Grupo do CST 00, 49,  50 e 99",CG,O01,,1-1,,"Informar apenas um dos grupos O07 ou O08 com base
+valor atribuído ao campo O09 – CST do IPI"
+262.00,,II,,P01,II,II.II,II,Grupo Imposto de Importação,CG,M01,,0-1,,Informar apenas quando o item for sujeito ao II
+263.00,,II,,P02,vBC,II.vBC,vBC,Valor BC do Imposto de Importação,E,P01,N,1-1,13v2,
+264.00,,II,,P03,vDespAdu,II.vDespAdu,vDespAdu,Valor despesas aduaneiras,E,P01,N,1-1,13v2,
+265.00,,II,,P04,vII,II.vII,vII,Valor Imposto de Importação,E,P01,N,1-1,13v2,
+266.00,,II,,P05,vIOF,II.vIOF,vIOF,Valor Imposto sobre Operações Financeiras,E,P01,N,1-1,13v2,
+267.00,,PIS,,Q01,PIS,PIS.PIS,PIS,Grupo PIS,G,M01,,0-1,,"Informar apenas um dos grupos Q02,  Q03,  Q04 ou Q05
+com base valor atribuído ao campo Q06 – CST do PIS"
+268.00,,PIS,,Q02,PISAliq,PIS.PISAliq,PISAliq,Grupo PIS tributado pela alíquota,CG,Q01,,1-1,,
+269.00,,PIS,,Q06,CST,PIS.CST,CST,Código de Situação Tributária do PIS,E,Q02,N,1-1,2,"01=Operação Tributável (base de cálculo = valor da operação alíquota normal (cumulativo/não cumulativo)); 02=Operação Tributável (base de cálculo = valor da
+operação (alíquota diferenciada));"
+270.00,,PIS,,Q07,vBC,PIS.vBC,vBC,Valor da Base de Cálculo do PIS,E,Q02,N,1-1,13v2,
+271.00,,PIS,,Q08,pPIS,PIS.pPIS,pPIS,Alíquota do PIS (em percentual),E,Q02,N,1-1,3v2-4,
+272.00,,PIS,,Q09,vPIS,PIS.vPIS,vPIS,Valor do PIS,E,Q02,N,1-1,13v2,
+273.00,,PIS,,Q03,PISQtde,PIS.PISQtde,PISQtde,Grupo PIS tributado por Qtde,CG,Q01,,1-1,,
+274.00,,PIS,,Q06,CST,PIS.CST,CST,Código de Situação Tributária do PIS,E,Q03,N,1-1,2,"03=Operação Tributável (base de cálculo = quantidade
+vendida x alíquota por unidade de produto);"
+275.00,,PIS,,Q10,qBCProd,PIS.qBCProd,qBCProd,Quantidade Vendida,E,Q03,N,1-1,12v0-4,
+276.00,,PIS,,Q11,vAliqProd,PIS.vAliqProd,vAliqProd,Alíquota do PIS (em reais),E,Q03,N,1-1,11v0-4,
+277.00,,PIS,,Q09,vPIS,PIS.vPIS,vPIS,Valor do PIS,E,Q03,N,1-1,13v2,
+278.00,,PISNT,,Q04,PISNT,PISNT.PISNT,PISNT,Grupo PIS não tributado,CG,Q01,,1-1,,
+279.00,,PISNT,,Q06,CST,PISNT.CST,CST,Código de Situação Tributária do PIS,E,Q04,N,1-1,2,"04=Operação Tributável (tributação monofásica (alíquota zero));
+05=Operação Tributável (Substituição Tributária); 06=Operação Tributável (alíquota zero); 07=Operação Isenta da Contribuição; 08=Operação Sem Incidência da Contribuição;
+09=Operação com Suspensão da Contribuição;"
+280.00,,PISOutr,,Q05,PISOutr,PISOutr.PISOutr,PISOutr,Grupo PIS Outras Operações,CG,Q01,,1-1,,
+281.00,,PISOutr,,Q06,CST,PISOutr.CST,CST,Código de Situação  Tributária do PIS,E,Q05,N,1-1,2,"49=Outras Operações de Saída;
+50=Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno; 51=Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno;
+52=Operação com Direito a Crédito – Vinculada Exclusivamente a Receita de Exportação;
+53=Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno; 54=Operação com Direito a Crédito - Vinculada a Receitas Tributadas no Mercado Interno e de Exportação; 55=Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação; 56=Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação;
+60=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno; 61=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno;
+62=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação;
+63=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas  e Não-Tributadas no Mercado Interno; 64=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas  no Mercado Interno e de Exportação; 65=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação;
+66=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas  e Não-Tributadas no Mercado Interno, e de Exportação;
+67=Crédito Presumido - Outras Operações; 70=Operação de Aquisição sem Direito a Crédito; 71=Operação de Aquisição com Isenção; 72=Operação de Aquisição com Suspensão; 73=Operação de Aquisição a Alíquota Zero; 74=Operação de Aquisição; sem Incidência da Contribuição;
+75=Operação de Aquisição por Substituição Tributária; 98=Outras Operações de Entrada;
+99=Outras Operações;"
+281.10,,PISOutr,,Q06.1,,,,Sequência XML,CG,Q05,,1-1,,"Informar os campos Q07 e Q08 se o cálculo do PIS em
+percentual."
+282.00,,PISOutr,,Q07,vBC,PISOutr.vBC,vBC,Valor da Base de Cálculo do PIS,E,Q06.1,N,1-1,13v2,
+283.00,,PISOutr,,Q08,pPIS,PISOutr.pPIS,pPIS,Alíquota do PIS (em percentual),E,Q06.1,N,1-1,3v2-4,
+283.10,,PISOutr,,Q08.1,,,,Sequência XML,CG,Q05,,1-1,,"Informar os campos Q10 e Q11 se o cálculo do PIS for em
+valor."
+287.00,,PISST,,R01,PISST,PISST.PISST,PISST,Grupo PIS Substituição Tributária,G,M01,,0-1,,
+287.10,,PISST,,R01.1,,,,Sequência XML,CG,R01,,1-1,,"Informar os campos R02 e R03 para cálculo do PIS em
+percentual."
+288.00,,PISST,,R02,vBC,PISST.vBC,vBC,Valor da Base de Cálculo do PIS,E,R01.1,N,1-1,13v2,
+289.00,,PISST,,R03,pPIS,PISST.pPIS,pPIS,Alíquota do PIS (em percentual),E,R01.1,N,1-1,3v2-4,
+289.10,,PISST,,R03.1,,,,Sequência XML,CG,R01,,1-1,,"Informar os campos R04 e R05 para cálculo do PIS em
+valor."
+290.00,,PISST,,R04,qBCProd,PISST.qBCProd,qBCProd,Quantidade Vendida,E,R031.,N,1-1,12v0-4,
+291.00,,PISST,,R05,vAliqProd,PISST.vAliqProd,vAliqProd,Alíquota do PIS (em reais),E,R03.1,N,1-1,11v0-4,
+292.00,,PISST,,R06,vPIS,PISST.vPIS,vPIS,Valor do PIS,E,R01,N,1-1,13v2,
+293.00,,COFINS,,S01,COFINS,COFINS.COFINS,COFINS,Grupo COFINS,G,M01,,0-1,,"Informar apenas um dos grupos S02,  S03, S04 ou S04 com
+base valor atribuído ao campo de CST da COFINS"
+294.00,,COFINS,,S02,COFINSAliq,COFINS.COFINSAliq,COFINSAliq,Grupo COFINS tributado pela alíquota,CG,S01,,1-1,,
+295.00,,COFINS,,S06,CST,COFINS.CST,CST,Código de Situação  Tributária da COFINS,E,S02,N,1-1,2,"01=Operação Tributável (base de cálculo = valor da
+operação alíquota normal (cumulativo/não cumulativo)); 02=Operação Tributável (base de cálculo = valor da
+operação (alíquota diferenciada));"
+296.00,,COFINS,,S07,vBC,COFINS.vBC,vBC,Valor da Base de Cálculo da COFINS,E,S02,N,1-1,13v2,
+297.00,,COFINS,,S08,pCOFINS,COFINS.pCOFINS,pCOFINS,Alíquota da COFINS (em percentual),E,S02,N,1-1,3v2-4,
+298.00,,COFINS,,S11,vCOFINS,COFINS.vCOFINS,vCOFINS,Valor da COFINS,E,S02,N,1-1,13v2,
+299.00,,COFINSQtde,,S03,COFINSQtde,COFINSQtde.COFINSQtde,COFINSQtde,Grupo de COFINS tributado por Qtde,CG,S01,,1-1,,
+300.00,,COFINSQtde,,S06,CST,COFINSQtde.CST,CST,Código de Situação Tributária da COFINS,E,S03,N,1-1,2,"03=Operação Tributável (base de cálculo = quantidade
+vendida x alíquota por unidade de produto);"
+301.00,,COFINSQtde,,S09,qBCProd,COFINSQtde.qBCProd,qBCProd,Quantidade Vendida,E,S03,N,1-1,12v0-4,
+302.00,,COFINSQtde,,S10,vAliqProd,COFINSQtde.vAliqProd,vAliqProd,Alíquota da COFINS (em reais),E,S03,N,1-1,11v0-4,
+303.00,,COFINSQtde,,S11,vCOFINS,COFINSQtde.vCOFINS,vCOFINS,Valor da COFINS,E,S03,N,1-1,13v2,
+304.00,,COFINSNT,,S04,COFINSNT,COFINSNT.COFINSNT,COFINSNT,Grupo COFINS não tributado,CG,S01,,1-1,,
+305.00,,COFINSNT,,S06,CST,COFINSNT.CST,CST,Código de Situação Tributária da COFINS,E,S04,N,1-1,2,"04=Operação Tributável (tributação monofásica, alíquota zero);
+05=Operação Tributável (Substituição Tributária); 06=Operação Tributável (alíquota zero); 07=Operação Isenta da Contribuição;
+08=Operação Sem Incidência da Contribuição; 09=Operação com Suspensão da Contribuição;"
+306.00,,COFINSOutr,,S05,COFINSOutr,COFINSOutr.COFINSOutr,COFINSOutr,Grupo COFINS Outras Operações,CG,S01,,1-1,,
+307.00,,COFINSOutr,,S06,CST,COFINSOutr.CST,CST,Código de Situação Tributária da COFINS,E,S05,N,1-1,2,"49=Outras Operações de Saída;
+50=Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Tributada no Mercado Interno; 51=Operação com Direito a Crédito - Vinculada Exclusivamente a Receita Não Tributada no Mercado Interno;
+52=Operação com Direito a Crédito – Vinculada Exclusivamente a Receita de Exportação;
+53=Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno; 54=Operação com Direito a Crédito - Vinculada a Receitas
+Tributadas no Mercado Interno e de Exportação; 55=Operação com Direito a Crédito - Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação; 56=Operação com Direito a Crédito - Vinculada a Receitas Tributadas e Não-Tributadas no Mercado Interno, e de Exportação;
+60=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Tributada no Mercado Interno; 61=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita Não-Tributada no Mercado Interno;
+62=Crédito Presumido - Operação de Aquisição Vinculada Exclusivamente a Receita de Exportação;
+63=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas  e Não-Tributadas no Mercado Interno; 64=Crédito Presumido - Operação de Aquisição Vinculada a
+Receitas Tributadas  no Mercado Interno e de Exportação; 65=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Não-Tributadas no Mercado Interno e de Exportação;
+66=Crédito Presumido - Operação de Aquisição Vinculada a Receitas Tributadas  e Não-Tributadas no Mercado Interno, e de Exportação;
+67=Crédito Presumido - Outras Operações; 70=Operação de Aquisição sem Direito a Crédito;
+71=Operação de Aquisição com Isenção;"
+307.10,,COFINSOutr,,S06.1,,,,Sequência XML,CG,S05,,1-1,,"Informar os campos S07 e S08 para cálculo da COFINS em
+percentual."
+308.00,,COFINSOutr,,S07,vBC,COFINSOutr.vBC,vBC,Valor da Base de Cálculo da COFINS,E,S06.1,N,1-1,13v2,
+309.00,,COFINSOutr,,S08,pCOFINS,COFINSOutr.pCOFINS,pCOFINS,Alíquota da COFINS (em percentual),E,S06.1,N,1-1,3v2-4,
+309.10,,COFINSOutr,,S08.1,,,,Sequência XML,CG,S05,,1-1,,"Informar os campos S09 e S10 para cálculo da COFINS em
+valor."
+310.00,,COFINSOutr,,S09,qBCProd,COFINSOutr.qBCProd,qBCProd,Quantidade Vendida,E,S08.1,N,1-1,12v0-4,
+311.00,,COFINSOutr,,S10,vAliqProd,COFINSOutr.vAliqProd,vAliqProd,Alíquota da COFINS (em reais),E,S08.1,N,1-1,11v0-4,
+312.00,,COFINSOutr,,S11,vCOFINS,COFINSOutr.vCOFINS,vCOFINS,Valor da COFINS,E,S05,N,1-1,13v2,
+313.00,,COFINSST,,T01,COFINSST,COFINSST.COFINSST,COFINSST,Grupo COFINS Substituição Tributária,G,M01,,0-1,,
+313.10,,COFINSST,,T01.1,,,,Sequência XML,CG,T01,,1-1,,"Informar os campos T02 e T03 para cálculo da COFINS
+Substituição Tributária em percentual."
+314.00,,COFINSST,,T02,vBC,COFINSST.vBC,vBC,Valor da Base de Cálculo da COFINS,E,T01.1,N,1-1,13v2,
+315.00,,COFINSST,,T03,pCOFINS,COFINSST.pCOFINS,pCOFINS,Alíquota da COFINS (em percentual),E,T01.1,N,1-1,3v2-4,
+315.10,,COFINSST,,T03.1,,,,Sequência XML,CG,T01,,1-1,,"Informar os campos T04 e T05 para cálculo da COFINS
+Substituição Tributária em valor."
+316.00,,COFINSST,,T04,qBCProd,COFINSST.qBCProd,qBCProd,Quantidade Vendida,E,T03.1,N,1-1,12v0-4,
+317.00,,COFINSST,,T05,vAliqProd,COFINSST.vAliqProd,vAliqProd,Alíquota da COFINS (em reais),E,T03.1,N,1-1,11v0-4,
+318.00,,COFINSST,,T06,vCOFINS,COFINSST.vCOFINS,vCOFINS,Valor da COFINS,E,T01,N,1-1,13v2,
+325.00,,infAdProd,,V01,infAdProd,infAdProd.infAdProd,infAdProd,Informações Adicionais  do Produto,E,H01,C,0-1,1-500,"Norma referenciada, informações complementares, etc."
+326.00,,total,,W01,total,total.total,total,Grupo Totais da NF-e,G,A01,,1-1,,"O grupo de valores totais da NF-e deve ser informado com
+o somatório do campo correspondente dos itens."
+327.00,,total,,W02,ICMSTot,total.ICMSTot,ICMSTot,Grupo Totais referentes ao ICMS,G,W01,,1-1,,
+328.00,,total,,W03,vBC,total.vBC,vBC,Base de Cálculo do ICMS,E,W02,N,1-1,13v2,
+329.00,,total,,W04,vICMS,total.vICMS,vICMS,Valor Total do ICMS,E,W02,N,1-1,13v2,
+329.01,,total,,W04a,vICMSDeson,total.vICMSDeson,vICMSDeson,Valor Total do ICMS desonerado,E,W02,N,1-1,13v2,
+329.03,,total,,W04c,vFCPUFDest,total.vFCPUFDest,vFCPUFDest,Valor total do ICMS relativo Fundo de Combate à Pobreza (FCP) da UF de destino,E,W02,N,0-1,13v2,"Valor total do ICMS relativo ao Fundo de Combate à Pobreza (FCP) para a UF de destino.
+(Incluído na NT 2015/003)"
+329.05,,total,,W04e,vICMSUFDest,total.vICMSUFDest,vICMSUFDest,Valor total do ICMS Interestadual para a UF de destino,E,W02,N,0-1,13v2,"Valor total do ICMS Interestadual para a UF de destino, já considerando o valor do ICMS relativo ao Fundo de Combate à Pobreza naquela UF.
+(Incluído na NT 2015/003)"
+329.07,,total,,W04g,vICMSUFRemet,total.vICMSUFRemet,vICMSUFRemet,Valor total do ICMS Interestadual para a UF do remetente,E,W02,N,0-1,13v2,"Valor total do ICMS Interestadual para a UF do remetente. Nota: A partir de 2019,  este valor será zero.
+(Incluído na NT 2015/003)"
+329.08,,total,,W04h,vFCP,total.vFCP,vFCP,Valor Total do FCP (Fundo de Combate à Pobreza),E,W02,N,1-1,13v2,"Corresponde ao total da soma dos campos id: N17c
+(Incluído na NT2016.002)"
+330.00,,total,,W05,vBCST,total.vBCST,vBCST,Base de Cálculo do ICMS ST,E,W02,N,1-1,13v2,
+331.00,,total,,W06,vST,total.vST,vST,Valor Total do ICMS ST,E,W02,N,1-1,13v2,
+331.01,,total,,W06a,vFCPST,total.vFCPST,vFCPST,"Valor Total do FCP (Fundo de Combate à
+Pobreza) retido por substituição tributária",E,W02,N,1-1,13v2,"Corresponde ao total da soma dos campos id:N23d
+(Incluído na NT2016.002)"
+331.02,,total,,W06b,vFCPSTRet,total.vFCPSTRet,vFCPSTRet,"Valor Total do FCP retido anteriormente por Substituição
+Tributária",E,W02,N,1-1,13v2,"Corresponde ao total da soma dos campos id:N27d
+(Incluído na NT2016.002)"
+332.00,,total,,W07,vProd,total.vProd,vProd,Valor Total dos produtos e serviços,E,W02,N,1-1,13v2,
+333.00,,total,,W08,vFrete,total.vFrete,vFrete,Valor Total do Frete,E,W02,N,1-1,13v2,
+334.00,,total,,W09,vSeg,total.vSeg,vSeg,Valor Total do Seguro,E,W02,N,1-1,13v2,
+335.00,,total,,W10,vDesc,total.vDesc,vDesc,Valor Total do Desconto,E,W02,N,1-1,13v2,
+336.00,,total,,W11,vII,total.vII,vII,Valor Total do II,E,W02,N,1-1,13v2,
+337.00,,total,,W12,vIPI,total.vIPI,vIPI,Valor Total do IPI,E,W02,N,1-1,13v2,
+337.01,,total,,W12a,vIPIDevol,total.vIPIDevol,vIPIDevol,Valor Total do IPI devolvido,E,W02,N,1-1,13v2,"Deve ser informado quando preenchido o Grupo Tributos Devolvidos na emissão de nota finNFe=4 (devolução) nas operações com não contribuintes do IPI. Corresponde ao total da soma dos campos id:UA04.
+(Incluído na NT2016.002)"
+338.00,,total,,W13,vPIS,total.vPIS,vPIS,Valor do PIS,E,W02,N,1-1,13v2,
+339.00,,total,,W14,vCOFINS,total.vCOFINS,vCOFINS,Valor da COFINS,E,W02,N,1-1,13v2,
+340.00,,total,,W15,vOutro,total.vOutro,vOutro,Outras Despesas acessórias,E,W02,N,1-1,13v2,
+341.00,,total,,W16,vNF,total.vNF,vNF,Valor Total da NF-e,E,W02,N,1-1,13v2,"Vide validação para este campo na regra de validação
+""W16-xx""."
+348.00,,total,,W23,retTrib,total.retTrib,retTrib,Grupo Retenções de Tributos,G,W01,,0-1,,
+349.00,,total,,W24,vRetPIS,total.vRetPIS,vRetPIS,Valor Retido de PIS,E,W23,N,0-1,13v2,
+350.00,,total,,W25,vRetCOFINS,total.vRetCOFINS,vRetCOFINS,Valor Retido de COFINS,E,W23,N,0-1,13v2,
+351.00,,total,,W26,vRetCSLL,total.vRetCSLL,vRetCSLL,Valor Retido de CSLL,E,W23,N,0-1,13v2,
+352.00,,total,,W27,vBCIRRF,total.vBCIRRF,vBCIRRF,Base de Cálculo do IRRF,E,W23,N,0-1,13v2,
+353.00,,total,,W28,vIRRF,total.vIRRF,vIRRF,Valor Retido do IRRF,E,W23,N,0-1,13v2,
+354.00,,total,,W29,vBCRetPrev,total.vBCRetPrev,vBCRetPrev,Base de Cálculo da Retenção da Previdência Social,E,W23,N,0-1,13v2,
+355.00,,total,,W30,vRetPrev,total.vRetPrev,vRetPrev,Valor da Retenção da Previdência Social,E,W23,N,0-1,13v2,
+356.00,,transp,,X01,transp,transp.transp,transp,Grupo Informações do Transporte,G,A01,,1-1,,
+357.00,,transp,,X02,modFrete,transp.modFrete,modFrete,Modalidade do frete,E,X01,N,1-1,1,"0=Contratação do Frete por conta do Remetente (CIF); 1=Contratação do Frete por conta do Destinatário (FOB); 2=Contratação do Frete por conta de Terceiros; 3=Transporte Próprio por conta do Remetente; 4=Transporte Próprio por conta do Destinatário;
+9=Sem Ocorrência de Transporte.
+(Atualizado na NT2016.002)"
+358.00,,transp,,X03,transporta,transp.transporta,transporta,Grupo Transportador,G,X01,,0-1,,
+359.00,,transp,,X04,CNPJ,transp.CNPJ,CNPJ,CNPJ do Transportador,CE,X03,N,0-1,14,Preencher os zeros não significativos.
+360.00,,transp,,X05,CPF,transp.CPF,CPF,CPF do Transportador,CE,X03,N,0-1,11,
+361.00,,transp,,X06,xNome,transp.xNome,xNome,Razão Social ou nome,E,X03,C,0-1,2 - 60,
+362.00,,transp,,X07,IE,transp.IE,IE,Inscrição Estadual do Transportador,E,X03,C,0-1,2 - 14,"Informar:
+- Inscrição Estadual do transportador contribuinte do ICMS, sem caracteres de formatação (ponto, barra, hífen, etc.);
+- Literal “ISENTO” para transportador isento de inscrição no
+cadastro de contribuintes ICMS;
+- Não informar a tag para não contribuinte do ICMS,
+A UF deve ser informada se informado uma IE. (v2.0)"
+363.00,,transp,,X08,xEnder,transp.xEnder,xEnder,Endereço Completo,E,X03,C,0-1,1 - 60,
+364.00,,transp,,X09,xMun,transp.xMun,xMun,Nome do município,E,X03,C,0-1,1 - 60,
+365.00,,transp,,X10,UF,transp.UF,UF,Sigla da UF,E,X03,C,0-1,2,"A UF deve ser informada se informado uma IE. (v2.0).
+Informar ""EX"" para Exterior."
+366.00,,transp,,X11,retTransp,transp.retTransp,retTransp,Grupo Retenção ICMS transporte,G,X01,,0-1,,
+367.00,,transp,,X12,vServ,transp.vServ,vServ,Valor do Serviço,E,X11,N,1-1,13v2,
+368.00,,transp,,X13,vBCRet,transp.vBCRet,vBCRet,BC da Retenção do ICMS,E,X11,N,1-1,13v2,
+369.00,,transp,,X14,pICMSRet,transp.pICMSRet,pICMSRet,Alíquota da Retenção,E,X11,N,1-1,3v2-4,
+370.00,,transp,,X15,vICMSRet,transp.vICMSRet,vICMSRet,Valor do ICMS Retido,E,X11,N,1-1,13v2,
+371.00,,transp,,X16,CFOP,transp.CFOP,CFOP,CFOP,E,X11,N,1-1,4,"CFOP de Serviço de Transporte (Seção 8.10 do MOC – Visão
+Geral,)."
+372.00,,transp,,X17,cMunFG,transp.cMunFG,cMunFG,"Código do município de ocorrência do fato gerador do
+ICMS do transporte",E,X11,N,1-1,7,"Utilizar a Tabela do IBGE (Seção 8.2 do MOC – Visão Geral,
+Tabela de UF, Município e País)"
+372.10,,transp,,X17.1,,,,Sequência XML,CG,X01,,0-1,,"Transporte  por Veículo, Vagão ou Balsa."
+373.00,,transp,,X18,veicTransp,transp.veicTransp,veicTransp,Grupo Veículo Transporte,G,X17.1,,0-1,,Informar o veículo trator (v2.0)
+374.00,,transp,,X19,placa,transp.placa,placa,Placa do Veículo,E,X18,C,1-1,7,"Informar em um dos seguintes formatos: XXX9999,  XXX999,
+XX9999 ou XXXX999. Informar a placa em informações complementares quando a placa do veículo tiver lei de
+formação diversa. (NT 2011/005)"
+375.00,,transp,,X20,UF,transp.UF,UF,Sigla da UF,E,X18,C,1-1,2,"Informar ""EX"" se Exterior."
+376.00,,transp,,X21,RNTC,transp.RNTC,RNTC,Registro Nacional de Transportador de Carga (ANTT),E,X18,C,0-1,1 - 20,
+377.00,,transp,,X22,reboque,transp.reboque,reboque,Grupo Reboque,G,X17.1,,0-5,,Informar os reboques/Dolly (v2.0)
+378.00,,transp,,X23,placa,transp.placa,placa,Placa do Veículo,E,X22,C,1-1,7,"Informar em um dos seguintes formatos: XXX9999,  XXX999, XX9999 ou XXXX999. Informar a placa em informações complementares quando a placa do veículo tiver lei de
+formação diversa. (NT 2011/005)"
+379.00,,transp,,X24,UF,transp.UF,UF,Sigla da UF,E,X22,C,1-1,2,"Informar ""EX"" se Exterior."
+380.00,,transp,,X25,RNTC,transp.RNTC,RNTC,Registro Nacional de Transportador de Carga (ANTT),E,X22,C,0-1,1 - 20,
+381.00,,transp,,X26,vol,transp.vol,vol,Grupo Volumes,G,X01,,0-5000,,(NT 2012/003)
+382.00,,transp,,X27,qVol,transp.qVol,qVol,Quantidade de volumes transportados,E,X26,N,0-1,1 - 15,
+383.00,,transp,,X28,esp,transp.esp,esp,Espécie dos volumes transportados,E,X26,C,0-1,1 - 60,
+384.00,,transp,,X29,marca,transp.marca,marca,Marca dos volumes transportados,E,X26,C,0-1,1  -60,
+385.00,,transp,,X30,nVol,transp.nVol,nVol,Numeração dos volumes transportados,E,X26,C,0-1,1 - 60,
+386.00,,transp,,X31,pesoL,transp.pesoL,pesoL,Peso Líquido (em kg),E,X26,N,0-1,12v3,
+387.00,,transp,,X32,pesoB,transp.pesoB,pesoB,Peso Bruto (em kg),E,X26,N,0-1,12v3,
+388.00,,transp,,X34,nLacre,transp.nLacre,nLacre,Número dos Lacres,E,X33,C,1-1,1 - 60,
+389.00,,cobr,,Y01,cobr,cobr.cobr,cobr,Grupo Cobrança,G,A01,,0-1,,
+390.00,,cobr,,Y02,fat,cobr.fat,fat,Grupo Fatura,G,Y01,,0-1,,
+391.00,,cobr,,Y03,nFat,cobr.nFat,nFat,Número da Fatura,E,Y02,C,0-1,1 - 60,
+392.00,,cobr,,Y04,vOrig,cobr.vOrig,vOrig,Valor Original da Fatura,E,Y02,N,0-1,13v2,
+393.00,,cobr,,Y05,vDesc,cobr.vDesc,vDesc,Valor do desconto,E,Y02,N,0-1,13v2,
+394.00,,cobr,,Y06,vLiq,cobr.vLiq,vLiq,Valor Líquido da Fatura,E,Y02,N,0-1,13v2,
+395.00,,cobr,,Y07,dup,cobr.dup,dup,Grupo Parcelas,G,Y01,,0-120,,(NT 2011/004)  (Grupo atualizado na NT2016.002)
+396.00,,cobr,,Y08,nDup,cobr.nDup,nDup,Número da Parcela,E,Y07,C,0 - 1,1 - 60,"Obrigatória informação do número de parcelas com 3 algarismos, sequenciais e consecutivos.
+Ex.: “001”,”002”,”003”,...
+Observação: este padrão de preenchimento será Obrig.atório somente a partir de 03/09/2018"
+397.00,,cobr,,Y09,dVenc,cobr.dVenc,dVenc,Data de vencimento,E,Y07,D,0 - 1,,Formato: “AAAA-MM-DD”. Obrigatória a informação da
+398.00,,cobr,,Y10,vDup,cobr.vDup,vDup,Valor da Parcela,E,Y07,N,1-1,13v2,(NT 2012/003)
+398.01,,cobr,,YA01,pag,cobr.pag,pag,Grupo de Informações de Pagamento,G,A01,,1-1,,"Obrig.atório o preenchimento do Grupo Informações de Pagamento para NF-e e NFC-e. Para as notas com finalidade de Ajuste ou Devolução o
+campo Meio de Pagamento deve ser preenchido com 90=Sem Pagamento."
+398.10,,cobr,,YA01a,detPag,cobr.detPag,detPag,Grupo Detalhamento do Pagamento,G,YA01,,1-100,,
+398.11,,cobr,,YA01b,indPag,cobr.indPag,indPag,Indicador da Forma de Pagamento,E,YA01a,N,0-1,1,"0= Pagamento à Vista 1= Pagamento à Prazo
+(Incluído na NT2016.002)"
+398.12,,cobr,,YA02,tPag,cobr.tPag,tPag,Meio de pagamento,E,YA01a,N,1-1,2,"01=Dinheiro 02=Cheque 03=Cartão de Crédito 04=Cartão de Débito 05=Crédito Loja 10=Vale Alimentação 11=Vale Refeição 12=Vale Presente 13=Vale Combustível 15=Boleto Bancário 16=Depósito Bancário
+17=Pagamento Instantâneo (PIX) 18=Transferência bancária,  Carteira Digital
+19=Programa de fidelidade, Cashback, Crédito Virtual 90= Sem pagamento
+99=Outros
+(Atualizado na NT2016.002,  NT2020.006)"
+398.13,,cobr,,YA03,vPag,cobr.vPag,vPag,Valor do Pagamento,E,YA01a,N,1-1,13v2,
+398.20,,cobr,,YA04,card,cobr.card,card,Grupo de Cartões,G,YA01a,,0-1,,
+398.21,,cobr,,YA04a,tpIntegra,cobr.tpIntegra,tpIntegra,Tipo de Integração para pagamento,E,YA04,N,1-1,1,"Tipo de Integração do processo de pagamento com o sistema de automação da empresa:
+1=Pagamento integrado com o sistema de automação da empresa (Ex.: equipamento TEF, Comércio Eletrônico);
+2= Pagamento não integrado com o sistema de automação
+da empresa (Ex.: equipamento POS);"
+398.22,,cobr,,YA05,CNPJ,cobr.CNPJ,CNPJ,CNPJ da instituição de pagamento,E,YA04,C,0-1,14,"Informar o CNPJ da instituição de pagamento, adquirente ou subadquirente. Caso o pagamento seja processado pelo intermediador da transação, informar o CNPJ deste
+(Atualizado na NT 2020.006)"
+398.23,,cobr,,YA06,tBand,cobr.tBand,tBand,Bandeira da  operadora  de  cartão  de crédito e/ou débito,E,YA04,N,0-1,2,"01=Visa 02=Mastercard 03=American Express 04=Sorocred 05=Diners Club 06=Elo
+07=Hipercard 08=Aura 09=Cabal 99=Outros
+(Atualizado na NT2016.002)"
+398.24,,cobr,,YA07,cAut,cobr.cAut,cAut,"Número  de  autorização  da  operação cartão de crédito
+e/ou débito",E,YA04,C,0-1,1-20,"Identifica o número da autorização da transação da
+operação com cartão de crédito e/ou débito"
+398.25,,cobr,,YA09,vTroco,cobr.vTroco,vTroco,Valor do troco,E,YA01,N,0-1,13v2,"Valor do troco
+(Incluído na NT2016.002)"
+398.26,,cobr,,YB01,infIntermed,cobr.infIntermed,infIntermed,Grupo de Informações do Intermediador da Transação,G,A01,,0-1,,"Obrigatório o preenchimento do Grupo de Informações do Intermediador da Transação  nos casos de “operação não presencial pela internet em site de terceiros
+(intermediadores)  (Incluído na NT2020.006)"
+398.27,,cobr,,YB02,CNPJ,cobr.CNPJ,CNPJ,"CNPJ do Intermediador da Transação (agenciador,
+plataforma de delivery, marketplace e similar) de serviços e de negócios.",E,YB01,N,1-1,14,"Informar o CNPJ do Intermediador da Transação
+(agenciador, plataforma de delivery, marketplace e similar)  de serviços e de negócios."
+398.28,,cobr,,YB03,idCadIntTran,cobr.idCadIntTran,idCadIntTran,Identificador cadastrado no intermediador,R,YB01,C,1-1,60,"Nome do usuário ou identificação do perfil do vendedor no site do intermediador (agenciador, plataforma de
+delivery, marketplace e similar) de serviços e de negócios."
+399.00,,infAdic,,Z01,infAdic,infAdic.infAdic,infAdic,Grupo de Informações Adicionais,G,A01,,0-1,,
+400.00,,infAdic,,Z02,infAdFisco,infAdic.infAdFisco,infAdFisco,Informações Adicionais  de Interesse do Fisco,E,Z01,C,0-1,1 - 2000,(v2.0)
+401.00,,infAdic,,Z03,infCpl,infAdic.infCpl,infCpl,Informações Complementares de interesse do Contribuinte,E,Z01,C,0-1,1 - 5000,
+402.00,,infAdic,,ZA01,exporta,infAdic.exporta,exporta,Grupo Exportação,G,A01,,0-1,,Informar apenas na exportação.
+403.00,,infAdic,,ZA02,UFSaidaPais,infAdic.UFSaidaPais,UFSaidaPais,Sigla da UF de Embarque ou de transposição de fronteira,E,ZA01,C,1-1,2,"Não aceita o valor ""EX""."
+404.00,,infAdic,,ZA03,xLocExporta,infAdic.xLocExporta,xLocExporta,"Descrição do Local de Embarque ou de transposição de
+fronteira",E,ZA01,C,1-1,1 - 60,
+405.00,,compra,,ZB01,compra,compra.compra,compra,Grupo Compra,G,A01,,0-1,,Informação adicional de compra
+406.00,,compra,,ZB02,xNEmp,compra.xNEmp,xNEmp,Nota de Empenho,E,ZB01,C,0-1,1 - 22,"Identificação da Nota de Empenho, quando se tratar de
+compras públicas (NT 2011/004)"
+407.00,,compra,,ZB03,xPed,compra.xPed,xPed,Pedido,E,ZB01,C,0-1,1 - 60,Informar o pedido.
+408.00,,compra,,ZB04,xCont,compra.xCont,xCont,Contrato,E,ZB01,C,0-1,1 - 60,Informar o contrato de compra
+409.00,,cana,,ZC01,cana,cana.cana,cana,Grupo Cana,G,A01,,0-1,,Informações de registro aquisições de cana v2.0
+410.00,,cana,,ZC02,safra,cana.safra,safra,Identificação da safra,E,ZC01,C,1-1,4 - 9,"Informar a safra, no formato: ""AAAA"" ou ""AAAA/AAAA"".
+v2.0"
+411.00,,cana,,ZC03,ref,cana.ref,ref,Mês e ano de referência,E,ZC01,C,1-1,7,"Informar o mês e ano de referência, no formato:
+""MM/AAAA"". v2.0"
+412.00,,cana,,ZC04,forDia,cana.forDia,forDia,Grupo Fornecimento diário de cana,G,ZC01,,1 -31,,Informar os fornecimentos diários de cana v2.0
+427.00,,cana,,ZC05,dia,cana.dia,dia,Dia,A,ZC04,N,1-1,1 - 2,v2.0
+414.00,,cana,,ZC06,qtde,cana.qtde,qtde,Quantidade,E,ZC04,N,1-1,11v10,Quantidade em KG v2.0
+415.00,,cana,,ZC07,qTotMes,cana.qTotMes,qTotMes,Quantidade Total do Mês,E,ZC01,N,1-1,11v10,v2.0
+416.00,,cana,,ZC08,qTotAnt,cana.qTotAnt,qTotAnt,Quantidade Total Anterior,E,ZC01,N,1-1,11v10,v2.0
+417.00,,cana,,ZC09,qTotGer,cana.qTotGer,qTotGer,Quantidade Total Geral,E,ZC01,N,1-1,11v10,v2.0
+418.00,,cana,,ZC10,deduc,cana.deduc,deduc,Grupo Deduções – Taxas e Contribuições,G,ZC01,,0-10,,Informar as Deduções – Taxas e Contribuições v2.0
+419.00,,cana,,ZC11,xDed,cana.xDed,xDed,Descrição da Dedução,E,ZC10,C,1-1,1 - 60,Informar a Descrição da Dedução v2.0
+420.00,,cana,,ZC12,vDed,cana.vDed,vDed,Valor da Dedução,E,ZC10,N,1-1,13v2,v2.0
+421.00,,cana,,ZC13,vFor,cana.vFor,vFor,Valor dos Fornecimentos,E,ZC01,N,1-1,13v2,Valor dos Fornecimentos v2.0
+422.00,,cana,,ZC14,vTotDed,cana.vTotDed,vTotDed,Valor Total da Dedução,E,ZC01,N,1-1,13v2,Valor das deduções v2.0
+423.00,,cana,,ZC15,vLiqFor,cana.vLiqFor,vLiqFor,Valor Líquido dos Fornecimentos,E,ZC01,N,1-1,13v2,Valor Líquido dos Fornecimentos v2.0
+424.00,,infNFeSupl,,ZX01,infNFeSupl,infNFeSupl.infNFeSupl,infNFeSupl,Informações suplementares da Nota Fiscal,G,Raiz,-,0-1,,"Informações suplementares da Nota Fiscal, não afetando
+a assinatura digital. (NT 2015.002)"
+425.00,,infNFeSupl,,ZX02,qrCode,infNFeSupl.qrCode,qrCode,"Texto com o QR-Code impresso no DANFE NFC-e.
+Obs.: URLs, por UF, utilizadas  para consulta QR Code acesse: http://nfce.encat.org/desenvolvedor/qrcode/",E,ZX01,C,1-1,100-600,Ver orientações de preenchimento na seção 3.3 deste documento.
+426.00,,infNFeSupl,,ZX03,urlChave,infNFeSupl.urlChave,urlChave,"Texto com a URL de consulta por chave de acesso a ser impressa no DANFE NFC-e.  Obs.: URLs, por UF, utilizadas para consulta por chave de acesso acesse: http://nfce.encat.org/consumidor-nfce/consulte-nota-
+nfce/",E,ZX01,C,1-1,21-85,Informar a URL da “Consulta por chave de acesso da NFC- e”. A mesma URL que deve estar informada no DANFE NFC- e para consulta por chave de acesso.
+999.00,,Signature,,ZZ01,Signature,Signature.Signature,Signature,"Assinatura XML da NF-e Segundo o Padrão XML Digital
+Signature",G,A01,,1-1,,

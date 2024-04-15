@@ -1,0 +1,160 @@
+bloco,Nº,Campo,Descrição,Tipo,Tam,Dec,Obrig,
+0000,1,REG,Texto fixo contendo “0000”.,C,4,-,O,
+0000,2,COD_VER,Código da versão do leiaute conforme a tabela indicada no Ato COTEPE.,N,003*,-,O,
+0000,3,COD_FIN,"Código da finalidade do arquivo:
+- Remessa do arquivo original;
+- Remessa do arquivo substituto.",N,1,-,O,
+0000,4,DT_INI,Data inicial das informações contidas no arquivo.,N,008*,-,O,
+0000,5,DT_FIN,Data final das informações contidas no arquivo.,N,008*,-,O,
+0000,6,NOME,Nome empresarial da entidade.,C,100,-,O,
+0000,7,CNPJ,Número de inscrição da entidade no CNPJ.,N,014*,-,OC,
+0000,8,CPF,Número de inscrição da entidade no CPF.,N,011*,,OC,
+0000,9,UF,Sigla da unidade da federação da entidade.,C,002*,-,O,
+0000,10,IE,Inscrição Estadual da entidade.,C,14,-,O,
+0000,11,COD_MUN,"Código do município do domicílio fiscal da entidade, conforme a tabela IBGE",N,007*,-,O,
+0000,12,IM,Inscrição Municipal da entidade.,C,-,-,OC,
+0000,13,SUFRAMA,Inscrição da entidade na SUFRAMA,C,009*,-,OC,
+0000,14,IND_PERFIL,"Perfil de apresentação do arquivo fiscal;
+A – Perfil A;
+B – Perfil B.;
+C – Perfil C.",C,1,-,O,
+0000,15,IND_ATIV,"Indicador de tipo de atividade:
+– Industrial ou equiparado a industrial;
+– Outros.",N,1,-,O,
+0200,1,REG,"Texto fixo contendo ""0200""",C,4,-,O,
+0200,2,COD_ITEM,Código do item,C,60,-,O,
+0200,3,DESCR_ITEM,Descrição do item,C,-,-,O,
+0200,4,COD_BARRA,"Representação alfanumérico do código de barra do produto, se houver",C,-,-,OC,
+0200,5,COD_ANT_ITEM,Código anterior do item com relação à última informação apresentada.,C,60,-,N (informar no 0205),
+0200,6,UNID_INV,Unidade de medida utilizada na quantificação de estoques.,C,6,-,O,
+0200,7,TIPO_ITEM,"Tipo do item – Atividades Industriais, Comerciais e Serviços:
+00 – Mercadoria para Revenda; 01 – Matéria-prima; 02 – Embalagem; 03 – Produto em Processo; 04 – Produto Acabado; 05– Subproduto; 06– Produto Intermediário; 07– Material de Uso e Consumo; 08 – Ativo Imobilizado; 09 – Serviços; 10 – Outros insumos; 99 – Outras",N,2,-,O,
+0200,8,COD_NCM,Código da Nomenclatura Comum do Mercosul,C,008*,-,OC,
+0200,9,EX_IPI,"Código EX, conforme a TIPI",C,3,-,OC,
+0200,10,COD_GEN,"Código do gênero do item, conforme a Tabela 4.2.1",N,002*,-,OC,
+0200,11,COD_LST,Código do serviço conforme lista do Anexo I da Lei Complementar Federal nº 116/03.,C,5,,OC,
+0200,12,ALIQ_ICMS,Alíquota de ICMS aplicável ao item nas operações internas,N,6,2,OC,
+0200,13,CEST,Código Especificador da Substituição Tributária,N,007*,-,OC,
+C100,1,REG,"Texto fixo contendo ""C100""",C,4,-,O,O
+C100,2,IND_OPER,Indicador do tipo de operação: 0- Entrada; 1- Saída,C,001*,-,O,O
+C100,3,IND_EMIT,Indicador do emitente do documento fiscal: 0- Emissão própria; 1- Terceiros,C,001*,-,O,O
+C100,4,COD_PART,"Código do participante (campo 02 do Registro 0150): do emitente do documento ou do remetente das mercadorias, no caso de entradas; do adquirente, no caso de saídas",C,60,-,O,O
+C100,5,COD_MOD,"Código do modelo do documento fiscal, conforme a Tabela 4.1.1",C,002*,-,O,O
+C100,6,COD_SIT,"Código da situação do documento fiscal, conforme a Tabela 4.1.2",N,002*,-,O,O
+C100,7,SER,Série do documento fiscal,C,3,-,OC,OC
+C100,8,NUM_DOC,Número do documento fiscal,N,9,-,O,O
+C100,9,CHV_NFE,Chave da Nota Fiscal Eletrônica,N,044*,-,OC,OC
+C100,10,DT_DOC,Data da emissão do documento fiscal,N,008*,-,O,O
+C100,11,DT_E_S,Data da entrada ou da saída,N,008*,-,O,OC
+C100,12,VL_DOC,Valor total do documento fiscal,N,-,2,O,O
+C100,13,IND_PGTO,Indicador do tipo de pagamento: 0 - À vista; 1 - A prazo; 9 - Outros,C,001*,-,O,O
+C100,14,VL_DESC,Valor total do desconto,N,-,2,OC,OC
+C100,15,VL_ABAT_NT,"Abatimento não tributado e não comercial
+Por exemplo: desconto ICMS nas remessas para ZFM.",N,-,2,OC,OC
+C100,16,VL_MERC,Valor total das mercadorias e serviços,N,-,2,O,OC
+C100,17,IND_FRT," Indicador do tipo de frete:
+0- Contratação do Frete por conta do Remetente (CIF);
+1- Contratação do Frete por conta do Destinatário (FOB);
+2- Contratação do Frete por conta de Terceiros;
+3- Transporte Próprio por conta do Remetente;
+4 - Transporte Próprio por conta do Destinatário;
+9 - Sem Ocorrência de Transporte.",C,001*,-,O,O
+C100,18,VL_FRT,Valor do frete indicado no documento fiscal,N,-,2,OC,OC
+C100,19,VL_SEG,Valor do seguro indicado no documento fiscal,N,-,2,OC,OC
+C100,20,VL_OUT_DA,Valor de outras despesas acessórias,N,-,2,OC,OC
+C100,21,VL_BC_ICMS,Valor da base de cálculo do ICMS,N,-,2,OC,OC
+C100,22,VL_ICMS,Valor do ICMS,N,-,2,OC,OC
+C100,23,VL_BC_ICMS_ST,Valor da base de cálculo do ICMS substituição tributária,N,-,2,OC,OC
+C100,24,VL_ICMS_ST,Valor do ICMS retido por substituição tributária,N,-,2,OC,OC
+C100,25,VL_IPI,Valor total do IPI,N,-,2,OC,OC
+C100,26,VL_PIS,Valor total do PIS,N,-,2,OC,OC
+C100,27,VL_COFINS,Valor total da COFINS,N,-,2,OC,OC
+C100,28,VL_PIS_ST,Valor total do PIS retido por substituição tributária,N,-,2,OC,OC
+C100,29,VL_COFINS_ST,Valor total da COFINS retido por substituição tributária,N,-,2,OC,OC
+C170,1,REG,"Texto fixo contendo ""C170""",C,4,-,O,O
+C170,2,NUM_ITEM,Número sequencial do item no documento fiscal,N,3,-,O,O
+C170,3,COD_ITEM,Código do item (campo 02 do Registro 0200),C,60,-,O,O
+C170,4,DESCR_COMPL,Descrição complementar do item como adotado no documento fiscal,C,-,-,OC,OC
+C170,5,QTD,Quantidade do item,N,-,5,O,O
+C170,6,UNID,Unidade do item (Campo 02 do registro 0190),C,6,-,O,O
+C170,7,VL_ITEM,Valor total do item (mercadorias ou serviços),N,-,2,O,O
+C170,8,VL_DESC,Valor do desconto comercial,N,-,2,OC,OC
+C170,9,IND_MOV,"Movimentação física do ITEM/PRODUTO:  0-SIM, 1-NÃO",C,001*,-,O,O
+C170,10,CST_ICMS,"Código da Situação Tributária referente ao ICMS, conforme a Tabela indicada no item 4.3.1",N,003*,-,O,O
+C170,11,CFOP,Código Fiscal de Operação e Prestação,N,004*,-,O,O
+C170,12,COD_NAT,Código da natureza da operação (campo 02 do Registro 0400),C,10,-,OC,OC
+C170,13,VL_BC_ICMS,Valor da base de cálculo do ICMS,N,-,2,OC,OC
+C170,14,ALIQ_ICMS,Alíquota do ICMS,N,6,2,OC,OC
+C170,15,VL_ICMS,Valor do ICMS creditado/debitado,N,-,2,OC,OC
+C170,16,VL_BC_ICMS_ST,Valor da base de cálculo referente à substituição tributária,N,-,2,OC,OC
+C170,17,ALIQ_ST,Alíquota do ICMS da substituição tributária na unidade da federação de destino,N,-,2,OC,OC
+C170,18,VL_ICMS_ST,Valor do ICMS referente à substituição tributária,N,-,2,OC,OC
+C170,19,IND_APUR,Indicador de período de apuração do IPI: 0- Mensal; 1- Decendial,C,001*,-,OC,OC
+C170,20,CST_IPI,"Código da Situação Tributária referente ao IPI, conforme a Tabela indicada no item 4.3.2.",C,002*,-,OC,OC
+C170,21,COD_ENQ,"Código de enquadramento legal do IPI, conforme tabela indicada no item 4.5.3.",C,003*,-,OC,OC
+C170,22,VL_BC_IPI,Valor da base de cálculo do IPI,N,-,2,OC,OC
+C170,23,ALIQ_IPI,Alíquota do IPI,N,6,2,OC,OC
+C170,24,VL_IPI,Valor do IPI creditado/debitado,N,-,2,OC,OC
+C170,25,CST_PIS,Código da Situação Tributária referente ao PIS.,N,002*,-,OC,OC
+C170,26,VL_BC_PIS,Valor da base de cálculo do PIS,N,-,2,OC,OC
+C170,27,ALIQ_PIS,Alíquota do PIS (em percentual),N,8,4,OC,OC
+C170,28,QUANT_BC_PIS,Quantidade – Base de cálculo PIS,N,-,3,OC,OC
+C170,29,ALIQ_PIS,Alíquota do PIS (em reais),N,-,4,OC,OC
+C170,30,VL_PIS,Valor do PIS,N,-,2,OC,OC
+C170,31,CST_COFINS,Código da Situação Tributária referente ao COFINS.,N,002*,-,OC,OC
+C170,32,VL_BC_COFINS,Valor da base de cálculo da COFINS,N,-,2,OC,OC
+C170,33,ALIQ_COFINS,Alíquota do COFINS (em percentual),N,8,4,OC,OC
+C170,34,QUANT_BC_COF INS,Quantidade – Base de cálculo COFINS,N,-,3,OC,OC
+C170,35,ALIQ_COFINS,Alíquota da COFINS (em reais),N,-,4,OC,OC
+C170,36,VL_COFINS,Valor da COFINS,N,-,2,OC,OC
+C170,37,COD_CTA,Código da conta analítica contábil debitada/creditada,C,-,-,OC,OC
+C170,38,VL_ABAT_NT,Valor do abatimento não tributado e não comercial,N,-,2,OC,OC
+C190,1,REG,"Texto fixo contendo ""C190""",C,4,-,O,O
+C190,2,CST_ICMS,Código da Situação Tributária,N,003*,-,O,O
+C190,3,CFOP,Código Fiscal de Operação e Prestação do agrupamento de itens,N,004*,-,O,O
+C190,4,ALIQ_ICMS,Alíquota do ICMS,N,6,2,OC,OC
+C190,5,VL_OPR,"Valor da operação na combinação de CST_ICMS, CFOP e alíquota do ICMS, correspondente ao somatório do valor das mercadorias, despesas acessórias (frete, seguros e outras despesas acessórias), ICMS_ST, FCP_ST e IPI.",N,-,2,O,O
+C190,6,VL_BC_ICMS,"Parcela correspondente ao ""Valor da base de cálculo do ICMS"" referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.",N,-,2,O,O
+C190,7,VL_ICMS,"Parcela correspondente ao ""Valor do ICMS"", incluindo o FCP, quando aplicável, referente à combinação de CST_ICMS, CFOP e alíquota do
+ICMS.",N,-,2,O,O
+C190,8,VL_BC_ICMS_ ST,"Parcela correspondente ao ""Valor da base de cálculo do ICMS"" da substituição tributária referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.",N,-,2,O,O
+C190,9,VL_ICMS_ST,"Parcela correspondente ao valor creditado/debitado do ICMS da substituição tributária, incluindo o FCP_ ST, quando aplicável, referente à combinação de CST_ICMS, CFOP, e alíquota do ICMS.",N,-,2,O,O
+C190,10,VL_RED_BC,"Valor não tributado em função da redução da base de cálculo do ICMS, referente à combinação de CST_ICMS, CFOP e alíquota do ICMS.",N,-,2,O,O
+C190,11,VL_IPI,"Parcela correspondente ao ""Valor do IPI"" referente à combinação CST_ICMS, CFOP e alíquota do ICMS.",N,-,2,O,O
+C190,12,COD_OBS,Código da observação do lançamento fiscal (campo 02 do Registro 0460),C,6,-,OC,OC
+E110,1,REG,"Texto fixo contendo ""E110""",C,4,-,O,
+E110,2,VL_TOT_DEBITOS,"Valor total dos débitos por ""Saídas e prestações com débito do imposto""",N,-,2,O,
+E110,3,VL_AJ_DEBITOS,Valor total dos ajustes a débito decorrentes do documento fiscal.,N,-,2,O,
+E110,4,VL_TOT_AJ_DEBITOS,"Valor total de ""Ajustes a débito""",N,-,2,O,
+E110,5,VL_ESTORNOS_CRED,Valor total de Ajustes “Estornos de créditos”,N,-,2,O,
+E110,6,VL_TOT_CREDITOS,"Valor total dos créditos por ""Entradas e aquisições com crédito do imposto""",N,-,2,O,
+E110,7,VL_AJ_CREDITOS,Valor total dos ajustes a crédito decorrentes do documento fiscal.,N,-,2,O,
+E110,8,VL_TOT_AJ_CREDITOS,"Valor total de ""Ajustes a crédito""",N,-,2,O,
+E110,9,VL_ESTORNOS_DEB,Valor total de Ajustes “Estornos de Débitos”,N,-,2,O,
+E110,10,VL_SLD_CREDOR_ANT,"Valor total de ""Saldo credor do período anterior""",N,-,2,O,
+E110,11,VL_SLD_APURADO,Valor do saldo devedor apurado,N,-,2,O,
+E110,12,VL_TOT_DED,"Valor total de ""Deduções""",N,-,2,O,
+E110,13,VL_ICMS_RECOLHER,"Valor total de ""ICMS a recolher (11-12)",N,-,2,O,
+E110,14,VL_SLD_CREDOR_TRA NSPORTAR,"Valor total de ""Saldo credor a transportar para o período seguinte”",N,-,2,O,
+E110,15,DEB_ESP,"Valores recolhidos ou a recolher, extra-apuração.",N,-,2,O,
+E210,1,REG,"Texto fixo contendo ""E210""",C,4,-,O,
+E210,2,IND_MOV_ST,"Indicador de movimento: 0– Sem operações com ST, 1– Com operações de ST",C,1,-,O,
+E210,3,VL_SLD_CRED_ANT_ST,"Valor do ""Saldo credor de período anterior – Substituição Tributária""",N,-,2,O,
+E210,4,VL_DEVOL_ST,Valor total do ICMS ST de devolução de mercadorias,N,-,2,O,
+E210,5,VL_RESSARC_ST,Valor total do ICMS ST de ressarcimentos,N,-,2,O,
+E210,6,VL_OUT_CRED_ST,"Valor total de Ajustes ""Outros créditos ST"" e “Estorno de débitos ST”",N,-,2,O,
+E210,7,VL_AJ_CREDITOS_ST,"Valor total dos ajustes a crédito de ICMS ST, provenientes de ajustes do documento fiscal.",N,-,2,O,
+E210,8,VL_RETENÇAO_ST,Valor Total do ICMS retido por Substituição Tributária,N,-,2,O,
+E210,9,VL_OUT_DEB_ST,"Valor Total dos ajustes ""Outros débitos ST"" "" e “Estorno de créditos ST”",N,-,2,O,
+E210,10,VL_AJ_DEBITOS_ST,"Valor total dos ajustes a débito de ICMS ST, provenientes de ajustes do documento fiscal.",N,-,2,O,
+E210,11,VL_SLD_DEV_ANT_ST,Valor total de Saldo devedor antes das deduções,N,-,2,O,
+E210,12,VL_DEDUÇÕES_ST,"Valor total dos ajustes ""Deduções ST""",N,-,2,O,
+E210,13,VL_ICMS_RECOL_ST,Imposto a recolher ST (11-12),N,-,2,O,
+E210,14,VL_SLD_CRED_ST_TRANS PORTAR,Saldo credor de ST a transportar para o período seguinte [(03+04+05+06+07+12) – (08+09+10)].,N,-,2,O,
+E210,15,DEB_ESP_ST,"Valores recolhidos ou a recolher, extra-apuração.",N,-,2,O,
+E510,1,REG,"Texto fixo contendo ""E510""",C,4,-,O,
+E510,2,CFOP,Código Fiscal de Operação e Prestação do agrupamento de itens,N,004*,-,O,
+E510,3,CST_IPI,"Código da Situação Tributária referente ao IPI, conforme a Tabela indicada no item 4.3.2.",C,002*,-,O,
+E510,4,VL_CONT_IPI,"Parcela correspondente ao ""Valor Contábil"" referente ao CFOP e ao Código de Tributação do IPI",N,-,2,O,
+E510,5,VL_BC_IPI,"Parcela correspondente ao ""Valor da base de cálculo do IPI"" referente ao CFOP e ao Código de Tributação do IPI, para operações tributadas",N,-,2,O,
+E510,6,VL_IPI,"Parcela correspondente ao ""Valor do IPI"" referente ao CFOP e ao Código de Tributação do IPI, para operações tributadas",N,-,2,O,
