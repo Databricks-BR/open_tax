@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00"
+	xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe
+		xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe versao="4.00" Id="NFe35240444213965000138550010009430021561031999">
+			<ide>
+				<cUF>35</cUF>
+				<cNF>56103155</cNF>
+				<natOp>VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>943002</nNF>
+				<dhEmi>2024-04-15T08:11:03-03:00</dhEmi>
+				<dhSaiEnt>2024-04-15T08:11:03-03:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>3503307</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>9</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>1</indFinal>
+				<indPres>9</indPres>
+				<indIntermed>0</indIntermed>
+				<procEmi>0</procEmi>
+				<verProc>MU: 6.0.4.14</verProc>
+			</ide>
+			<emit>
+				<CNPJ>44213965000138</CNPJ>
+				<xNome>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xNome>
+				<xFant>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xFant>
+				<enderEmit>
+					<xLgr>AV. DONA RENATA</xLgr>
+					<nro>2953</nro>
+					<xBairro>CENTRO</xBairro>
+					<cMun>3503307</cMun>
+					<xMun>ARARAS</xMun>
+					<UF>SP</UF>
+					<CEP>13600000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1935433933</fone>
+				</enderEmit>
+				<IE>182004229119</IE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CPF>05057264400</CPF>
+				<xNome>JOAO BATATINHA DA SILVA</xNome>
+				<enderDest>
+					<xLgr>EST. MUN. PAULO BOTION</xLgr>
+					<nro>S/N</nro>
+					<xCpl>CHACARA DA BATATA</xCpl>
+					<xBairro>BARRO PRETO</xBairro>
+					<cMun>3512407</cMun>
+					<xMun>CORDEIROPOLIS</xMun>
+					<UF>SP</UF>
+					<CEP>13490000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>19912345678</fone>
+				</enderDest>
+				<indIEDest>9</indIEDest>
+				<email>joao.batatinha@gmail.com</email>
+			</dest>
+			<retirada>
+				<CNPJ>44213965000138</CNPJ>
+				<xNome>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xNome>
+				<xLgr>AV. DONA RENATA</xLgr>
+				<nro>2953</nro>
+				<xBairro>CENTRO</xBairro>
+				<cMun>3503307</cMun>
+				<xMun>ARARAS</xMun>
+				<UF>SP</UF>
+				<CEP>13600000</CEP>
+				<cPais>1058</cPais>
+				<xPais>BRASIL</xPais>
+				<fone>1935433933</fone>
+				<email>vendas@krepischi.com.br</email>
+				<IE>182004229119</IE>
+			</retirada>
+			<det nItem="1">
+				<prod>
+					<cProd>52902</cProd>
+					<cEAN>7899530327007</cEAN>
+					<xProd>REV.82X82 PORC.REF.P82055 EMBRAMACO</xProd>
+					<NCM>69072100</NCM>
+					<CEST>1003000</CEST>
+					<CFOP>5405</CFOP>
+					<uCom>M2</uCom>
+					<qCom>6.0600</qCom>
+					<vUnCom>82.5100000000</vUnCom>
+					<vProd>500.01</vProd>
+					<cEANTrib>7899530327007</cEANTrib>
+					<uTrib>M2</uTrib>
+					<qTrib>6.0600</qTrib>
+					<vUnTrib>82.5099009901</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS60>
+							<orig>0</orig>
+							<CST>60</CST>
+							<vBCSTRet>0.00</vBCSTRet>
+							<pST>0.0000</pST>
+							<vICMSSubstituto>0.00</vICMSSubstituto>
+							<vICMSSTRet>0.00</vICMSSTRet>
+						</ICMS60>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>500.01</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>8.25</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>500.01</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>38.00</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>FP63176A ; L:235 -T:69 -B:6 Quantidade: 6 0600 [06];</infAdProd>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>0.00</vBC>
+					<vICMS>0.00</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>500.01</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>8.25</vPIS>
+					<vCOFINS>38.00</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>500.01</vNF>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>3</modFrete>
+				<transporta>
+					<CNPJ>44213965000138</CNPJ>
+					<xNome>Krepischi - Lar &amp; Construcao</xNome>
+					<IE>182004229119</IE>
+					<xEnder>Av.Dona Renata, 2953</xEnder>
+					<xMun>Araras</xMun>
+					<UF>SP</UF>
+				</transporta>
+				<vol>
+					<qVol>3</qVol>
+					<nVol>1</nVol>
+					<pesoL>138.000</pesoL>
+					<pesoB>138.000</pesoB>
+				</vol>
+			</transp>
+			<cobr>
+				<fat>
+					<nFat>943002</nFat>
+					<vOrig>500.01</vOrig>
+					<vDesc>0.00</vDesc>
+					<vLiq>500.01</vLiq>
+				</fat>
+				<dup>
+					<nDup>001</nDup>
+					<dVenc>2024-07-10</dVenc>
+					<vDup>500.01</vDup>
+				</dup>
+			</cobr>
+			<pag>
+				<detPag>
+					<indPag>1</indPag>
+					<tPag>15</tPag>
+					<vPag>500.01</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infAdFisco>Total desconto concedido: 75,08 C; ONFERIR AS MERCADORIAS NO ATO DA ENTREGA/RETIRADA, NAO ACEITAMOS RECLAMACOES</infAdFisco>
+				<infCpl>Vendedor: ZEZAO TEL:3543-1111 Pedido: 9990999 Celular: 199 1234-5678 Voce pagou aproximadamente: R$ 67.95 de tributos federais R$ 60.00 de tributos estaduais R$ 372.06 pelos produtos Fonte IBPT/FECOMERCIO SP D8CAC2</infCpl>
+			</infAdic>
+		</infNFe>
+		<Signature
+			xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+				<Reference URI="#NFe35240444213965000138550010009430021561031999">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+					<DigestValue>NkdSHR8vICdqaD+J0iZ1v/vTu5o=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>VouVjBzaLEM3OwabpfOsBJmKJ364jEwascjHV/wEibtDolCVcuLfhc1MaXlWLBuijA6qOm+KWqeF3yUS0sPwIH0++nDkeRbHvzefPlgflt0p6rLPmFzvuzsjmIkrbFFsYO+RITWgeWH70S60ogzAB0NsmErf4RQ+hOJEo46DiDWMBlsC0TS93sbV5ojjtZTRby3JO8N7vWAiiTfscC86B6Kd4voV772exSrF3kHWSJ/AW2fgZUZG9kc/rXclOBDbWtGkhoqRNxi3uN1r0kYcV7J7TOVeCAXpHTd+Cc+fGrmtD9DmK7yU1PBDYha8c+5YsrEAHdSY0bJ79xHSgm752w==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe versao="4.00">
+		<infProt>
+			<tpAmb>1</tpAmb>
+			<verAplic>SP_NFE_PL009_V4</verAplic>
+			<chNFe>35240444213965000138550010009430021561031999</chNFe>
+			<dhRecbto>2024-04-15T08:15:56-03:00</dhRecbto>
+			<nProt>135240781693989</nProt>
+			<digVal>NkdSHR8vICdqaD+J0iZ1v/vTu5o=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>

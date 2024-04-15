@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc versao="4.00"
+	xmlns="http://www.portalfiscal.inf.br/nfe">
+	<NFe
+		xmlns="http://www.portalfiscal.inf.br/nfe">
+		<infNFe versao="4.00" Id="NFe35240244213965000138550010009347831188888102">
+			<ide>
+				<cUF>35</cUF>
+				<cNF>10598810</cNF>
+				<natOp>VENDA DE MERCADORIA ADQUIRIDA OU RECEBIDA DE TERCEIROS</natOp>
+				<mod>55</mod>
+				<serie>1</serie>
+				<nNF>934783</nNF>
+				<dhEmi>2024-02-22T11:39:40-03:00</dhEmi>
+				<dhSaiEnt>2024-02-22T11:39:40-03:00</dhSaiEnt>
+				<tpNF>1</tpNF>
+				<idDest>1</idDest>
+				<cMunFG>3503307</cMunFG>
+				<tpImp>1</tpImp>
+				<tpEmis>1</tpEmis>
+				<cDV>2</cDV>
+				<tpAmb>1</tpAmb>
+				<finNFe>1</finNFe>
+				<indFinal>1</indFinal>
+				<indPres>9</indPres>
+				<indIntermed>0</indIntermed>
+				<procEmi>0</procEmi>
+				<verProc>MU: 6.0.4.14</verProc>
+			</ide>
+			<emit>
+				<CNPJ>44213965000138</CNPJ>
+				<xNome>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xNome>
+				<xFant>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xFant>
+				<enderEmit>
+					<xLgr>AV. DONA RENATA</xLgr>
+					<nro>2953</nro>
+					<xBairro>CENTRO</xBairro>
+					<cMun>3503307</cMun>
+					<xMun>ARARAS</xMun>
+					<UF>SP</UF>
+					<CEP>13600000</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1935433933</fone>
+				</enderEmit>
+				<IE>182004229119</IE>
+				<CRT>3</CRT>
+			</emit>
+			<dest>
+				<CPF>38868329450</CPF>
+				<xNome>MANUEL LIMAO</xNome>
+				<enderDest>
+					<xLgr>AV LUIZ MAGGIONI</xLgr>
+					<nro>2601</nro>
+					<xCpl>AP 222</xCpl>
+					<xBairro>DISTRITO EMPRESARIAL</xBairro>
+					<cMun>3543402</cMun>
+					<xMun>RIBEIRAO PRETO</xMun>
+					<UF>SP</UF>
+					<CEP>14072055</CEP>
+					<cPais>1058</cPais>
+					<xPais>BRASIL</xPais>
+					<fone>1636387886</fone>
+				</enderDest>
+				<indIEDest>9</indIEDest>
+				<email>manuel.limao@limao.com</email>
+			</dest>
+			<retirada>
+				<CNPJ>44213965000138</CNPJ>
+				<xNome>KREPISCHI LAR E CONSTRUCAO LTDA-MATRIZ</xNome>
+				<xLgr>AV. DONA RENATA</xLgr>
+				<nro>2953</nro>
+				<xBairro>CENTRO</xBairro>
+				<cMun>3503307</cMun>
+				<xMun>ARARAS</xMun>
+				<UF>SP</UF>
+				<CEP>13600000</CEP>
+				<cPais>1058</cPais>
+				<xPais>BRASIL</xPais>
+				<fone>1935433933</fone>
+				<email>vendas@krepischi.com.br</email>
+				<IE>182004229119</IE>
+			</retirada>
+			<det nItem="1">
+				<prod>
+					<cProd>32691</cProd>
+					<cEAN>7890577340028</cEAN>
+					<xProd>DOBRADICA PIVO.INOX 360PV 80KG PADO</xProd>
+					<NCM>83021000</NCM>
+					<CEST>1007600</CEST>
+					<CFOP>5405</CFOP>
+					<uCom>UN</uCom>
+					<qCom>1.0000</qCom>
+					<vUnCom>286.0000000000</vUnCom>
+					<vProd>286.00</vProd>
+					<cEANTrib>7890577340028</cEANTrib>
+					<uTrib>UN</uTrib>
+					<qTrib>1.0000</qTrib>
+					<vUnTrib>286.0000000000</vUnTrib>
+					<indTot>1</indTot>
+				</prod>
+				<imposto>
+					<ICMS>
+						<ICMS60>
+							<orig>0</orig>
+							<CST>60</CST>
+							<vBCSTRet>0.00</vBCSTRet>
+							<pST>0.0000</pST>
+							<vICMSSubstituto>0.00</vICMSSubstituto>
+							<vICMSSTRet>0.00</vICMSSTRet>
+						</ICMS60>
+					</ICMS>
+					<IPI>
+						<CNPJProd>00000000000000</CNPJProd>
+						<cEnq>999</cEnq>
+						<IPITrib>
+							<CST>99</CST>
+							<vBC>0.00</vBC>
+							<pIPI>0.0000</pIPI>
+							<vIPI>0.00</vIPI>
+						</IPITrib>
+					</IPI>
+					<PIS>
+						<PISAliq>
+							<CST>01</CST>
+							<vBC>286.00</vBC>
+							<pPIS>1.6500</pPIS>
+							<vPIS>4.72</vPIS>
+						</PISAliq>
+					</PIS>
+					<COFINS>
+						<COFINSAliq>
+							<CST>01</CST>
+							<vBC>286.00</vBC>
+							<pCOFINS>7.6000</pCOFINS>
+							<vCOFINS>21.74</vCOFINS>
+						</COFINSAliq>
+					</COFINS>
+				</imposto>
+				<infAdProd>52018865 [06];</infAdProd>
+			</det>
+			<total>
+				<ICMSTot>
+					<vBC>0.00</vBC>
+					<vICMS>0.00</vICMS>
+					<vICMSDeson>0.00</vICMSDeson>
+					<vFCP>0.00</vFCP>
+					<vBCST>0.00</vBCST>
+					<vST>0.00</vST>
+					<vFCPST>0.00</vFCPST>
+					<vFCPSTRet>0.00</vFCPSTRet>
+					<vProd>286.00</vProd>
+					<vFrete>0.00</vFrete>
+					<vSeg>0.00</vSeg>
+					<vDesc>0.00</vDesc>
+					<vII>0.00</vII>
+					<vIPI>0.00</vIPI>
+					<vIPIDevol>0.00</vIPIDevol>
+					<vPIS>4.72</vPIS>
+					<vCOFINS>21.74</vCOFINS>
+					<vOutro>0.00</vOutro>
+					<vNF>286.00</vNF>
+				</ICMSTot>
+			</total>
+			<transp>
+				<modFrete>9</modFrete>
+				<vol>
+					<qVol>1</qVol>
+					<nVol>1</nVol>
+				</vol>
+			</transp>
+			<cobr>
+				<fat>
+					<nFat>934783</nFat>
+					<vOrig>286.00</vOrig>
+					<vDesc>0.00</vDesc>
+					<vLiq>286.00</vLiq>
+				</fat>
+				<dup>
+					<nDup>001</nDup>
+					<dVenc>2024-03-25</dVenc>
+					<vDup>286.00</vDup>
+				</dup>
+			</cobr>
+			<pag>
+				<detPag>
+					<indPag>1</indPag>
+					<tPag>15</tPag>
+					<vPag>286.00</vPag>
+				</detPag>
+			</pag>
+			<infAdic>
+				<infAdFisco>Total desconto concedido: 31,54 C; ONFERIR AS MERCADORIAS NO ATO DA ENTREGA/RETIRADA, NAO ACEITAMOS RECLAMACOES</infAdFisco>
+				<infCpl>Vendedor: COSTINHA TEL:3111-3222 Pedido: 88889999 Celular: 169 1122-9414 Voce pagou aproximadamente: R$ 38.47 de tributos federais R$ 51.48 de tributos estaduais R$ 196.05 pelos produtos Fonte IBPT/FECOMERCIO SP 24F470</infCpl>
+			</infAdic>
+		</infNFe>
+		<Signature
+			xmlns="http://www.w3.org/2000/09/xmldsig#">
+			<SignedInfo>
+				<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></CanonicalizationMethod>
+				<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"></SignatureMethod>
+				<Reference URI="#NFe35240244213965000138550010009347831188888102">
+					<Transforms>
+						<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"></Transform>
+						<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"></Transform>
+					</Transforms>
+					<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"></DigestMethod>
+					<DigestValue>GkwhNe7wp3s8B/GpdRJBp4iVkqE=</DigestValue>
+				</Reference>
+			</SignedInfo>
+			<SignatureValue>0rtGf96nBQnqSnlmdSAhWxLMIqY4zuE45ktmzJGY+DvNQtk9DzKMsuPig661OXBxDR/FmCSSK2kGa4Gq8420Bn0gGeow9OtYgoJoh2CT7rsJ85ucxQqU4szjGzUSDsL//NlTDb+40oYSOHCY8GDflD5P0R28bheMMh+1gvU0HP09RoeR9WggeFcfoXAD8tJVpTYpWvOfR5qCxI9/FEg2iG01SGRugAg9ZbCFMY8zPGIl21Zx6J8xTj5bg+HxrBoH1oJ5BVD3ep3tEnSDWDqmKM6Xz1lX6RSNPuFLmE41DChxVWr3nt6b8sJFkiIwqvER10cOuIpDsBmIKF417FGvRA==</SignatureValue>
+			<KeyInfo>
+				<X509Data>
+					<X509Certificate>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</X509Certificate>
+				</X509Data>
+			</KeyInfo>
+		</Signature>
+	</NFe>
+	<protNFe versao="4.00">
+		<infProt>
+			<tpAmb>1</tpAmb>
+			<verAplic>SP_NFE_PL009_V4</verAplic>
+			<chNFe>35240244213965000138550010009347831188888102</chNFe>
+			<dhRecbto>2024-02-22T11:42:44-03:00</dhRecbto>
+			<nProt>135240385833886</nProt>
+			<digVal>GkwhNe7wp3s8B/GpdRJBp4iVkqE=</digVal>
+			<cStat>100</cStat>
+			<xMotivo>Autorizado o uso da NF-e</xMotivo>
+		</infProt>
+	</protNFe>
+</nfeProc>
