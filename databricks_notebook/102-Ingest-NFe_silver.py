@@ -32,18 +32,58 @@
 # MAGIC
 # MAGIC create or replace table tax.silver.nfe_prod 
 # MAGIC as
-# MAGIC    select _id as num_NFe, produto.*
+# MAGIC select 
+# MAGIC       _id as id_nfe, 
+# MAGIC       prod.cProd as cod_produto,
+# MAGIC       prod.xProd as desc_produto,
+# MAGIC       prod.NCM as cod_ncm,
+# MAGIC       ncm.desc_ncm as desc_ncm,
+# MAGIC       prod.CFOP as cod_cfop,
+# MAGIC       cfop.desc_cfop as desc_cfop,
+# MAGIC       prod.uCom as unid_comercial,
+# MAGIC       prod.qCom as qde_comercial,
+# MAGIC       prod.vProd as val_bruto_produto_servico,
+# MAGIC       prod.cEAN as cod_ean,
+# MAGIC       prod.cEANTrib as cod_ean_trib,
+# MAGIC       prod.uTrib as unid_tributavel,
+# MAGIC       prod.qTrib as qde_tributavel
 # MAGIC from
 # MAGIC (
-# MAGIC    select _id, explode(det.prod) as produto
-# MAGIC    from tax.bronze.nfe_xml2
-# MAGIC )
+# MAGIC    select _id, explode(det.prod) as prod
+# MAGIC    from tax.bronze.nfe_xml
+# MAGIC ) 
+# MAGIC
+# MAGIC left join tax.silver.tab_cfop cfop
+# MAGIC on prod.CFOP = cfop.cod_cfop
+# MAGIC
+# MAGIC left join tax.silver.tab_ncm ncm
+# MAGIC on prod.NCM = ncm.cod_ncm;
 
 # COMMAND ----------
 
 # MAGIC %sql
 # MAGIC
-# MAGIC select * from tax.silver.nfe_prod
+# MAGIC USE catalog tax;
+# MAGIC USE silver;
+# MAGIC
+# MAGIC COMMENT ON TABLE nfe_prod IS 'Nota Fiscal Eletrônica, Detalhamento de Produtos e Serviços - TAG de Produtos (det.prod)';
+# MAGIC
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN id_nfe COMMENT 'Número da Nota Fiscal Eletrônica. Chave de cruzamento (FK)';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN cod_produto COMMENT 'Código do produto ou serviço';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN cod_ean COMMENT 'GTIN (Global Trade Item Number) do produto, antigo código EAN ou código de barras';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN desc_produto COMMENT 'Descrição do produto ou serviço';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN cod_ncm COMMENT 'Código NCM com 8 dígitos';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN desc_ncm COMMENT 'Categoria do Produto. Descrição do NCM (Nomenclatura Comum do Mercosul)';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN cod_cfop COMMENT 'Código Fiscal de Operações e Prestações';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN desc_cfop COMMENT 'Descrição do Código Fiscal de Operações e Prestações';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN unid_comercial COMMENT 'Unidade Comercial';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN qde_comercial COMMENT 'Quantidade Comercial';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN val_bruto_produto_servico COMMENT 'Valor Total Bruto dos Produtos ou Serviços.';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN cod_ean_trib COMMENT 'GTIN (Global Trade Item Number) da unidade tributável, antigo código EAN ou código de barras';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN unid_tributavel COMMENT 'Unidade Tributável';
+# MAGIC ALTER TABLE nfe_prod ALTER COLUMN qde_tributavel COMMENT 'Quantidade Tributável';
+# MAGIC
+# MAGIC
 
 # COMMAND ----------
 

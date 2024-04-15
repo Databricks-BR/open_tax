@@ -240,7 +240,7 @@ ALTER TABLE tab_cst_cofins ALTER COLUMN desc_cst_cofins COMMENT 'Descrição da 
 -- COMMAND ----------
 
 -- MAGIC %md
--- MAGIC ## RASCUNHO
+-- MAGIC ## Validação das Cargas
 -- MAGIC
 -- MAGIC
 
@@ -253,3 +253,64 @@ FROM
   tax.information_schema.tables
 WHERE 
   table_type = 'MANAGED'
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC ### Carga das Tabelas de LAYOUT
+
+-- COMMAND ----------
+
+-- MAGIC %python
+-- MAGIC
+-- MAGIC import pandas as pd
+-- MAGIC from pyspark.sql import SparkSession
+-- MAGIC
+-- MAGIC url = f"https://raw.githubusercontent.com//Databricks-BR/open_tax/main/layout/"
+-- MAGIC catalog_name = f"tax"
+-- MAGIC schema_name = f"metadado"
+
+-- COMMAND ----------
+
+-- MAGIC %python
+-- MAGIC
+-- MAGIC entity_name  = f"layout_nfe"
+-- MAGIC table_name   = f"{catalog_name}.{schema_name}.{entity_name}"
+-- MAGIC file_name = f"{url}{entity_name}.csv"
+-- MAGIC
+-- MAGIC df = pd.read_csv(file_name)                          # leitura arquivo CSV utilizando Dataframe Pandas
+-- MAGIC s_df = spark.createDataFrame(df)                     # converte Dataframe Pandas em Spark Dataframe
+-- MAGIC s_df.write.mode("overwrite").saveAsTable(table_name) # grava o DataFrame na Tabela Delta  
+
+-- COMMAND ----------
+
+-- MAGIC %python
+-- MAGIC
+-- MAGIC entity_name  = f"layout_sped_efd_blocos"
+-- MAGIC table_name   = f"{catalog_name}.{schema_name}.{entity_name}"
+-- MAGIC file_name = f"{url}{entity_name}.csv"
+-- MAGIC
+-- MAGIC df = pd.read_csv(file_name)                          # leitura arquivo CSV utilizando Dataframe Pandas
+-- MAGIC s_df = spark.createDataFrame(df)                     # converte Dataframe Pandas em Spark Dataframe
+-- MAGIC s_df.write.mode("overwrite") \
+-- MAGIC     .option("overwriteSchema", "true") \
+-- MAGIC     .saveAsTable(table_name)                         # grava o DataFrame na Tabela Delta  
+
+-- COMMAND ----------
+
+-- MAGIC %python
+-- MAGIC
+-- MAGIC entity_name  = f"layout_sped_efd"
+-- MAGIC table_name   = f"{catalog_name}.{schema_name}.{entity_name}"
+-- MAGIC file_name = f"{url}{entity_name}.csv"
+-- MAGIC
+-- MAGIC df = pd.read_csv(file_name)                          # leitura arquivo CSV utilizando Dataframe Pandas
+-- MAGIC s_df = spark.createDataFrame(df)                     # converte Dataframe Pandas em Spark Dataframe
+-- MAGIC s_df.write.mode("overwrite") \
+-- MAGIC     .option("overwriteSchema", "true") \
+-- MAGIC     .saveAsTable(table_name)                         # grava o DataFrame na Tabela Delta  
+
+-- COMMAND ----------
+
+-- MAGIC %md
+-- MAGIC
