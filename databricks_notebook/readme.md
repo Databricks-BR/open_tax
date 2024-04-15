@@ -1,5 +1,7 @@
 ### Códigos Python - Notebook Databricks:
 
+##### Atualização:  15/04/2024
+
 | Módulo | Objetivo | Progresso |
 | -- | -- | :-- |
 | 000-Setup_Catalogo | Configuração inicial das estruturas do Catálogo | 100% |
