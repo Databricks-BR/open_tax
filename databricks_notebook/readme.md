@@ -1,5 +1,4 @@
-### Códigos Python - Notebbok Databricks:
-
+### Códigos Python - Notebook Databricks:
 
 | Módulo | Objetivo | Progresso |
 | -- | -- | :-- |
