@@ -130,26 +130,25 @@
 # MAGIC create or replace table tax.silver.nfe_emit
 # MAGIC as 
 # MAGIC select 
-# MAGIC     _id as id_nfe,
-# MAGIC     emit.CNPJ as emit_cnpj,
-# MAGIC     emit.xNome as emit_nome_emitente,
-# MAGIC     emit.xFant as emit_nome_fantasia,
-# MAGIC     emit.enderEmit.xLgr as emit_end_logradouro,
-# MAGIC     emit.enderEmit.nro as emit_end_nro,
-# MAGIC   --  emit.enderEmit.xCpl as emit_end_complemento,
-# MAGIC     emit.enderEmit.xBairro as emit_end_bairro,
-# MAGIC     emit.enderEmit.cMun as emit_end_cod_municipio,
-# MAGIC     emit.enderEmit.xMun as emit_end_municipio,
-# MAGIC     emit.enderEmit.UF as emit_end_uf,
-# MAGIC     emit.enderEmit.CEP as emit_end_cep,
-# MAGIC     emit.enderEmit.cPais as emit_end_cod_pais,
-# MAGIC     emit.enderEmit.xPais as emit_end_pais,
-# MAGIC     emit.enderEmit.fone as emit_end_fone,
-# MAGIC     emit.IE as emit_insc_estadual
-# MAGIC  --   iif(exists(emit.IEST), emit.IEST, null) as emit_insc_estadual_st,
-# MAGIC  --   emit.IM as emit_insc_municipal,
-# MAGIC  --   emit.CNAE as cod_cnae,
-# MAGIC  
+# MAGIC     _id as id_nfe
+# MAGIC     ,emit.CNPJ as emit_cnpj
+# MAGIC     ,emit.xNome as emit_nome_emitente
+# MAGIC     ,emit.xFant as emit_nome_fantasia
+# MAGIC     ,emit.enderEmit.xLgr as emit_end_logradouro
+# MAGIC     ,emit.enderEmit.nro as emit_end_nro
+# MAGIC     ,get_json_object(to_json(emit.enderEmit), '$.xCpl') as emit_end_complemento,
+# MAGIC     ,emit.enderEmit.xBairro as emit_end_bairro
+# MAGIC     ,emit.enderEmit.cMun as emit_end_cod_municipio
+# MAGIC     ,emit.enderEmit.xMun as emit_end_municipio
+# MAGIC     ,emit.enderEmit.UF as emit_end_uf
+# MAGIC     ,emit.enderEmit.CEP as emit_end_cep
+# MAGIC     ,emit.enderEmit.cPais as emit_end_cod_pais
+# MAGIC     ,emit.enderEmit.xPais as emit_end_pais
+# MAGIC     ,emit.enderEmit.fone as emit_end_fone
+# MAGIC     ,emit.IE as emit_insc_estadual
+# MAGIC     ,get_json_object(to_json(emit), '$.IEST') as emit_insc_estatual_st
+# MAGIC     ,get_json_object(to_json(emit), '$.IM') as emit_insc_municipal
+# MAGIC     ,get_json_object(to_json(emit), '$.CNAE') as cod_cnae
 # MAGIC from 
 # MAGIC     tax.bronze.nfe_xml;
 # MAGIC
@@ -162,26 +161,27 @@
 # MAGIC create or replace table tax.silver.nfe_dest
 # MAGIC as 
 # MAGIC select 
-# MAGIC     _id as id_nfe,
-# MAGIC     dest.CNPJ as dest_cnpj,
-# MAGIC  --   dest.CPF as dest_cpf,
-# MAGIC     dest.xNome as dest_nome_destinatario,
-# MAGIC     dest.enderDest.xLgr as dest_end_logradouro,
-# MAGIC     dest.enderDest.nro as dest_end_num,
-# MAGIC     dest.enderDest.xCpl as dest_end_complemento,
-# MAGIC     dest.enderDest.xBairro as dest_end_bairro,
-# MAGIC     dest.enderDest.cMun as dest_end_cod_municipio,
-# MAGIC     dest.enderDest.xMun as dest_end_municipio,
-# MAGIC     dest.enderDest.UF as dest_end_uf,
-# MAGIC     dest.enderDest.CEP as dest_end_cep,
-# MAGIC     dest.enderDest.cPais as dest_end_cod_pais,
-# MAGIC     dest.enderDest.xPais as dest_end_pais,
-# MAGIC     dest.enderDest.fone as dest_end_fone,
-# MAGIC     dest.IE as dest_insc_estadual
-# MAGIC    -- dest.ISUF as dest_insc_suframa,
-# MAGIC    -- dest.IM as dest_insc_municipal
+# MAGIC     _id as id_nfe
+# MAGIC     ,get_json_object(to_json(dest), '$.CNPJ') as dest_cnpj
+# MAGIC     ,get_json_object(to_json(dest), '$.CPF') as dest_cpf
+# MAGIC     ,dest.xNome as dest_nome_destinatario
+# MAGIC     ,dest.enderDest.xLgr as dest_end_logradouro
+# MAGIC     ,dest.enderDest.nro as dest_end_num
+# MAGIC     ,get_json_object(to_json(dest.enderDest), '$.xCpl') as dest_end_complemento
+# MAGIC     ,dest.enderDest.xBairro as dest_end_bairro
+# MAGIC     ,dest.enderDest.cMun as dest_end_cod_municipio
+# MAGIC     ,dest.enderDest.xMun as dest_end_municipio
+# MAGIC     ,dest.enderDest.UF as dest_end_uf
+# MAGIC     ,dest.enderDest.CEP as dest_end_cep
+# MAGIC     ,dest.enderDest.cPais as dest_end_cod_pais
+# MAGIC     ,dest.enderDest.xPais as dest_end_pais
+# MAGIC     ,dest.enderDest.fone as dest_end_fone
+# MAGIC     ,dest.IE as dest_insc_estadual
+# MAGIC     ,get_json_object(to_json(dest), '$.ISUF') as dest_insc_suframa 
+# MAGIC     ,get_json_object(to_json(dest), '$.IM') as dest_insc_municipal
 # MAGIC from 
 # MAGIC     tax.bronze.nfe_xml;
+# MAGIC
 # MAGIC
 
 # COMMAND ----------
@@ -234,7 +234,7 @@
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_nome_fantasia COMMENT 'Nome fantasia';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_logradouro COMMENT 'Logradouro do emitente';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_nro COMMENT 'Número';
-# MAGIC -- ALTER TABLE nfe_emit ALTER COLUMN emit_end_complemento COMMENT 'Complemento';
+# MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_complemento COMMENT 'Complemento';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_bairro COMMENT 'Bairro';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_cod_municipio COMMENT 'Código do município';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_municipio COMMENT 'Nome do município';
@@ -244,7 +244,7 @@
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_pais COMMENT 'Nome do País';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_end_fone COMMENT 'Telefone';
 # MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_insc_estadual COMMENT 'Inscrição Estadual do Emitente';
-# MAGIC -- ALTER TABLE nfe_emit ALTER COLUMN emit_insc_estadual_st COMMENT 'IE do Substituto Tributário';
+# MAGIC ALTER TABLE nfe_emit ALTER COLUMN emit_insc_estadual_st COMMENT 'IE do Substituto Tributário';
 # MAGIC
 # MAGIC
 
@@ -256,7 +256,7 @@
 # MAGIC USE silver;
 # MAGIC
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_cnpj COMMENT 'CNPJ do destinatário';
-# MAGIC -- ALTER TABLE nfe_dest ALTER COLUMN dest_cpf COMMENT 'CPF do destinatário';
+# MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_cpf COMMENT 'CPF do destinatário';
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_nome_destinatario COMMENT 'Razão Social ou nome do destinatário';
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_end_logradouro COMMENT 'Logradouro';
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_end_num COMMENT 'Número';
@@ -270,5 +270,5 @@
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_end_pais COMMENT 'Nome do País';
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_end_fone COMMENT 'Telefone';
 # MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_insc_estadual COMMENT 'Inscrição Estadual do Destinatário';
-# MAGIC -- ALTER TABLE nfe_dest ALTER COLUMN dest_insc_suframa COMMENT 'Inscrição na SUFRAMA';
-# MAGIC -- ALTER TABLE nfe_dest ALTER COLUMN dest_insc_municipal COMMENT 'Inscrição Municipal do Tomador do Serviço';
+# MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_insc_suframa COMMENT 'Inscrição na SUFRAMA';
+# MAGIC ALTER TABLE nfe_dest ALTER COLUMN dest_insc_municipal COMMENT 'Inscrição Municipal do Tomador do Serviço';
