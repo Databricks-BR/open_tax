@@ -1,6 +1,6 @@
 ### Códigos Python - Notebook Databricks:
 
-##### Atualização:  15/04/2024
+##### Atualização:  16/04/2024
 
 | Módulo | Objetivo | Progresso |
 | -- | -- | :-- |
@@ -12,3 +12,4 @@
 | 102-Ingest-NFe_silver | Ingestão NFe da Bronze pra Silver | 60% |
 | 120-Ingest-SPED_massa_teste | SPED - EFD - Carga de Teste (opcional) | 100% |
 | 121-Ingest-SPED_bronze | Ingestão SPED - EFD da Landing pra Bronze | 100% |
+| 122-Ingest-SPED_silver | Ingestão SPED - EFD da Bronze para Silver| 70% |
