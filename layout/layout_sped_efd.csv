@@ -92,14 +92,12 @@ C,C480,6,1:1,Informações complementares das operações de saída de mercadori
 C,C490,4,1:N,Registro Analítico do movimento diário (código 02; 2D e 60)
 C,C495,2,V,Resumo Mensal de Itens do ECF por Estabelecimento (código 02 e 2D e 2E)
 C,C500,2,V,Nota Fiscal/Conta de Energia Elétrica (código 06); Nota Fiscal de Energia Elétrica Eletrônica (código 66) ; Nota Fiscal/Conta de fornecimento dágua canalizada (código 29) e Nota Fiscal/Consumo Fornecimento de Gás (Código 28)
-C,C510,3,1:N,"Itens do Documento - Nota Fiscal/Conta de Energia Elétrica (código 06); Nota
-Fiscal/Conta de fornecimento dágua canalizada (código 29) e Nota Fiscal/Conta Fornecimento de Gás (Código 28)"
+C,C510,3,1:N,"Itens do Documento - Nota Fiscal/Conta de Energia Elétrica (código 06); Nota Fiscal/Conta de fornecimento dágua canalizada (código 29) e Nota Fiscal/Conta Fornecimento de Gás (Código 28)"
 C,C590,3,1:N,Registro Analítico do Documento - Nota Fiscal/Conta de Energia Elétrica (código 06); Nota Fiscal de Energia Elétrica Eletrônica (código 66); Nota Fiscal/Conta de fornecimento dágua canalizada (código 29) e Nota Fiscal/Conta Fornecimento de Gás (Código 28)
 C,C591,4,1:1,Informações do Fundo de Combate à Pobreza – FCP na NF3e (código 66)
 C,C595,3,1:N,Observações do Lançamento Fiscal (códigos 06; 28; 29 e 66)
 C,C597,4,1:N,Outras obrigações tributárias; ajustes e informações de valores provenientes de documento fiscal.
-C,C600,2,V,"Consolidação Diária de Notas Fiscais/Contas de Energia Elétrica (Código 06); Nota Fiscal/Conta de Fornecimento d água (código 29) e Nota Fiscal/Conta de
-Fornecimento de Gás (Código 28) - (Empresas não obrigadas ao Convênio ICMS 115/03)"
+C,C600,2,V,"Consolidação Diária de Notas Fiscais/Contas de Energia Elétrica (Código 06); Nota Fiscal/Conta de Fornecimento d água (código 29) e Nota Fiscal/Conta de Fornecimento de Gás (Código 28) - (Empresas não obrigadas ao Convênio ICMS 115/03)"
 C,C601,3,1:N,Documentos cancelados - Consolidação diária de notas fiscais/conta de energia elétrica (Código 06); nota fiscal/conta de fornecimento de água (código 29) e nota fiscal/conta de fornecimento de gás (código 28)
 C,C610,3,1:N,Itens do Documento Consolidado - Notas Fiscais/Contas de Energia Elétrica (Código 06); Nota Fiscal/Conta de Fornecimento d água (código 29) e Nota Fiscal/Conta de Fornecimento de Gás (Código 28) - (Empresas não obrigadas ao Convênio ICMS 115/03)
 C,C690,3,1:N,Registro Analítico dos Documentos - Notas Fiscais/Contas de Energia Elétrica (Código 06); Nota Fiscal/Conta de Fornecimento d água (código 29) e Nota Fiscal/Conta de Fornecimento de Gás (Código 28)

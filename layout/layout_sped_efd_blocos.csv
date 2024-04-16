@@ -20,8 +20,7 @@ bloco,num,campo,descricao,tipo,tamanho,decimal,obrigatorio
 0200,4,COD_BARRA,Representação alfanumérico do código de barra do produto; se houver,C,,,OC
 0200,5,COD_ANT_ITEM,Código anterior do item com relação à última informação apresentada.,C,60,,N (informar no 0205)
 0200,6,UNID_INV,Unidade de medida utilizada na quantificação de estoques.,C,6,,O
-0200,7,TIPO_ITEM,"Tipo do item – Atividades Industriais; Comerciais e Serviços:
-00 – Mercadoria para Revenda; 01 – Matéria-prima; 02 – Embalagem; 03 – Produto em Processo; 04 – Produto Acabado; 05– Subproduto; 06– Produto Intermediário; 07– Material de Uso e Consumo; 08 – Ativo Imobilizado; 09 – Serviços; 10 – Outros insumos; 99 – Outras",N,2,,O
+0200,7,TIPO_ITEM,"Tipo do item – Atividades Industriais; Comerciais e Serviços: 00 – Mercadoria para Revenda; 01 – Matéria-prima; 02 – Embalagem; 03 – Produto em Processo; 04 – Produto Acabado; 05– Subproduto; 06– Produto Intermediário; 07– Material de Uso e Consumo; 08 – Ativo Imobilizado; 09 – Serviços; 10 – Outros insumos; 99 – Outras",N,2,,O
 0200,8,COD_NCM,Código da Nomenclatura Comum do Mercosul,C,8,,OC
 0200,9,EX_IPI,Código EX; conforme a TIPI,C,3,,OC
 0200,10,COD_GEN,Código do gênero do item; conforme a Tabela 4.2.1,N,2,,OC
@@ -42,8 +41,7 @@ C100,11,DT_E_S,Data da entrada ou da saída,N,8,,O
 C100,12,VL_DOC,Valor total do documento fiscal,N,,2,O
 C100,13,IND_PGTO,Indicador do tipo de pagamento: 0 - À vista; 1 - A prazo; 9 - Outros,C,1,,O
 C100,14,VL_DESC,Valor total do desconto,N,,2,OC
-C100,15,VL_ABAT_NT,"Abatimento não tributado e não comercial
-Por exemplo: desconto ICMS nas remessas para ZFM.",N,,2,OC
+C100,15,VL_ABAT_NT,"Abatimento não tributado e não comercial. Por exemplo: desconto ICMS nas remessas para ZFM.",N,,2,OC
 C100,16,VL_MERC,Valor total das mercadorias e serviços,N,,2,O
 C100,17,IND_FRT,Indicador do tipo de frete: 0- Contratação do Frete por conta do Remetente (CIF); 1- Contratação do Frete por conta do Destinatário (FOB); 2- Contratação do Frete por conta de Terceiros; 3- Transporte Próprio por conta do Remetente; 4 - Transporte Próprio por conta do Destinatário; 9 - Sem Ocorrência de Transporte.,C,1,,O
 C100,18,VL_FRT,Valor do frete indicado no documento fiscal,N,,2,OC
@@ -102,8 +100,7 @@ C190,3,CFOP,Código Fiscal de Operação e Prestação do agrupamento de itens,N
 C190,4,ALIQ_ICMS,Alíquota do ICMS,N,6,2,OC
 C190,5,VL_OPR,Valor da operação na combinação de CST_ICMS; CFOP e alíquota do ICMS; correspondente ao somatório do valor das mercadorias; despesas acessórias (frete; seguros e outras despesas acessórias); ICMS_ST; FCP_ST e IPI.,N,,2,O
 C190,6,VL_BC_ICMS,Parcela correspondente ao Valor da base de cálculo do ICMS referente à combinação de CST_ICMS; CFOP e alíquota do ICMS.,N,,2,O
-C190,7,VL_ICMS,"Parcela correspondente ao Valor do ICMS; incluindo o FCP; quando aplicável; referente à combinação de CST_ICMS; CFOP e alíquota do
-ICMS.",N,,2,O
+C190,7,VL_ICMS,"Parcela correspondente ao Valor do ICMS; incluindo o FCP; quando aplicável; referente à combinação de CST_ICMS; CFOP e alíquota do ICMS.",N,,2,O
 C190,8,VL_BC_ICMS_ ST,Parcela correspondente ao Valor da base de cálculo do ICMS da substituição tributária referente à combinação de CST_ICMS; CFOP e alíquota do ICMS.,N,,2,O
 C190,9,VL_ICMS_ST,Parcela correspondente ao valor creditado/debitado do ICMS da substituição tributária; incluindo o FCP_ ST; quando aplicável; referente à combinação de CST_ICMS; CFOP; e alíquota do ICMS.,N,,2,O
 C190,10,VL_RED_BC,Valor não tributado em função da redução da base de cálculo do ICMS; referente à combinação de CST_ICMS; CFOP e alíquota do ICMS.,N,,2,O
