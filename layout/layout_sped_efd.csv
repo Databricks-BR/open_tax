@@ -1,27 +1,27 @@
-Bloco,Reg.,Nível,Ocorrência,Descrição
-0,0,0,1,Abertura do Arquivo Digital e Identificação da entidade
-0,1,1,1,Abertura do Bloco 0
-0,2,2,1,Classificação do Estabelecimento Industrial ou Equiparado a Industrial
-0,5,2,1,Dados Complementares da entidade
-0,15,2,V,Dados do Contribuinte Substituto ou Responsável pelo ICMS Destino
-0,100,2,1,Dados do Contabilista
-0,150,2,V,Tabela de Cadastro do Participante
-0,175,3,1:N,Alteração da Tabela de Cadastro de Participante
-0,190,2,V,Identificação das unidades de medida
-0,200,2,V,Tabela de Identificação do Item (Produtos e Serviços)
-0,205,3,1:N,Alteração do Item
-0,206,3,1:1,Código de produto conforme Tabela ANP
-0,210,3,1:N,Consumo Específico Padronizado
-0,220,3,1:N,Fatores de Conversão de Unidades
-0,221,3,1:N,Correlação entre códigos de itens comercializados
-0,300,2,V,Cadastro de bens ou componentes do Ativo Imobilizado
-0,305,3,1:1,Informação sobre a Utilização do Bem
-0,400,2,V,Tabela de Natureza da Operação/ Prestação
-0,450,2,V,Tabela de Informação Complementar do documento fiscal
-0,460,2,V,Tabela de Observações do Lançamento Fiscal
-0,500,2,V,Plano de contas contábeis
-0,600,2,V,Centro de custos
-0,990,1,1,Encerramento do Bloco 0
+bloco,reg,nivel,ocorrencia,descricao
+0,0000,0,1,Abertura do Arquivo Digital e Identificação da entidade
+0,0001,1,1,Abertura do Bloco 0
+0,0002,2,1,Classificação do Estabelecimento Industrial ou Equiparado a Industrial
+0,0005,2,1,Dados Complementares da entidade
+0,0015,2,V,Dados do Contribuinte Substituto ou Responsável pelo ICMS Destino
+0,0100,2,1,Dados do Contabilista
+0,0150,2,V,Tabela de Cadastro do Participante
+0,0175,3,1:N,Alteração da Tabela de Cadastro de Participante
+0,0190,2,V,Identificação das unidades de medida
+0,0200,2,V,Tabela de Identificação do Item (Produtos e Serviços)
+0,0205,3,1:N,Alteração do Item
+0,0206,3,1:1,Código de produto conforme Tabela ANP
+0,0210,3,1:N,Consumo Específico Padronizado
+0,0220,3,1:N,Fatores de Conversão de Unidades
+0,0221,3,1:N,Correlação entre códigos de itens comercializados
+0,0300,2,V,Cadastro de bens ou componentes do Ativo Imobilizado
+0,0305,3,1:1,Informação sobre a Utilização do Bem
+0,0400,2,V,Tabela de Natureza da Operação/ Prestação
+0,0450,2,V,Tabela de Informação Complementar do documento fiscal
+0,0460,2,V,Tabela de Observações do Lançamento Fiscal
+0,0500,2,V,Plano de contas contábeis
+0,0600,2,V,Centro de custos
+0,0990,1,1,Encerramento do Bloco 0
 B,B001,1,1,Abertura do Bloco B
 B,B020,2,V,Nota Fiscal (código 01); Nota Fiscal de Serviços (código 03); Nota Fiscal de Serviços Avulsa (código 3B); Nota Fiscal de Produtor (código 04); Conhecimento de Transporte Rodoviário de Cargas (código 08); NF-e (código 55) e NFC-e (código 65)
 B,B025,3,1:N,Detalhamento por combinação de alíquota e item da lista de serviços da Lei Complementar nº 116/2003
